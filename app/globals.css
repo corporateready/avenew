@@ -1,26 +1,24 @@
 @import "tailwindcss";
+/* @import "tw-animate-css"; */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+html {
+  @apply w-full h-full;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  scroll-behavior: smooth;
+
+  font-size: calc(100vw / (1440 * 1));
+
+  @media screen and (min-width: 641px) {
+    font-size: calc(100vw / (1440 * 1));
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: calc(100vw / (428 * 1));
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply w-full h-full bg-[#060916];
 }

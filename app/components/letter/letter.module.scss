@@ -1,0 +1,51 @@
+@reference "tailwindcss";
+
+.letter {
+  @apply w-full h-full relative mt-[-210rem] z-[-1];
+  font-family: "Montserrat", sans-serif;
+
+  &::before {
+    content: '';
+    @apply w-full h-[680rem] bg-[url('/mobile/facilities/facilities-light-email.png')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-0;
+  }
+}
+.letter__title {
+  @apply text-[28rem] text-white font-semibold leading-none absolute top-[414rem] left-0 text-center w-full z-[1];
+}
+
+.letter__description {
+  @apply text-[16rem] text-white font-normal leading-[112%] absolute top-[452rem] left-0 text-center w-full z-[1];
+}
+.letter__button_access {
+  @apply text-white text-[22rem] leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[720rem] left-1/2 -translate-x-1/2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3%;
+  background: linear-gradient(
+    0deg,
+    #060915 40%,
+    #50525B 100%,
+    #FFF 100%,
+  );
+
+  &::before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4rem;
+  background: linear-gradient(
+  90deg,
+    transparent 0%,
+  
+    #ffffff 50%,
+    #ffffff 50%,
+  
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 3rem rgba(255, 255, 255, .1),
+    0 0 1rem rgba(255, 255, 255, .1);
+}
+}

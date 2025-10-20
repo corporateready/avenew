@@ -1,0 +1,45 @@
+@reference "tailwindcss";
+
+.facilities {
+  @apply w-full h-full relative mt-[-80rem] z-[0];
+  font-family: "Montserrat", sans-serif;
+
+  &::before {
+    content: '';
+    @apply w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.png')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+  }
+}
+.facilities__title {
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[-24rem] left-1/2 -translate-x-1/2 z-[1];
+}
+.facilities__inner {
+  @apply w-full h-full flex flex-col items-center justify-center gap-[20rem] px-[38rem] pt-[10rem];
+}
+.facilities__item {
+  @apply w-full h-[440rem] bg-[url('/mobile/facilities/facilities-item-1.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[24rem] left-[30rem] z-[2];
+  }
+}
+.facilities__item_2 {
+  @apply w-full h-[440rem] bg-[url('/mobile/facilities/facilities-item-2.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[24rem] left-[30rem] z-[2];
+  }
+}
+.facilities__item_3 {
+  @apply w-full h-[440rem] bg-[url('/mobile/facilities/facilities-item-3.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[24rem] left-[30rem] z-[2];
+  }
+}
+.facilities__item_4 {
+  @apply w-full h-[440rem] bg-[url('/mobile/facilities/facilities-item-4.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[24rem] left-[30rem] z-[2];
+  }
+}
