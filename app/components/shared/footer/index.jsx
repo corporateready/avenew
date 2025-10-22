@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './footer.module.scss'
 import Image from 'next/image';
-import logo from "../../../../public/shared/Avenew botanica-logo.png";
 import Link from 'next/link';
 
 const Index = () => {
@@ -9,12 +8,11 @@ const Index = () => {
     <div className={styles.footer}>
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
-          <Image src={logo} alt="logo" width={130} height={26} className="" />
+          <img src="/shared/Avenew botanica-logo.png" alt="logo" className="w-[130rem] h-[26rem] sm:w-[212rem] sm:h-[44rem]" />
           <div className={styles.footer__inner_top__links}>
             <Link href="/">
               <svg
-                width="23"
-                height="23"
+                className="w-[23rem] h-[23rem] sm:w-[38rem] sm:h-[38rem]"
                 viewBox="0 0 23 23"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -27,8 +25,7 @@ const Index = () => {
             </Link>
             <Link href="/">
               <svg
-                width="14"
-                height="25"
+                className="w-[14rem] h-[25rem] sm:w-[22rem] sm:h-[38rem]"
                 viewBox="0 0 14 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +38,7 @@ const Index = () => {
             </Link>
             <Link href="/">
               <svg
-                width="25"
-                height="25"
+                className="w-[25rem] h-[25rem] sm:w-[38rem] sm:h-[38rem]"
                 viewBox="0 0 25 25"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +66,7 @@ const Index = () => {
             </Link>
             <Link href="/">
               <svg
-                width="27"
-                height="27"
+                className="w-[27rem] h-[27rem] sm:w-[43rem] sm:h-[43rem]"
                 viewBox="0 0 27 27"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

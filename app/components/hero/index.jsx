@@ -2,16 +2,22 @@
 import React from "react";
 import styles from "./hero.module.scss";
 import Facilities from "../facilities";
+import {motion} from "motion/react";
 
-const Hero = () => {
+const Hero = ({ handleToggle }) => {
   return (
     <div>
       <div className={styles.hero}>
         <div className={styles.location__heart}></div>
 
-        <h1 className={styles.title}>coming soon</h1>
+        <motion.h1 className={styles.title}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.5 }}
+        >coming soon</motion.h1>
         <p className={styles.description}>Lansarea proiectului în noiembrie </p>
-        <button className={styles.button__detail}>
+        <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>Află detalii acum</span>
           <span className={styles.button__detail__line_bottom}></span>
           <span className={styles.button__detail__sparkle}></span>
@@ -22,12 +28,14 @@ const Hero = () => {
         </button>
         <p className={styles.location__title_text}>
           Locație fără {""}
-          <br className="" /> precedent în inima {""}
-          <br className="" /> secorului Botanica
+          <br className="block sm:hidden" /> precedent {""}
+          <br className="hidden sm:block" /> în inima {""}
+          <br className="block sm:hidden" /> secorului Botanica
         </p>
         <p className={styles.location__description_text}>
           În curând, un nou ansamblu rezidențial
-          <br className="" /> care va ridica calitatea vieții urbane
+          <br className="block sm:hidden" /> care va ridica {""}
+          <br className="hidden sm:block" /> calitatea vieții urbane
         </p>
 
         <p className={styles.location__title_text__bottom}>

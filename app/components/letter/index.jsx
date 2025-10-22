@@ -1,27 +1,28 @@
 import React from "react";
 import styles from "./letter.module.scss";
-import logo from "../../../public/shared/Avenew botanica-logo.png";
 import Image from "next/image";
 
-const Index = () => {
+const Index = ({ handleToggleModalBottom }) => {
   return (
     <div className={styles.letter}>
-      <Image
-        src={logo}
-        width={70}
-        h={14}
-        className="absolute top-[390rem] left-1/2 -translate-1/2"
-        alt=""
+      <img
+        src="/shared/Avenew botanica-logo.png"
+        className={styles.letter__logo}
+        alt="Avenew botanica logo"
       />
       <p className={styles.letter__title}>Află primul detalii</p>
       <p className={styles.letter__description}>
         Locurile pentru preînregistrare
-        <br /> sunt limitate. Află toate detaliile
-        <br />
-        despre lansarea proiectului
-        <br /> chiar acum.
+        <br className="block sm:hidden"/> sunt limitate. {""}
+        <br className="hidden sm:block" /> Află toate detaliile
+        <br className="block sm:hidden" /> despre lansarea {""}
+        <br className="hidden sm:block" /> proiectului {""}
+        <br className="block sm:hidden" /> chiar acum.
       </p>
-      <button className={styles.letter__button_access}>
+      <button
+        className={styles.letter__button_access}
+        onClick={handleToggleModalBottom}
+      >
         Deschide accesul prioritar
       </button>
     </div>

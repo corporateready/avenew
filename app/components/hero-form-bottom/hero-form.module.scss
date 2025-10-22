@@ -1,0 +1,84 @@
+@reference "tailwindcss";
+
+.hero__form {
+  @apply w-full h-full fixed top-0 left-0 z-10 bg-[#060916];
+  font-family: "Montserrat", sans-serif;
+} 
+.hero__form_inner {
+  @apply w-full h-[514rem] relative top-1/2 -translate-y-1/2 left-0 z-0 bg-[#16171E] overflow-hidden;
+
+  &::before {
+    content: '';
+
+    background: radial-gradient(
+      circle at center,
+      rgba(235, 139, 12, 5) 0%,
+      rgba(218, 119, 11, 0.6) 35%,
+       rgba(150, 40, 5, 0) 60%);
+    @apply w-[600rem] h-[700rem] rounded-full absolute -bottom-[60%] -right-[85%] z-[1] opacity-20;
+
+  }
+  &::after {
+    content: '';
+    
+    background: radial-gradient(
+      circle at center,
+      rgba(235, 139, 12, 1) 0%,
+      rgba(218, 119, 11, 0.4) 0%,
+       rgba(150, 40, 5, 0) 50%);
+
+    @apply w-[530rem] h-[670rem] rounded-full absolute -top-[85%] -left-[50%] z-[1];
+  }
+  
+}
+.hero__form_progress__wrapper {
+  @apply w-[394rem] h-[10rem] bg-white rounded-full mt-[48rem] mx-auto;
+}
+.hero__form_title {
+  @apply text-[24rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[40rem];
+}
+.hero__form_content {
+  @apply w-[394rem] h-full mt-[30rem] mx-auto flex flex-col gap-[20rem] relative z-[2]  ;
+
+  input {
+    @apply w-full h-[45rem] text-white border-[1rem] border-[#494B54] rounded-[13rem] px-[20rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[14rem];
+    background: linear-gradient(
+  0deg,
+  #16171E 0%,
+  #353746 50%,
+  #16171E 100%
+);
+  }
+}
+.button__detail {
+  @apply text-white text-[23rem] font-medium leading-[100%] w-full h-[54rem] border-[0.54rem] border-white rounded-full flex items-center justify-center relative z-[2] mt-[10rem];
+  
+  background: linear-gradient(
+    0deg,
+    #060915 40%,
+    #50525B 100%,
+    #FFF 100%,
+  );
+
+  &::before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4rem;
+  background: linear-gradient(
+  90deg,
+    transparent 0%,
+  
+    #ffffff 50%,
+    #ffffff 50%,
+  
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 3rem rgba(255, 255, 255, .1),
+    0 0 1rem rgba(255, 255, 255, .1);
+}
+}

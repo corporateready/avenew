@@ -1,27 +1,49 @@
 @reference "tailwindcss";
 
 .hero {
-    @apply w-full h-[2000rem] relative z-0 mt-[50rem];
+  font-family: "Montserrat", sans-serif;
 
-    &::before {
-      content: '';
-      @apply w-full h-full bg-[url('/mobile/hero/hero-light-bg-mobile.png')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+  @media screen and (max-width: 640px) {
+     @apply w-full h-[2000rem] relative z-0;
+
+      &::before {
+        content: '';
+        @apply w-full h-full bg-[url('/mobile/hero/hero-light-bg-mobile.webp')] bg-cover bg-center bg-no-repeat absolute top-[-100rem] left-0 z-[1];
+      }
+
+      &::after {
+        content: '';
+        @apply bg-[url('/mobile/hero/dark-building-mobile.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[240rem] left-0 z-[2] w-full h-[726rem];
+      }
     }
 
-  &::after {
-    content: '';
-    @apply bg-[url('/mobile/hero/dark-building-mobile.png')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[240rem] left-0 z-[2] w-full h-[726rem];
-  }
+   @media screen and (min-width: 641px) {
+    @apply w-full h-[3600rem] relative z-0;
+
+     &::before {
+      content: '';
+      @apply w-full h-full bg-[url('/desktop/hero-light-bg-desktop.webp')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+    }
+
+    &::after {
+        content: '';
+        @apply bg-[url('/desktop/dark-building-desktop.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[300rem] left-0 z-[2] w-full h-[1180rem];
+      }
+   }
 
 }
 .title {
   @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[126rem] left-1/2 -translate-x-1/2 z-[1];
-  font-family: "Montserrat", sans-serif;
   letter-spacing: 9rem;
+
+  @media screen and (min-width: 641px) {
+     @apply w-max text-center text-white/63 text-[112rem] font-medium uppercase leading-none z-[1] ml-[20rem] absolute top-[220rem] left-1/2 -translate-x-1/2;
+  letter-spacing: 34%;
+    }
 }
 .description { 
   @apply text-[22rem] text-center leading-[100%] w-full absolute z-[5] top-[544rem] left-[25rem] -translate-x-[25rem];
-  font-family: "Montserrat", sans-serif;
+  
   letter-spacing: 3%;
   background: linear-gradient(
     90deg,
@@ -32,6 +54,20 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+
+  @media screen and (min-width: 641px) {
+    @apply text-[40rem] text-center font-normal leading-[100%] w-full absolute z-[5] top-[850rem] left-[25rem] -translate-x-[25rem];
+  letter-spacing: 3%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  }
 }
 .button__detail {
   @apply text-white text-[22rem] leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
@@ -65,6 +101,40 @@
     0 0 3rem rgba(255, 255, 255, .1),
     0 0 1rem rgba(255, 255, 255, .1);
 }
+@media screen and (min-width: 641px) {
+  @apply text-white text-[30rem] leading-[100%] w-[345rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[920rem] left-1/2 -translate-x-1/2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 3%;
+  background: linear-gradient(
+    0deg,
+    #060915 40%,
+    #50525B 100%,
+    #FFF 100%,
+  );
+
+  &::before {
+  content: '';
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4rem;
+  background: linear-gradient(
+  90deg,
+    transparent 0%,
+  
+    #ffffff 50%,
+    #ffffff 50%,
+  
+    transparent 100%
+  );
+  box-shadow: 
+    0 0 3rem rgba(255, 255, 255, .1),
+    0 0 1rem rgba(255, 255, 255, .1);
+}
+}
+
 }
 .button__detail__sparkle {
   @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
@@ -144,18 +214,54 @@
       background-blend-mode: screen;
 }
 .location__title_text {
-  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[872rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[1272rem] left-1/2 -translate-x-1/2 z-[3];
+
+  @media screen and (min-width: 641px) {
+     @apply text-[77rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[1500rem] left-1/2 -translate-x-1/2 z-[3];
+  }
 }
 .location__description_text {
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[990rem] left-1/2 -translate-x-1/2 z-[3];
+
+  @media screen and (min-width: 641px) {
+    @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1690rem] left-1/2 -translate-x-1/2 z-[3];
+  }
 }
 .location__heart {
-  @apply bg-[url('/mobile/location/location-heart.png')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[744rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
+  @media screen and (max-width: 640px) {
+    @apply bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[744rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
+  }
+
+  @media screen and (min-width: 641px) {
+   content: '';
+     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1270rem] left-1/2 -translate-x-1/2 z-[3];
+
+    //  animation: heartbeat 3s ease-in-out infinite;
+    //   @keyframes heartbeat {
+    //         0%, 100% {
+    //             transform: scale(1);
+    //         }
+    //         10%, 30% {
+    //             transform: scale(1.1);
+    //         }
+    //         20%, 40% {
+    //             transform: scale(1);
+    //         }
+    //     }
+  }
 }
 
 .location__title_text__bottom {
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[556rem] left-1/2 -translate-x-1/2 z-[3];
+
+  @media screen and (min-width: 641px) {
+   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1220rem] left-1/2 -translate-x-1/2 z-[3];
+  }
 }
 .location__description_text__bottom {
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[494rem] left-1/2 -translate-x-1/2 z-[3];
+
+  @media screen and (min-width: 641px) {
+    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1110rem] left-1/2 -translate-x-1/2 z-[3];
+  }
 }
