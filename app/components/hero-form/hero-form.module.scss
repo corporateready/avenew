@@ -3,9 +3,13 @@
 .hero__form {
   @apply w-full h-full fixed top-0 left-0 z-10 bg-[#060916];
   font-family: "Montserrat", sans-serif;
+
+  @media screen and (min-width: 641px) {
+    @apply flex items-center justify-center;
+  }
 } 
 .hero__form_inner {
-  @apply w-full h-[514rem] relative top-1/2 -translate-y-1/2 left-0 z-0 bg-[#16171E] overflow-hidden;
+  @apply w-full h-[520rem] relative top-1/2 -translate-y-1/2 left-0 z-0 bg-[#16171E] overflow-hidden;
 
   &::before {
     content: '';
@@ -29,10 +33,26 @@
 
     @apply w-[530rem] h-[670rem] rounded-full absolute -top-[85%] -left-[50%] z-[1];
   }
+
+  @media screen and (min-width: 641px) {
+   @apply w-[520rem] h-[540rem] top-[40%] left-0;
+  }
   
 }
 .hero__form_progress__wrapper {
-  @apply w-[394rem] h-[10rem] bg-white rounded-full mt-[48rem] mx-auto;
+  @apply w-[394rem] h-[10rem] bg-white rounded-full mt-[48rem] sm:mt-[80rem] mx-auto border-[1rem] border-[#494B54] relative;
+
+     background: linear-gradient(
+        0deg,
+        #16171E 0%,
+        #353746 50%,
+        #16171E 100%
+      );
+
+  &__line {
+    @apply w-1/2 h-[8rem] bg-amber-700/50 rounded-full absolute top-1/2 -translate-y-1/2 left-0;
+    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
+  }
 }
 .hero__form_title {
   @apply text-[24rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[40rem];
@@ -41,7 +61,7 @@
   @apply w-[394rem] h-full mt-[30rem] mx-auto flex flex-col gap-[20rem] relative z-[2]  ;
 
   input {
-    @apply w-full h-[45rem] text-white border-[1rem] border-[#494B54] rounded-[13rem] px-[20rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[14rem];
+    @apply w-full h-[45rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[20rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[14rem];
     background: linear-gradient(
   0deg,
   #16171E 0%,

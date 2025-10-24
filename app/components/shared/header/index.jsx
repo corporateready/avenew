@@ -1,17 +1,46 @@
-'use client'
-import React from 'react'
-import styles from "./header.module.scss"
-import Link from 'next/link';
+"use client";
+import React from "react";
+import styles from "./header.module.scss";
+import Link from "next/link";
+
+const langs = [
+  {
+    id: 1,
+    name: "ro",
+    value: "",
+  },
+  {
+    id: 2,
+    name: "ru",
+    value: "ru",
+  },
+  {
+    id: 3,
+    name: "en",
+    value: "en",
+  },
+];
 
 const Index = () => {
-  const [isOpenSelect, setIsOpenSelect] = React.useState("ro");
+  const [isOpenSelect, setIsOpenSelect] = React.useState(false);
+  const [valueSelect, setValueSelect] = React.useState("ro");
+  const [disabled, setDisabled] = React.useState(false);
 
   const handleOpenSelect = () => {
-    setIsOpen(!isOpen);
-  }
+    setIsOpenSelect(!isOpenSelect);
+    setDisabled(true);
+  };
+
+  const handleChangeValueSelect = (value) => {
+    setValueSelect(value);
+    setIsOpenSelect(false); 
+    setDisabled(false);
+  };
+
+  console.log("valueSelect", valueSelect);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className={styles.container}>
         <div className={styles.inner}>
           <div className={styles.logo}>
@@ -22,55 +51,29 @@ const Index = () => {
             />
           </div>
           <div className={styles.navigate}>
-            <button className={styles.lang__select}>
-              {isOpenSelect}
-              {/* <div className="w-full h-[80rem] absolute top-[100%] left-0 z-[1] flex flex-col items-center justify-center border-[0.35rem] border-white rounded-[13rem]">
-                <span className="w-full h-[42rem]">ru</span>
-                <span className="w-full h-[42rem]">en</span>
-              </div>
-              <span className="w-full h-[42rem]">ru</span>
-              <span className="w-full h-[42rem]">en</span> */}
-            </button>
-            {/* <button
-              type="button"
-              className={
-                !isActiveButton
-                  ? styles.header_navigate__lang
-                  : styles.header_navigate__lang_active
-              }
-              onClick={() => setIsActiveButton(!isActiveButton)}
+            <button
+              className={`${styles.lang__select} ${
+                isOpenSelect && styles.lang__select_active
+              }`}
+              onClick={handleOpenSelect}
             >
-              <span
-                className={`flex justify-center items-center p-[10rem] ${
-                  isActiveButton
-                    ? "border-b-[1rem] border-b-[#D9D9D9]/50 w-[28rem] sm:w-[34rem]"
-                    : "border-0"
-                }`}
-              >
-                {isLanguageActive.slice(1, 3)}
-              </span>
-              {isActiveButton ? (
-                <div
-                  onChange={(e) => e.stopPropagation()}
-                  className={styles.header__drop_lang}
-                >
-                  <Link
-                    href={"/"}
-                    className="flex justify-center items-center border-b-[1rem] border-b-[#D9D9D9]/50 absolute top-0 left-[5rem] z-[2] w-[26rem] sm:w-[34rem] h-[32rem]"
-                  >
-                    {isLanguageActive === "/ro" && "en"}
-                  </Link>
-                  <Link
-                    href={`/ru`}
-                    className="flex justify-center items-center absolute top-[32rem] left-0 z-[2] w-full h-[36rem]"
-                  >
-                    {isLanguageActive === "/ro" && "ru"}
-                  </Link>
+              {!isOpenSelect ? valueSelect : ''}
+              {isOpenSelect && (
+                <div className={`${isOpenSelect && styles.lang__select_list}`}>
+                  {langs.map((item) => (
+                    <Link
+                      href={`/${item.value}`}
+                      key={item.id}
+                      className={styles.lang__select_list_item}
+                      onClick={() => handleChangeValueSelect(item.value)}
+                      disabled={disabled === valueSelect}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
                 </div>
-              ) : (
-                ""
               )}
-            </button> */}
+            </button>
             <Link href="/" className={styles.phone__link}>
               +373 79 800 000
             </Link>
@@ -79,6 +82,6 @@ const Index = () => {
       </div>
     </header>
   );
-}
+};
 
-export default Index
+export default Index;

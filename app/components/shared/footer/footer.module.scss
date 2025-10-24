@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .footer {
-  @apply w-full h-auto bg-[#0D101D] px-[35rem] pb-[22rem] pt-[90rem];
+  @apply w-full h-auto bg-[#0D101D] px-[35rem] pb-[32rem] pt-[90rem];
   font-family: "Montserrat", sans-serif;
 
   @media screen and (min-width: 641px) {
