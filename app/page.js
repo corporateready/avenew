@@ -8,7 +8,7 @@ import HeroForm from "./components/hero-form";
 // import HeroFormBottom from "./components/hero-form-bottom";
 
 export default function Home() {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
   // const [isOpenBottom, setIsOpenBottom] = React.useState(false);
 
   const handleToggleModal = () => {
