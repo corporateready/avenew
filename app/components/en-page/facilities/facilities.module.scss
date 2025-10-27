@@ -1,0 +1,102 @@
+@reference "tailwindcss";
+
+.facilities {
+  @apply w-full h-full relative mt-[-80rem] z-[0];
+  font-family: "Montserrat", sans-serif;
+
+  &::before {
+    content: '';
+    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.webp')] bg-cover bg-center bg-no-repeat absolute top-[-6rem] left-0 z-[1];
+
+    @media screen and (min-width: 641px) {
+     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.webp')] bg-cover bg-center bg-no-repeat absolute top-[-350rem] left-0 z-[1];
+    }
+  }
+}
+.facilities__title {
+  @apply text-[30rem] font-semibold text-white text-center leading-[110%] w-full relative top-[-28rem] left-1/2 -translate-x-1/2 z-[1];
+
+  @media screen and (min-width: 641px) {
+    @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full relative top-[-300rem] left-1/2 -translate-x-1/2 z-[1];
+  }
+}
+.facilities__inner {
+  @apply w-full h-full flex flex-col items-center justify-center gap-[20rem] px-[38rem] pt-[34rem] mt-0;
+
+  @media screen and (min-width: 641px) {
+   @apply w-[1198rem] h-full flex flex-row items-center justify-center gap-[18rem] px-0 mx-auto mt-[-274rem];
+  }
+}
+.facilities__item {
+  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-1.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+&:nth-child(1) {
+      @apply order-1
+  } 
+  }
+
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
+
+    @media screen and (min-width: 641px) {
+     @apply text-[20rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
+    }
+  }
+}
+.facilities__item_2 {
+  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-2.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-3.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+    &:nth-child(2) {
+      @apply order-3
+  } 
+}
+
+  span {
+    @apply text-[20rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
+
+    @media screen and (min-width: 641px) {
+     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
+    }
+  }
+}
+.facilities__item_3 {
+  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-3.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-2.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+    &:nth-child(3) {
+      @apply order-2;
+  } 
+  }
+  span {
+    @apply text-[20rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
+
+    @media screen and (min-width: 641px) {
+     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
+    }
+  }
+}
+.facilities__item_4 {
+  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-4.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+  @media screen and (min-width: 641px) {  
+    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-4.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+
+    &:nth-child(4) {
+      @apply order-4;
+  } 
+  }
+  span {
+    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
+
+    @media screen and (min-width: 641px) {
+     @apply text-[20rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
+    }
+  }
+}

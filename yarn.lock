@@ -1487,6 +1487,7 @@ __metadata:
     postcss: ^8.5.6
     react: 19.1.0
     react-dom: 19.1.0
+    react-international-phone: ^4.6.0
     sass: ^1.93.2
     sass-migrator: ^2.4.2
     tailwind-merge: ^3.3.1
@@ -3955,6 +3956,15 @@ __metadata:
   peerDependencies:
     react: ^19.1.0
   checksum: 1d154b6543467095ac269e61ca59db546f34ef76bcdeb90f2dad41d682cd210aae492e70c85010ed5d0a2caea225e9a55139ebc1a615ee85bf197d7f99678cdf
+  languageName: node
+  linkType: hard
+
+"react-international-phone@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "react-international-phone@npm:4.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: ef0e3114a7730803591423fefa4b154fc8552c5f3a578c8a68ef5771e1e78824619f524ae1f1ba4e661e59674547caa936a79d9cb7f632df3ed51f4227b32233
   languageName: node
   linkType: hard
 
