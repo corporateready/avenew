@@ -15,7 +15,8 @@ const Index = () => {
           <span className={styles.facilities__item__title}>
             Terenuri de joacă {""}
             <br className="" /> pentru toate {""}
-            <br className="hidden sm:block" />vârstele
+            <br className="hidden sm:block" />
+            vârstele
           </span>
         </div>
         <div className={styles.facilities__item_2}>
@@ -35,7 +36,8 @@ const Index = () => {
         <div className={styles.facilities__item_4}>
           <span className={styles.facilities__item__title}>
             Art&Lounge exterior pentru {""}
-            <br className="block sm:hidden" /> adulți {""} <br className="hidden sm:block" /> cu BBQ și WiFi
+            <br className="block sm:hidden" /> adulți {""}{" "}
+            <br className="hidden sm:block" /> cu BBQ și WiFi
           </span>
         </div>
       </div>
