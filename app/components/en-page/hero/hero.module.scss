@@ -115,7 +115,7 @@
     0 0 1rem rgba(255, 255, 255, .1);
 }
 @media screen and (min-width: 641px) {
-  @apply text-white text-[30rem] leading-[100%] w-[426rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[924rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  @apply text-white text-[30rem] leading-[100%] w-[422rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[924rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -164,7 +164,7 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-        @apply w-[13rem] h-[13rem] rounded-full absolute top-[17rem] left-[-80rem];
+        @apply w-[13rem] h-[13rem] rounded-full absolute top-[17rem] left-[-40rem] -translate-x-1/2;
       }
 }
 .button__detail__sparkle_2 {
@@ -184,7 +184,7 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-10rem] left-[10rem];
+         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-9rem] left-[60rem] -translate-x-1/2;
       }
 }
 .button__detail__sparkle_3 {
@@ -204,7 +204,7 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {  
-        @apply w-[18rem] h-[18rem] rounded-full absolute bottom-[7rem] right-[-31rem];
+        @apply w-[18rem] h-[18rem] rounded-full absolute bottom-[-4rem] right-[-18rem] -translate-x-1/2;
       }
 }
 .button__detail__sparkle_4 {
@@ -249,7 +249,7 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-       @apply w-[12rem] h-[12rem] rounded-full absolute top-[-90rem] right-[-21rem] -translate-x-1/2;
+       @apply w-[12rem] h-[12rem] rounded-full absolute top-[-90rem] right-[10rem] -translate-x-1/2;
       }
 }
 .location__title_text {
@@ -274,7 +274,7 @@
 
   @media screen and (min-width: 641px) {
    content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1270rem] left-1/2 -translate-x-1/2 z-[3];
+     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1170rem] left-1/2 -translate-x-1/2 z-[3];
 
     //  animation: heartbeat 3s ease-in-out infinite;
     //   @keyframes heartbeat {

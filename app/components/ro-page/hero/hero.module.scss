@@ -23,7 +23,7 @@
 
       &::after {
         content: '';
-        @apply bg-[url('/mobile/hero/dark-building-mobile.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[230rem] left-0 z-[2] w-full h-[726rem];
+        @apply bg-[url('/mobile/hero/dark-building-mobile.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[244rem] left-0 z-[2] w-full h-[726rem];
 
       }
 
@@ -46,7 +46,7 @@
 
 }
 .title {
-  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[116rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[130rem] left-1/2 -translate-x-1/2 z-[1];
   letter-spacing: 9rem;
 
   @media screen and (min-width: 641px) {
@@ -274,7 +274,7 @@
 
   @media screen and (min-width: 641px) {
    content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1270rem] left-1/2 -translate-x-1/2 z-[3];
+     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
 
     //  animation: heartbeat 3s ease-in-out infinite;
     //   @keyframes heartbeat {
@@ -294,13 +294,13 @@
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[556rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1252rem] left-1/2 -translate-x-1/2 z-[3];
+   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1232rem] left-1/2 -translate-x-1/2 z-[3];
   }
 }
 .location__description_text__bottom {
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[494rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1143rem] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1123rem] left-1/2 -translate-x-1/2 z-[3];
   }
 }

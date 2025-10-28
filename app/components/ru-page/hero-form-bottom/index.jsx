@@ -129,7 +129,8 @@ const Index = ({ handleToggleModalBottom }) => {
         </div>
         <p className={styles.hero__form_title}>
           Введите ваши контактные данные, {""}
-          <br />чтобы получить подробности
+          <br />
+          чтобы получить подробности
         </p>
         <form action="" className={styles.hero__form_content}>
           <input
@@ -155,6 +156,8 @@ const Index = ({ handleToggleModalBottom }) => {
               // }}
               defaultCountry="md"
               style={{
+                "--react-international-phone-input-placeholder-text-size": "17rem",
+                "--react-international-phone-input-text-size": "17rem",
                 "--react-international-phone-flag-width": "40rem",
                 "--react-international-phone-flag-height": "20rem",
                 "--react-international-phone-background-color": "none",

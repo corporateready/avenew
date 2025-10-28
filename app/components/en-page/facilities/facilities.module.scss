@@ -6,10 +6,10 @@
 
   &::before {
     content: '';
-    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.webp')] bg-cover bg-center bg-no-repeat absolute top-[-6rem] left-0 z-[1];
+    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.webp')] bg-cover bg-center bg-no-repeat absolute top-[-18rem] left-0 z-[1];
 
     @media screen and (min-width: 641px) {
-     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.webp')] bg-cover bg-center bg-no-repeat absolute top-[-350rem] left-0 z-[1];
+     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.webp')] bg-cover bg-center bg-no-repeat absolute top-[-360rem] left-0 z-[1];
     }
   }
 }

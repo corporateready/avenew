@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  @apply w-full h-full bg-[#060916];
+  @apply w-full h-full bg-[#060916] overflow-x-hidden;
 }
 
 .react-international-phone-country-selector-button__dropdown-arrow {
