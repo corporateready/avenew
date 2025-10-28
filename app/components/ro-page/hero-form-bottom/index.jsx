@@ -5,8 +5,15 @@ import FormButton from "./form-button";
 // import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { useMediaQuery } from "react-responsive";
+
 
 const Index = ({ handleToggleModalBottom }) => {
+
+  const isMobile = useMediaQuery({
+    query: "(max-width: 640px)",
+  });
+
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState('');
@@ -166,12 +173,16 @@ const Index = ({ handleToggleModalBottom }) => {
                 "--react-international-phone-dropdown-item-background-color":
                   "#060916",
                 "--react-international-phone-dropdown-top": "60rem",
+                "--react-international-phone-font-size": `${isMobile ? "14rem" : "17rem"}`,
               }}
               value={phone}
               onChange={handleChangePhone}
             />
           </div>
-          <FormButton handleToggleModalBottom={handleToggleModalBottom} formSubmitTrack={formSubmitTrack}/>
+          <FormButton
+            handleToggleModalBottom={handleToggleModalBottom}
+            formSubmitTrack={formSubmitTrack}
+          />
         </form>
         <span className={styles.button__sparkle_1}></span>
         <span className={styles.button__sparkle_2}></span>

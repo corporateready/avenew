@@ -5,8 +5,14 @@ import FormButton from "./form-button";
 // import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
+import { useMediaQuery } from "react-responsive";
 
 const Index = ({ handleToggleModalBottom }) => {
+
+  const isMobile = useMediaQuery({
+    query: "(max-width: 640px)",
+  });
+
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState('');
@@ -156,7 +162,8 @@ const Index = ({ handleToggleModalBottom }) => {
               // }}
               defaultCountry="md"
               style={{
-                "--react-international-phone-input-placeholder-text-size": "17rem",
+                "--react-international-phone-input-placeholder-text-size":
+                  "17rem",
                 "--react-international-phone-input-text-size": "17rem",
                 "--react-international-phone-flag-width": "40rem",
                 "--react-international-phone-flag-height": "20rem",
@@ -169,6 +176,9 @@ const Index = ({ handleToggleModalBottom }) => {
                 "--react-international-phone-dropdown-item-background-color":
                   "#060916",
                 "--react-international-phone-dropdown-top": "60rem",
+                "--react-international-phone-font-size": `${
+                  isMobile ? "14rem" : "17rem"
+                }`,
               }}
               value={phone}
               onChange={handleChangePhone}
