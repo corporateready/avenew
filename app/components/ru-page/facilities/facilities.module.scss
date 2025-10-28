@@ -6,10 +6,10 @@
 
   &::before {
     content: '';
-    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.webp')] bg-cover bg-center bg-no-repeat absolute top-[-16rem] left-0 z-[1];
+    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[-16rem] left-0 z-[1];
 
     @media screen and (min-width: 641px) {
-     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.webp')] bg-cover bg-center bg-no-repeat absolute top-[-330rem] left-0 z-[1];
+     @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[-330rem] left-0 z-[1];
     }
   }
 }
@@ -28,10 +28,10 @@
   }
 }
 .facilities__item {
-  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[448rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-1.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 &:nth-child(1) {
       @apply order-1
   } 
@@ -46,10 +46,10 @@
   }
 }
 .facilities__item_2 {
-  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-2.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[448rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-3.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
     &:nth-child(2) {
       @apply order-3
@@ -65,10 +65,10 @@
   }
 }
 .facilities__item_3 {
-  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-3.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[448rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-2.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
     &:nth-child(3) {
       @apply order-2;
@@ -83,10 +83,10 @@
   }
 }
 .facilities__item_4 {
-  @apply w-full h-[448rem] bg-[url('/mobile/facilities/facilities-item-4.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[448rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/desktop/facilities-item-4.png')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
     &:nth-child(4) {
       @apply order-4;

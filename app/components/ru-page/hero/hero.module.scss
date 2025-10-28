@@ -18,12 +18,23 @@
 
       &::before {
         content: '';
-        @apply w-full h-full bg-[url('/mobile/hero/hero-light-bg-mobile.webp')] bg-cover bg-center bg-no-repeat absolute top-[-14rem] left-0 z-[1];
+        @apply w-full h-full bg-[url('/mobile/hero/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-[-14rem] left-0 z-[1];
+
+        animation: fadeIn 2s ease-in-out forwards;
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
       }
 
       &::after {
         content: '';
-        @apply bg-[url('/mobile/hero/dark-building-mobile.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[240rem] left-0 z-[2] w-full h-[726rem];
+        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[240rem] left-0 z-[2] w-full h-[726rem];
 
       }
 
@@ -35,12 +46,23 @@
 
      &::before {
       content: '';
-      @apply w-full h-full bg-[url('/desktop/hero-light-bg-desktop.webp')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1];
+      @apply w-full h-full bg-[url('/desktop/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1];
+
+      animation: fadeIn 2s ease-in-out forwards;
+      
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
     }
 
     &::after {
         content: '';
-        @apply bg-[url('/desktop/dark-building-desktop.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[294rem] left-0 z-[2] w-full h-[1180rem];
+        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[294rem] left-0 z-[2] w-full h-[1180rem];
       }
    }
 
