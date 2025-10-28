@@ -83,7 +83,7 @@
   }
 }
 .button__detail {
-  @apply text-white text-[22rem] leading-[100%] w-[354rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[22rem] font-semibold leading-[100%] w-[354rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -115,7 +115,7 @@
     0 0 1rem rgba(255, 255, 255, .1);
 }
 @media screen and (min-width: 641px) {
-  @apply text-white text-[30rem] leading-[100%] w-[422rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[924rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  @apply text-white text-[27rem] leading-[100%] w-[422rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[924rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
