@@ -80,25 +80,7 @@ const Index = ({ handleToggleModal }) => {
       onClick={handleToggleModal}
     >
       {/* <Header /> */}
-      <button
-        className="inline-flex w-[16rem] h-[16rem] absolute top-[100rem] -translate-y-1/2 left-[396rem] -translate-x-1/2 z-[12] sm:hidden sm:w-0"
-        onClick={handleToggleModal}
-      >
-        <svg
-          className="w-full h-full absolute top-0 left-0"
-          viewBox="0 0 18 18"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M17 1L1 17M1 1L17 17"
-            stroke="#494B54"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
+  
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -107,6 +89,25 @@ const Index = ({ handleToggleModal }) => {
         className={styles.hero__form_inner}
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          className="inline-flex w-[16rem] h-[16rem] absolute top-[10rem] left-[404rem] -translate-x-1/2 z-[12] sm:hidden sm:w-0"
+          onClick={handleToggleModal}
+        >
+          <svg
+            className="w-full h-full absolute top-0 left-0"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 1L1 17M1 1L17 17"
+              stroke="#494B54"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
         <button
           className="sm:inline-flex sm:w-[12rem] sm:h-[12rem] sm:absolute sm:top-[17rem] sm:left-[624rem] sm:-translate-x-1/2 sm:z-[12] hidden sm:hover:cursor-pointer"
           onClick={handleToggleModal}
@@ -134,7 +135,8 @@ const Index = ({ handleToggleModal }) => {
         </div>
         <p className={styles.hero__form_title}>
           Введите ваши контактные данные, {""}
-          <br />чтобы получить подробности
+          <br />
+          чтобы получить подробности
         </p>
         <form action="" className={styles.hero__form_content}>
           <input
@@ -171,7 +173,9 @@ const Index = ({ handleToggleModal }) => {
                 "--react-international-phone-dropdown-item-background-color":
                   "#060916",
                 "--react-international-phone-dropdown-top": "60rem",
-                "--react-international-phone-font-size": `${isMobile ? "14rem" : "17rem"}`,
+                "--react-international-phone-font-size": `${
+                  isMobile ? "14rem" : "17rem"
+                }`,
               }}
               value={phone}
               onChange={handleChangePhone}
