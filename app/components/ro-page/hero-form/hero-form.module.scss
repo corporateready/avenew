@@ -12,7 +12,7 @@
 .hero__form_inner {
   @apply w-full h-[520rem] relative top-1/2 -translate-y-1/2 left-0 z-0 bg-[#16171E] overflow-hidden mt-[-22rem];
 
-  &::before {
+   &::before {
     content: '';
 
     background: radial-gradient(
@@ -20,7 +20,11 @@
       rgba(235, 139, 12, 5) 0%,
       rgba(218, 119, 11, 0.6) 35%,
        rgba(150, 40, 5, 0) 60%);
-    @apply w-[600rem] h-[700rem] rounded-full absolute top-1/2 -right-[85%] z-[1] opacity-20;
+    @apply w-[700rem] h-[800rem] rounded-full absolute top-0 -right-[190%] z-[1] -translate-x-1/2 opacity-17;
+
+    @media screen and (min-width: 641px) {
+     @apply w-[700rem] h-[800rem] rounded-full absolute top-[5%] -right-[120%] z-[1] -translate-x-1/2 opacity-17;
+    }
 
   }
   &::after {
@@ -32,7 +36,11 @@
       rgba(218, 119, 11, 0.4) 0%,
        rgba(150, 40, 5, 0) 50%);
 
-    @apply w-[530rem] h-[670rem] rounded-full absolute -top-[85%] -left-[50%] z-[1];
+    @apply w-[700rem] h-[800rem] rounded-full absolute top-[-80%] left-[10%] -translate-x-1/2 z-[1] opacity-40;
+
+    @media screen and (min-width: 641px) {
+      @apply w-[700rem] h-[800rem] rounded-full absolute top-[-70%] left-[15%] -translate-x-1/2 z-[1] opacity-40;
+    }
   }
 
   @media screen and (min-width: 641px) {
