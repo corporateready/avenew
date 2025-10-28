@@ -59,7 +59,7 @@
   @apply bg-none  border-white leading-0 font-medium uppercase text-[10rem] text-white w-[30rem] h-[26rem] border-[0.5rem] rounded-[13rem] flex justify-center items-center relative;
 
   @media screen and (min-width: 641px) {
-   @apply bg-none  border-white leading-0 font-medium uppercase text-[18rem] text-white w-[61rem] h-[42rem] border-[0.56rem] rounded-[22rem] flex justify-center items-center relative;
+   @apply bg-none  border-white leading-0 font-medium uppercase text-[18rem] text-white w-[61rem] h-[42rem] border-[0.56rem] rounded-[22rem] flex justify-center items-center relative cursor-pointer;
   }
 
 }
@@ -75,7 +75,7 @@
   @apply bg-transparent font-semibold uppercase text-[10rem] border-[0.5rem] border-white rounded-t-[13rem] border-b-0 text-white w-[30rem] h-[26rem] flex flex-col justify-center items-center relative z-10 px-[10rem];
 
   @media screen and (min-width: 641px) {
-    @apply bg-transparent font-semibold uppercase text-[17rem] border-[0.56rem] border-white rounded-t-[22rem] border-b-0 text-white w-[50rem] h-[42rem] flex flex-col justify-center items-center relative z-0 px-[10rem];
+    @apply bg-transparent font-semibold uppercase text-[17rem] border-[0.56rem] border-white rounded-t-[22rem] border-b-0 text-white w-[50rem] h-[42rem] flex flex-col justify-center items-center relative z-0 px-[10rem] cursor-pointer;
   }
   
 }

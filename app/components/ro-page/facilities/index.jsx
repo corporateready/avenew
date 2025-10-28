@@ -22,7 +22,7 @@ const Index = () => {
         <div className={styles.facilities__item_2}>
           <span className={styles.facilities__item__title}>
             Școală și grădiniță {""}
-            <br className="" /> în incintă {""}
+            <br className="" /> în incinta {""}
             <br className="hidden sm:block" /> complexului
           </span>
         </div>

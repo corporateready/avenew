@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "./letter.module.scss";
-import Image from "next/image";
-import Link from "next/link";
 import { motion, useInView } from "motion/react";
 
 const Index = ({ handleToggleModalBottom }) => {

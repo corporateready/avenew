@@ -10,10 +10,10 @@
 
   &::before {
     content: '';
-    @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.webp')] bg-cover bg-center bg-no-repeat absolute top-[-5rem] left-0 z-0;
+    @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-5rem] left-0 z-0;
 
     @media screen and (min-width: 641px) {
-      @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.webp')] bg-cover bg-center bg-no-repeat absolute top-[-140rem] left-0 z-0;
+      @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[-140rem] left-0 z-0;
     }
   }
 

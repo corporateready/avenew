@@ -37,7 +37,7 @@ const Hero = ({ handleToggle }) => {
           Locație fără {""}
           <br className="block sm:hidden" /> precedent {""}
           <br className="hidden sm:block" /> în inima {""}
-          <br className="block sm:hidden" /> secorului Botanica
+          <br className="block sm:hidden" /> sectorului Botanica
         </p>
         <p className={styles.location__description_text}>
           În curând, un nou ansamblu rezidențial
