@@ -29,12 +29,14 @@ const Index = ({ handleToggleModalBottom }) => {
         className={styles.letter__button_access}
         onClick={handleToggleModalBottom}
       >
-        Deschide accesul prioritar
+        <span>Deschide accesul prioritar</span>
+        <span className={styles.button__detail_sparkle_left}></span>
+        <span className={styles.button__detail_sparkle_right}></span>
       </button>
 
       <motion.a
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9, }}
+        whileTap={{ scale: 0.9 }}
         ref={ref}
         initial={{ opacity: 0, y: 100 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}

@@ -74,41 +74,84 @@
   box-shadow: 
     0 0 3rem rgba(255, 255, 255, .1),
     0 0 1rem rgba(255, 255, 255, .1);
-}
+  }
 
-@media screen and (min-width: 641px) {
- @apply text-white text-[30rem] leading-[100%] w-[454rem] h-[76rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1017rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 0%;
-  background: linear-gradient(
-    0deg,
-    #060915 40%,
-    #50525B 100%,
-    #FFF 100%,
-  );
+  @media screen and (min-width: 641px) {
+  @apply text-white text-[30rem] leading-[100%] w-[454rem] h-[76rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[1017rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 0%;
+    background: linear-gradient(
+      0deg,
+      #060915 40%,
+      #50525B 100%,
+      #FFF 100%,
+    );
 
-  &::before {
-  content: '';
-  position: absolute;
-  bottom: -2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 4rem;
-  background: linear-gradient(
-  90deg,
-    transparent 0%,
+    &::before {
+    content: '';
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 4rem;
+    background: linear-gradient(
+    90deg,
+      transparent 0%,
+    
+      #ffffff 50%,
+      #ffffff 50%,
+    
+      transparent 100%
+    );
+    box-shadow: 
+      0 0 3rem rgba(255, 255, 255, .1),
+      0 0 1rem rgba(255, 255, 255, .1);
+  }
+  }
+
+  .button__detail_sparkle_left {
+  @apply w-0 h-0;
+
+      @media screen and (min-width: 641px) {
+        @apply w-[13rem] h-[13rem] rounded-full absolute top-[-47rem] left-[60rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+  }
+
+  .button__detail_sparkle_right {
+  @apply w-0 h-0;
+
   
-    #ffffff 50%,
-    #ffffff 50%,
-  
-    transparent 100%
-  );
-  box-shadow: 
-    0 0 3rem rgba(255, 255, 255, .1),
-    0 0 1rem rgba(255, 255, 255, .1);
-}
-}
+
+      @media screen and (min-width: 641px) {
+        @apply w-[16rem] h-[16rem] rounded-full absolute bottom-[-37rem] right-[50rem] -translate-x-1/2;
+
+        background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 50%
+      );
+      background-blend-mode: screen;
+      }
+  }
+
 }
 .letter__button_up {
   @apply w-[50rem] h-[50rem] border-[1rem] border-white rounded-full flex items-center justify-center absolute z-[1] bottom-[-180rem] left-[90%] -translate-x-1/2;

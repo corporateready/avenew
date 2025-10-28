@@ -29,7 +29,9 @@ const Index = ({ handleToggleModalBottom }) => {
         className={styles.letter__button_access}
         onClick={handleToggleModalBottom}
       >
-        Get priority access
+        <span>Get priority access</span>
+        <span className={styles.button__detail_sparkle_left}></span>
+        <span className={styles.button__detail_sparkle_right}></span>
       </button>
 
       <motion.a

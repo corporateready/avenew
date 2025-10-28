@@ -11,7 +11,7 @@
            @apply  block absolute top-[904rem] left-0 z-[3] w-full h-[590rem];
           background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
           }
-        }
+  }
 
   @media screen and (max-width: 640px) {
      @apply w-full h-[2000rem] relative z-0;
@@ -55,7 +55,7 @@
   }
 }
 .description { 
-  @apply text-[22rem] text-center leading-[100%] w-full absolute z-[5] top-[544rem] left-[25rem] -translate-x-[25rem];
+  @apply text-[22rem] text-center leading-[120%] w-full absolute z-[5] top-[534rem] left-[25rem] -translate-x-[25rem];
   
   letter-spacing: 3%;
   background: linear-gradient(
@@ -69,21 +69,21 @@
   color: transparent;
 
   @media screen and (min-width: 641px) {
-    @apply text-[40rem] text-center font-normal leading-[100%] w-full absolute z-[5] top-[852rem] left-[32rem] -translate-x-[25rem];
-  letter-spacing: 3%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+    @apply text-[40rem] text-center font-normal w-full absolute z-[5] top-[852rem] left-[32rem] -translate-x-[25rem];
+  // letter-spacing: 3%;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(255, 255, 255, 0.7) 0%,
+  //   rgba(255, 255, 255, 1) 100%
+  // );
+  // -webkit-background-clip: text;
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  // color: transparent;
   }
 }
 .button__detail {
-  @apply text-white text-[22rem] leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[22rem] font-semibold leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[572rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
