@@ -29,8 +29,6 @@ const Index = ({ handleToggleModal }) => {
     setPhone(phone);
   };
 
-  console.log(name, email, phone);
-
   const formSubmitTrack = () => {
     handleToggleModal();
     // analytics?.identify("form_submitted", {
@@ -136,11 +134,6 @@ const Index = ({ handleToggleModal }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                // inputProps={{
-                //   id: "phone",
-                //   name: "phone",
-                // }}
-                // className="text-[20rem] placeholder:text-[27rem]"
                 isValid={(value, country) => {
                   if (value.match(/3730/)) {
                     setPhoneValue("+373");

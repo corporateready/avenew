@@ -12,6 +12,10 @@
 .form__wrapper {
   @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
 
+  @media screen and (max-height: 700px) {
+    @apply scale-75;
+  }
+
   @media screen and (min-width: 641px) {
      @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
   }
