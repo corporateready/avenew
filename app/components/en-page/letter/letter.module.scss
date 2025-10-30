@@ -1,11 +1,32 @@
 @reference "tailwindcss";
 
+// .letter {
+//   @apply w-full h-[676rem] relative mt-[-210rem] mb-[190rem] z-[-1];
+//   font-family: "Montserrat", sans-serif;
+
+//   @media screen and (min-width: 641px) {
+//     @apply w-full h-[1300rem] relative mt-[-210rem] mb-[-8rem] z-[-1];
+//   }
+
+//   &::before {
+//     content: '';
+//     @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-5rem] left-0 z-0;
+
+//     @media screen and (min-width: 641px) {
+//       @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[-140rem] left-0 z-0;
+//     }
+//   }
+
+//   @media screen and (min-width: 641px) {
+//     // @apply ;
+//   }
+// }
 .letter {
-  @apply w-full h-[676rem] relative mt-[-210rem] mb-[190rem] z-[-1];
+  @apply w-full h-[676rem] relative mt-[-210rem] mb-[120rem] z-[-1];
   font-family: "Montserrat", sans-serif;
 
   @media screen and (min-width: 641px) {
-    @apply w-full h-[1300rem] relative mt-[-210rem] mb-[-8rem] z-[-1];
+    @apply w-full h-[1300rem] relative mt-[-210rem] mb-[-47rem] z-[-1];
   }
 
   &::before {

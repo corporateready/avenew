@@ -9,10 +9,17 @@
   
   font-family: "Montserrat", sans-serif;
 } 
-.hero__form_inner {
-  @apply w-full h-[520rem] relative top-1/2 -translate-y-1/2 left-0 z-0 bg-[#16171E] overflow-hidden mt-[-22rem];
+.form__wrapper {
+  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
 
-  &::before {
+  @media screen and (min-width: 641px) {
+     @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  }
+}
+.hero__form_inner {
+   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem];
+
+   &::before {
     content: '';
 
     background: radial-gradient(
@@ -20,7 +27,7 @@
       rgba(235, 139, 12, 5) 0%,
       rgba(218, 119, 11, 0.6) 35%,
        rgba(150, 40, 5, 0) 60%);
-    @apply w-[700rem] h-[800rem] rounded-full absolute top-0 -right-[190%] z-[1] -translate-x-1/2 opacity-17;
+    @apply w-[700rem] h-[800rem] rounded-full absolute top-0 -right-[205%] z-[1] -translate-x-1/2 opacity-17;
 
     @media screen and (min-width: 641px) {
      @apply w-[700rem] h-[800rem] rounded-full absolute top-[5%] -right-[120%] z-[1] -translate-x-1/2 opacity-17;
@@ -36,7 +43,7 @@
       rgba(218, 119, 11, 0.4) 0%,
        rgba(150, 40, 5, 0) 50%);
 
-    @apply w-[700rem] h-[800rem] rounded-full absolute top-[-80%] left-[10%] -translate-x-1/2 z-[1] opacity-40;
+    @apply w-[700rem] h-[800rem] rounded-full absolute top-[-90%] left-[10%] -translate-x-1/2 z-[1] opacity-40;
 
     @media screen and (min-width: 641px) {
       @apply w-[700rem] h-[800rem] rounded-full absolute top-[-70%] left-[15%] -translate-x-1/2 z-[1] opacity-40;
@@ -44,12 +51,12 @@
   }
 
   @media screen and (min-width: 641px) {
-   @apply w-[650rem] h-[620rem] relative top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0 bg-[#16171E] overflow-hidden ml-[8rem];
+   @apply w-[650rem] h-[620rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
   }
   
 }
 .hero__form_progress__wrapper {
-  @apply w-[400rem] h-[10rem] bg-white rounded-full mt-[48rem] sm:mt-[57rem] mx-auto border-[1rem] border-[#494B54] relative;
+  @apply w-full h-[18rem] bg-white rounded-full mt-[45rem] sm:mt-[57rem] mx-auto border-[1rem] border-[#494B54] relative overflow-hidden;
 
      background: linear-gradient(
         0deg,
@@ -59,12 +66,12 @@
       );
 
   &__line {
-    @apply w-1/2 h-[8rem] bg-amber-700/50 rounded-full absolute top-1/2 -translate-y-1/2 left-0;
+    @apply w-full h-[18rem] bg-[url('/shared/progress-inner.png')] bg-cover bg-left rounded-full absolute top-1/2 -translate-y-1/2 left-[9%] -translate-x-1/2;
     box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
   }
 
   @media screen and (min-width: 641px) {
-   @apply w-[526rem] h-[10rem] bg-white rounded-full mt-[48rem] sm:mt-[57rem] mx-auto border-[1rem] border-[#494B54] relative;
+   @apply w-[526rem] h-[20rem] bg-white rounded-full mt-[54rem] mx-auto border-[1rem] border-[#494B54] relative;
 
      background: linear-gradient(
         0deg,
@@ -74,27 +81,27 @@
       );
 
   &__line {
-    @apply w-1/2 h-[8rem] bg-amber-700/50 rounded-full absolute top-1/2 -translate-y-1/2 left-0;
+    @apply w-full h-[16rem] absolute top-1/2 -translate-y-1/2 left-[8%] -translate-x-1/2;
     box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
   }
   }
 }
 .hero__form_title {
-  @apply text-[24rem] text-white font-semibold leading-[118%] text-center w-full z-[1] mt-[40rem] tracking-[-0.3rem];
+  @apply text-[22rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 
   @media screen and (min-width: 641px) {
-   @apply text-[33rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[50rem];
+   @apply text-[33rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[42rem];
   }
 }
 .hero__form_content {
-  @apply w-[400rem] h-full mt-[34rem] mx-auto flex flex-col gap-[22rem] relative z-[2]  ;
+  @apply w-full h-full mt-[32rem] mx-auto flex flex-col gap-[19rem] relative z-[2]  ;
 
   @media screen and (min-width: 641px) {
-   @apply w-[524rem] h-full mt-[52rem] mx-auto flex flex-col gap-[32rem] relative z-[2]  ;
+   @apply w-[524rem] h-full mt-[51rem] mx-auto flex flex-col gap-[28rem] relative z-[2]  ;
   }
 
   input {
-    @apply w-full h-[45rem] text-[14rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[14rem];
+    @apply w-full h-[43rem] text-[13rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[13rem];
     
     background: linear-gradient(
       0deg,
@@ -108,7 +115,7 @@
 
   @media screen and (min-width: 641px) {
     input {
-    @apply w-full h-[47rem] text-white text-[17rem] border-[1rem] border-[#494B54] rounded-[7rem] px-[26rem] py-[10rem] outline-none placeholder:tracking-[16%] placeholder:text-[#B5B5B5] placeholder:text-[17rem];
+    @apply w-full h-[50rem] text-white text-[17rem] border-[1rem] border-[#494B54] rounded-[7rem] px-[26rem] py-[10rem] outline-none placeholder:tracking-[16%] placeholder:text-[#B5B5B5] placeholder:text-[17rem];
     
     }
   }
@@ -122,11 +129,10 @@
     );
 
     * {
-       @apply z-[10];
+       @apply relative z-[20];
     }
 }
 .button__sparkle_1 {
-  // @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
 
   background: content-box radial-gradient(
         circle at center,
@@ -145,8 +151,6 @@
       }
 }
 .button__sparkle_2 {
-  // @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
-
   background: content-box radial-gradient(
         circle at center,
         #ffffff 0%,
@@ -164,8 +168,6 @@
       }
 }
 .button__sparkle_3 {
-  // @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
-
   background: content-box radial-gradient(
         circle at center,
         #ffffff 0%,
@@ -183,8 +185,6 @@
       }
 }
 .button__sparkle_4 {
-  // @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
-
   background: content-box radial-gradient(
         circle at center,
         #ffffff 0%,
@@ -198,6 +198,6 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-@apply w-[11rem] h-[11rem] rounded-full absolute bottom-[149rem] right-[188rem] -translate-x-1/2;
+@apply w-[11rem] h-[11rem] rounded-full absolute bottom-[150rem] right-[188rem] -translate-x-1/2;
       }
 }

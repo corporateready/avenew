@@ -81,17 +81,9 @@ const Index = ({ handleToggleModalBottom }) => {
       onClick={handleToggleModalBottom}
     >
       {/* <Header /> */}
-
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className={styles.hero__form_inner}
-        onClick={(e) => e.stopPropagation()}
-      >
+      <div className={styles.form__wrapper}>
         <button
-          className="inline-flex w-[16rem] h-[16rem] absolute top-[10rem] left-[404rem] -translate-x-1/2 z-[12] sm:hidden sm:w-0"
+          className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
           onClick={handleToggleModalBottom}
         >
           <svg
@@ -109,89 +101,82 @@ const Index = ({ handleToggleModalBottom }) => {
             />
           </svg>
         </button>
-        <button
-          className="sm:inline-flex sm:w-[12rem] sm:h-[12rem] sm:absolute sm:top-[17rem] sm:left-[624rem] sm:-translate-x-1/2 sm:z-[12] hidden sm:hover:cursor-pointer"
-          onClick={handleToggleModalBottom}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className={styles.hero__form_inner}
+          onClick={(e) => e.stopPropagation()}
         >
-          <svg
-            className="w-full h-full absolute top-0 left-0"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17 1L1 17M1 1L17 17"
-              stroke="#494B54"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <div className={styles.hero__form_progress__wrapper}>
-          <span className={styles.hero__form_progress__wrapper__line}></span>
-          <span className="text-[6rem] text-white font-semibold absolute top-1/2  left-[48%] -translate-x-1/2 -translate-y-1/2 z-10">
-            50%
-          </span>
-        </div>
-        <p className={styles.hero__form_title}>
-          Enter your contact details {""}
-          <br />
-          to receive more information
-        </p>
-        <form action="" className={styles.hero__form_content}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Name, Surname"
-            value={name}
-            onChange={handleChangeName}
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={email}
-            onChange={handleChangeEmail}
-          />
-          <div className={styles.phone__input}>
-            <PhoneInput
-              name="phone"
-              // inputProps={{
-              //   id: "phone",
-              //   name: "phone",
-              // }}
-              defaultCountry="md"
-              style={{
-                "--react-international-phone-flag-width": "40rem",
-                "--react-international-phone-flag-height": "20rem",
-                "--react-international-phone-background-color": "none",
-                "--react-international-phone-text-color": "#B5B5B5",
-                "--react-international-phone-border-color": "#494B54",
-                "--react-international-phone-border-radius": "7rem",
-                "--react-international-phone-width": "100%",
-                "--react-international-phone-height": "50rem",
-                "--react-international-phone-dropdown-item-background-color":
-                  "#060916",
-                "--react-international-phone-dropdown-top": "60rem",
-                "--react-international-phone-font-size": `${
-                  isMobile ? "14rem" : "17rem"
-                }`,
-              }}
-              value={phone}
-              onChange={handleChangePhone}
-            />
+    
+          <div className={styles.hero__form_progress__wrapper}>
+            <span className={styles.hero__form_progress__wrapper__line}></span>
+            <span className="text-[6rem] text-white font-semibold absolute top-1/2  left-[48%] -translate-x-1/2 -translate-y-1/2 z-10">
+              50%
+            </span>
           </div>
-          <FormButton
-            handleToggleModalBottom={handleToggleModalBottom}
-            formSubmitTrack={formSubmitTrack}
-          />
-        </form>
-        <span className={styles.button__sparkle_1}></span>
-        <span className={styles.button__sparkle_2}></span>
-        <span className={styles.button__sparkle_3}></span>
-        <span className={styles.button__sparkle_4}></span>
-      </motion.div>
+          <p className={styles.hero__form_title}>
+            Enter your contact details {""}
+            <br />
+            to receive more information
+          </p>
+          <form action="" className={styles.hero__form_content}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name, Surname"
+              value={name}
+              onChange={handleChangeName}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={email}
+              onChange={handleChangeEmail}
+            />
+            <div className={styles.phone__input}>
+              <PhoneInput
+                name="phone"
+                // inputProps={{
+                //   id: "phone",
+                //   name: "phone",
+                // }}
+                defaultCountry="md"
+                style={{
+                  "--react-international-phone-flag-width": "40rem",
+                  "--react-international-phone-flag-height": "20rem",
+                  "--react-international-phone-background-color": "none",
+                  "--react-international-phone-text-color": "#B5B5B5",
+                  "--react-international-phone-border-color": "#494B54",
+                  "--react-international-phone-border-radius": "7rem",
+                  "--react-international-phone-width": "100%",
+                  "--react-international-phone-height": `${
+                    isMobile ? "45rem" : "50rem"
+                  }`,
+                  "--react-international-phone-dropdown-item-background-color":
+                    "#060916",
+                  "--react-international-phone-dropdown-top": "60rem",
+                  "--react-international-phone-font-size": `${
+                    isMobile ? "14rem" : "17rem"
+                  }`,
+                }}
+                value={phone}
+                onChange={handleChangePhone}
+              />
+            </div>
+            <FormButton
+              handleToggleModalBottom={handleToggleModalBottom}
+              formSubmitTrack={formSubmitTrack}
+            />
+          </form>
+          <span className={styles.button__sparkle_1}></span>
+          <span className={styles.button__sparkle_2}></span>
+          <span className={styles.button__sparkle_3}></span>
+          <span className={styles.button__sparkle_4}></span>
+        </motion.div>
+      </div>
     </motion.div>
   );
 };

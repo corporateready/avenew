@@ -292,12 +292,12 @@
 }
 .location__heart {
   @media screen and (max-width: 640px) {
-    @apply bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[754rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
+    @apply bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[754rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
   }
 
   @media screen and (min-width: 641px) {
    content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.webp')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
+     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
 
    animation: heartbeat 5s ease-in-out infinite;
      -webkit-animation: heartbeat 5s ease-in-out infinite;
