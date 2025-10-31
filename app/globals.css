@@ -48,5 +48,5 @@ body {
 }
 .react-international-phone-country-selector-dropdown {
   /* @apply w-[100%] h-[100%] bg-transparent; */
-position: absolute !important;
+/* position: absolute !important; */
 }
