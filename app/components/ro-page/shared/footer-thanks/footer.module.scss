@@ -25,11 +25,18 @@
     @apply flex items-center gap-[30rem];
   }
 }
+.footer__inner_desktop {
+  @apply w-full h-full flex flex-col gap-[10rem] hidden;
+
+  @media screen and (min-width: 641px) {
+    @apply w-full h-full flex flex-col gap-[11rem];
+  }
+}
 .footer__inner_bottom {
   @apply w-full h-full flex flex-col gap-[10rem];
 
   @media screen and (min-width: 641px) {
-    @apply w-full h-full flex flex-col gap-[11rem];
+    @apply w-full h-full flex flex-col gap-[11rem] hidden;
   }
 }
 .footer__inner_bottom__text {

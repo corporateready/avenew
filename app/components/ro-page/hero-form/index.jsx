@@ -1,13 +1,17 @@
 import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
+import ProgressBar from "../shared/form-progress-bar";
 import FormButton from "./form-button";
 // import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
+import { useRouter } from "next/navigation";
 
 const Index = ({ handleToggleModal }) => {
+
+  const router = useRouter();
 
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
@@ -30,7 +34,8 @@ const Index = ({ handleToggleModal }) => {
   };
 
   const formSubmitTrack = () => {
-    handleToggleModal();
+    router.push("/thank-you-ro");
+    // handleToggleModal();
     // analytics?.identify("form_submitted", {
     //   form_name: "descarca_prezentare_pdf_ro",
     //   form_type: "click_form",
@@ -106,17 +111,12 @@ const Index = ({ handleToggleModal }) => {
           className={styles.hero__form_inner}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className={styles.hero__form_progress__wrapper}>
-            <span className={styles.hero__form_progress__wrapper__line}></span>
-            <span className="text-[8rem] text-white font-semibold absolute top-1/2 left-[47%] -translate-x-1/2 -translate-y-1/2 z-10">
-              50%
-            </span>
-          </div>
+          <ProgressBar />
           <p className={styles.hero__form_title}>
             Introdu datele tale de contact
             <br /> pentru a primi detalii
           </p>
-          <form action="" className={styles.hero__form_content}>
+          <form action="" className={styles.hero__form_content} onSubmit={e => e.preventDefault()}>
             <input
               type="text"
               name="name"

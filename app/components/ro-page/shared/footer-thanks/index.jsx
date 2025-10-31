@@ -13,7 +13,7 @@ const Index = () => {
     <div className={styles.footer}>
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
-          <div className={styles.footer__inner_bottom}>
+          <div className={styles.footer__inner_desktop}>
             <p className={styles.footer__inner_bottom__text}>
               © 2025 Toate drepturile sunt rezervate.
             </p>
@@ -30,6 +30,12 @@ const Index = () => {
               </Link>
             </div>
           </div>
+          <img
+            src="/shared/Avenew botanica-logo.png"
+            alt="logo"
+            className="w-[130rem] h-[26rem] sm:w-0] sm:h-0"
+          />
+
           <div className={styles.footer__inner_top__links}>
             <Link href="/">
               <svg
@@ -108,6 +114,23 @@ const Index = () => {
                   </clipPath>
                 </defs>
               </svg>
+            </Link>
+          </div>
+        </div>
+        <div className={styles.footer__inner_bottom}>
+          <p className={styles.footer__inner_bottom__text}>
+            © 2025 Toate drepturile sunt rezervate.
+          </p>
+          <div className={styles.footer__inner_bottom__links}>
+            <Link href="/">
+              <p className={styles.footer__inner_bottom__links__text}>
+                Terms & conditions
+              </p>
+            </Link>
+            <Link href="/">
+              <p className={styles.footer__inner_bottom__links__text}>
+                Privacy policy
+              </p>
             </Link>
           </div>
         </div>

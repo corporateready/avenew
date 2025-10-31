@@ -65,7 +65,7 @@
 
     &::after {
         content: '';
-        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[294rem] left-0 z-[2] w-full h-[1180rem];
+        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[294rem] object-cover left-0 z-[2] w-full h-[1200rem];
       }
    }
 
