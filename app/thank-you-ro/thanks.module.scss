@@ -1,0 +1,17 @@
+@reference "tailwindcss";
+
+.thanks {
+  @apply w-full h-full relative top-0 left-0 z-0 flex flex-col justify-between;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(
+    225deg,
+     #FCEAD2 0%, 
+     #7E93AA 24%,
+     #1C2532 58%,
+     #040608 100%);
+
+     &::after {
+      @apply content-[''] absolute bottom-0 left-0 w-full h-2960 bg-[url('/shared/dark-building-desktop.png')] bg-cover bg-center bg-no-repeat;
+      z-index: -1;
+     }
+}

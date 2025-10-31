@@ -12,25 +12,12 @@ const Index = () => {
     if (path) {
       setIsLanguageActive(path);
     }
-    if (path === "/") {
-      setIsLanguageActive("/ro");
+    if (path === "/thank-you-ru") {
+      setIsLanguageActive("ro");
     }
   }, []);
   const [isActiveButton, setIsActiveButton] = React.useState(false);
   const [isLanguageActive, setIsLanguageActive] = React.useState("");
-
-  // const handleOpenSelect = () => {
-  //   setIsOpenSelect(!isOpenSelect);
-  //   setDisabled(true);
-  // };
-
-  // const handleChangeValueSelect = (value) => {
-  //   setValueSelect(value);
-  //   setIsOpenSelect(false);
-  //   setDisabled(false);
-  // };
-
-  // console.log("valueSelect", valueSelect);
 
   return (
     <header className={styles.header} id="header">
@@ -54,13 +41,13 @@ const Index = () => {
               onClick={() => setIsActiveButton(!isActiveButton)}
             >
               <span
-                className={`flex justify-center items-center h-[44rem] w-[52rem] sm:w-[38rem] ${
+                className={`flex justify-center items-center h-[168] w-104 sm:w-152 ${
                   isActiveButton
-                    ? "border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] sm:w-[37.5rem] h-[44rem] sm:h-[42rem]"
+                    ? "border-b-[0.36rem] sm:border-b-[1rem] border-b-[#22333F] w-[20rem] sm:w-150 h-104 sm:h-168"
                     : "border-0"
                 }`}
               >
-                {isLanguageActive.slice(1, 3)}
+                {isLanguageActive.slice(11, 13)}
               </span>
               {isActiveButton ? (
                 <div
@@ -68,16 +55,16 @@ const Index = () => {
                   className={styles.header__drop_lang}
                 >
                   <Link
-                    href={"/ru"}
-                    className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[48rem] h-[44rem] sm:w-[38rem] sm:h-[40rem] absolute top-[24rem] sm:top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
+                    href={"/thank-you-ru"}
+                    className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-[#22333F] w-[20rem] h-[26rem] sm:w-[38rem] sm:h-[40rem] absolute top-[16rem] sm:top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
                   >
-                    {isLanguageActive === "/ro" && "ru"}
+                    {isLanguageActive === "/thank-you-ro" && "ru"}
                   </Link>
                   <Link
                     href={`/en`}
-                    className="flex justify-center items-center absolute top-[78rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[26rem] h-[26rem] sm:w-[38rem] sm:h-[44rem]"
+                    className="flex justify-center items-center absolute top-[42rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[26rem] h-[26rem] sm:w-[38rem] sm:h-[44rem]"
                   >
-                    {isLanguageActive === "/ro" && "en"}
+                    {isLanguageActive === "/thank-you-ro" && "en"}
                   </Link>
                 </div>
               ) : (
@@ -87,7 +74,7 @@ const Index = () => {
 
             <a href="tel:+37369786756" className={styles.phone__link}>
               <svg
-                className="w-[24rem] h-[24rem] sm:w-0 sm:h-0"
+                className="w-[17rem] h-[17rem] sm:w-0 sm:h-0"
                 viewBox="0 0 17 17"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

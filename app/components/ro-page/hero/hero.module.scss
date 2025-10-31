@@ -2,14 +2,16 @@
 
 .hero {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 
   .hero__dark__building_shadow {
         
-          @apply  hidden;
+         @apply  block absolute top-[584rem] left-0 z-[3] w-full h-[290rem];
+          background: linear-gradient(180deg, #080b1a 16%, rgba(7, 11, 27, 0) 44%);
 
           @media screen and (min-width: 641px) {
            @apply  block absolute top-[904rem] left-0 z-[3] w-full h-[590rem];
-          background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
+           background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
           }
         }
 
@@ -34,7 +36,7 @@
 
       &::after {
         content: '';
-        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[244rem] left-0 z-[2] w-full h-[726rem];
+        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[160rem] left-0 z-[2] w-full h-[726rem];
 
       }
 
@@ -69,7 +71,7 @@
 
 }
 .title {
-  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[130rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[40rem] left-1/2 -translate-x-1/2 z-[1];
   letter-spacing: 9rem;
 
   @media screen and (min-width: 641px) {
@@ -78,7 +80,7 @@
   }
 }
 .description { 
-  @apply text-[22rem] text-center leading-[100%] w-full absolute z-[5] top-[544rem] left-[25rem] -translate-x-[25rem];
+  @apply text-[21.5rem] text-center leading-[100%] w-full absolute z-[5] top-[512rem] left-[25rem] -translate-x-[25rem];
   
   letter-spacing: 3%;
   background: linear-gradient(
@@ -106,7 +108,7 @@
   }
 }
 .button__detail {
-  @apply text-white text-[22rem] leading-[100%] w-[380rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[21.5rem] leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[554rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -204,7 +206,7 @@
 
 }
 .button__detail__sparkle {
-  @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
+  @apply w-[8rem] h-[8rem] rounded-full absolute top-[58rem] left-[-13rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -223,7 +225,7 @@
       }
 }
 .button__detail__sparkle_2 {
-  @apply w-[14rem] h-[14rem] rounded-full absolute top-[3rem] left-[97rem];
+  @apply w-[12rem] h-[12rem] rounded-full absolute top-[-65rem] left-[67rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -239,11 +241,11 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-10rem] left-[10rem];
+         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-10rem] left-[20rem];
       }
 }
 .button__detail__sparkle_3 {
-  @apply w-[18rem] h-[18rem] rounded-full absolute bottom-[3rem] right-[65rem];
+  @apply w-[12rem] h-[12rem] rounded-full absolute bottom-[-30rem] right-[28rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -263,7 +265,7 @@
       }
 }
 .button__detail__sparkle_4 {
-  @apply w-[12rem] h-[12rem] rounded-full absolute bottom-[-6rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply w-[10rem] h-[10rem] rounded-full absolute bottom-[-6rem] left-1/2 -translate-x-1/2 z-[1];
 
   background: content-box radial-gradient(
         circle at center,
@@ -288,7 +290,7 @@
       }
 }
 .button__detail__sparkle_5 {
-  @apply w-[10rem] h-[10rem] rounded-full absolute top-[-42rem] right-[79rem] -translate-x-1/2;
+  @apply w-[10rem] h-[10rem] rounded-full absolute top-[-51rem] right-[76rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -304,7 +306,27 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-       @apply w-[12rem] h-[12rem] rounded-full absolute top-[-90rem] right-[-21rem] -translate-x-1/2;
+       @apply w-[14rem] h-[14rem] rounded-full absolute top-[-90rem] right-[-21rem] -translate-x-1/2;
+      }
+}
+.button__detail__sparkle_6 {
+  @apply w-[15rem] h-[15rem] rounded-full absolute bottom-[-53rem] left-[113rem] -translate-x-1/2;
+
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 35%
+      );
+      // box-shadow: 0 0rem 60rem rgba(0, 0, 0, 0.1);
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+       @apply w-0 h-0;
       }
 }
 .location__title_text {
@@ -327,14 +349,10 @@
     @apply bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[754rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
   }
 
-  @media screen and (min-width: 641px) {
-   content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
-
-   animation: heartbeat 5s ease-in-out infinite;
-     -webkit-animation: heartbeat 5s ease-in-out infinite;
-     -moz-animation: heartbeat 5s ease-in-out infinite;
-     -o-animation: heartbeat 5s ease-in-out infinite;
+  animation: heartbeat 3s ease-in-out infinite;
+     -webkit-animation: heartbeat 3s ease-in-out infinite;
+     -moz-animation: heartbeat 3s ease-in-out infinite;
+     -o-animation: heartbeat 3s ease-in-out infinite;
      animation-delay: 0s;
      -webkit-animation-delay: 0s;
      -moz-animation-delay: 0s;
@@ -344,13 +362,21 @@
             0%, 100% {
                 transform: scale(1);
             }
-            10%, 30% {
-                transform: scale(1.1);
+            25%, 30% {
+                transform: scale(1.05);
             }
-            20%, 40% {
+            75%, 50% {
+                transform: scale(1.05);
+            }
+            100%, 50% {
                 transform: scale(1);
             }
         }
+
+  @media screen and (min-width: 641px) {
+   content: '';
+     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
+
   }
 }
 .location__title_text__bottom {

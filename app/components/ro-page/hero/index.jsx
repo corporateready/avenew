@@ -22,7 +22,7 @@ const Hero = ({ handleToggle }) => {
         </motion.h1>
 
         <p className={styles.description}>Lansarea proiectului în noiembrie </p>
-        
+
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>Află detalii acum</span>
           <span className={styles.button__detail__line_bottom}></span>
@@ -31,8 +31,9 @@ const Hero = ({ handleToggle }) => {
           <span className={styles.button__detail__sparkle_3}></span>
           <span className={styles.button__detail__sparkle_4}></span>
           <span className={styles.button__detail__sparkle_5}></span>
+          <span className={styles.button__detail__sparkle_6}></span>
         </button>
-        
+
         <p className={styles.location__title_text}>
           Locație fără {""}
           <br className="block sm:hidden" /> precedent {""}
