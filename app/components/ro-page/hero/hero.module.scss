@@ -70,15 +70,6 @@
    }
 
 }
-.title {
-  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[40rem] left-1/2 -translate-x-1/2 z-[1];
-  letter-spacing: 9rem;
-
-  @media screen and (min-width: 641px) {
-    @apply w-max text-center text-white/63 text-[112rem] font-medium uppercase leading-none z-[1] ml-[21rem] absolute top-[215rem] left-1/2 -translate-x-1/2;
-    letter-spacing: 36.8rem;
-  }
-}
 .description { 
   @apply text-[21.5rem] text-center leading-[100%] w-full absolute z-[5] top-[512rem] left-[25rem] -translate-x-[25rem];
   
@@ -117,28 +108,6 @@
     #50525B 100%,
     #FFF 100%,
   );
-
-//   &::before {
-//   content: '';
-//   position: absolute;
-//   bottom: -2rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 60%;
-//   height: 4rem;
-//   background: linear-gradient(
-//   90deg,
-//     transparent 0%,
-  
-//     #ffffff 50%,
-//     #ffffff 50%,
-  
-//     transparent 100%
-//   );
-//   box-shadow: 
-//     0 0 3rem rgba(255, 255, 255, .1),
-//     0 0 1rem rgba(255, 255, 255, .1);
-// }
 
 &::before {
     @apply rounded-full;
@@ -344,41 +313,7 @@
     @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1584rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
   }
 }
-.location__heart {
-  @media screen and (max-width: 640px) {
-    @apply bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[754rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
-  }
 
-  animation: heartbeat 3s ease-in-out infinite;
-     -webkit-animation: heartbeat 3s ease-in-out infinite;
-     -moz-animation: heartbeat 3s ease-in-out infinite;
-     -o-animation: heartbeat 3s ease-in-out infinite;
-     animation-delay: 0s;
-     -webkit-animation-delay: 0s;
-     -moz-animation-delay: 0s;
-     -o-animation-delay: 0s;
-     
-      @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            25%, 30% {
-                transform: scale(1.05);
-            }
-            75%, 50% {
-                transform: scale(1.05);
-            }
-            100%, 50% {
-                transform: scale(1);
-            }
-        }
-
-  @media screen and (min-width: 641px) {
-   content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1190rem] left-1/2 -translate-x-1/2 z-[3];
-
-  }
-}
 .location__title_text__bottom {
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[556rem] left-1/2 -translate-x-1/2 z-[3];
 

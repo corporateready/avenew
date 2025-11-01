@@ -2,8 +2,8 @@
 import React from "react";
 import Hero from "../components/en-page/hero";
 import Letter from "../components/en-page/letter";
-import Footer from "../components/en-page/shared/footer";
-import Header from "../components/en-page/shared/header";
+import Footer from "../components/shared/footer";
+import Header from "../components/shared/header";
 import HeroForm from "../components/en-page/hero-form";
 import HeroFormBottom from "../components/en-page/hero-form-bottom";
 

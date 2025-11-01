@@ -2,14 +2,16 @@
 
 .hero {
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 
   .hero__dark__building_shadow {
         
-          @apply  hidden;
+         @apply  block absolute top-[584rem] left-0 z-[3] w-full h-[290rem];
+          background: linear-gradient(180deg, #080b1a 16%, rgba(7, 11, 27, 0) 44%);
 
           @media screen and (min-width: 641px) {
            @apply  block absolute top-[904rem] left-0 z-[3] w-full h-[590rem];
-          background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
+           background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
           }
         }
 
@@ -34,7 +36,7 @@
 
       &::after {
         content: '';
-        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[240rem] left-0 z-[2] w-full h-[726rem];
+        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[160rem] left-0 z-[2] w-full h-[726rem];
 
       }
 
@@ -58,23 +60,15 @@
           opacity: 1;
         }
       }
+      
     }
 
     &::after {
         content: '';
-        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[294rem] left-0 z-[2] w-full h-[1180rem];
+        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[294rem] object-cover left-0 z-[2] w-full h-[1200rem];
       }
    }
 
-}
-.title {
-  @apply text-white/63 text-[74rem] uppercase leading-[102%] absolute top-[126rem] left-1/2 -translate-x-1/2 z-[1];
-  letter-spacing: 9rem;
-
-  @media screen and (min-width: 641px) {
-    @apply w-max text-center text-white/63 text-[112rem] font-medium uppercase leading-none z-[1] ml-[21rem] absolute top-[215rem] left-1/2 -translate-x-1/2;
-    letter-spacing: 36.8rem;
-  }
 }
 .description { 
   @apply text-[22rem] text-center leading-[100%] w-full absolute z-[5] top-[544rem] left-[25rem] -translate-x-[25rem];
@@ -114,28 +108,6 @@
     #50525B 100%,
     #FFF 100%,
   );
-
-//   &::before {
-//   content: '';
-//   position: absolute;
-//   bottom: -2rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 60%;
-//   height: 4rem;
-//   background: linear-gradient(
-//   90deg,
-//     transparent 0%,
-  
-//     #ffffff 50%,
-//     #ffffff 50%,
-  
-//     transparent 100%
-//   );
-//   box-shadow: 
-//     0 0 3rem rgba(255, 255, 255, .1),
-//     0 0 1rem rgba(255, 255, 255, .1);
-// }
 
 &::before {
     @apply rounded-full;
@@ -321,37 +293,7 @@
     @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1584rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
   }
 }
-.location__heart {
-  @media screen and (max-width: 640px) {
-    @apply bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[754rem] left-1/2 -translate-x-1/2 z-[2] w-full h-[400rem];
-  }
 
-  @media screen and (min-width: 641px) {
-   content: '';
-     @apply w-[760rem] h-[715rem] bg-[url('/mobile/location/location-heart.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[1210rem] left-1/2 -translate-x-1/2 z-[3];
-
-     animation: heartbeat 5s ease-in-out infinite;
-     -webkit-animation: heartbeat 5s ease-in-out infinite;
-     -moz-animation: heartbeat 5s ease-in-out infinite;
-     -o-animation: heartbeat 5s ease-in-out infinite;
-     animation-delay: 0s;
-     -webkit-animation-delay: 0s;
-     -moz-animation-delay: 0s;
-     -o-animation-delay: 0s;
-     
-      @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            10%, 30% {
-                transform: scale(1.1);
-            }
-            20%, 40% {
-                transform: scale(1);
-            }
-        }
-  }
-}
 .location__title_text__bottom {
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[566rem] left-1/2 -translate-x-1/2 z-[3];
 

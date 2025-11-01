@@ -5,7 +5,13 @@ import { motion, useInView } from "motion/react";
 const Index = ({ handleToggleModalBottom }) => {
 
   return (
-    <div className={styles.letter}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className={styles.letter}
+    >
       <img
         src="/shared/Avenew botanica-logo.png"
         className={styles.letter__logo}
@@ -27,7 +33,7 @@ const Index = ({ handleToggleModalBottom }) => {
       </button>
 
       
-    </div>
+    </motion.div>
   );
 };
 

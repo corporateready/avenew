@@ -2,24 +2,17 @@
 import React from "react";
 import styles from "./hero.module.scss";
 import Facilities from "../facilities";
-import { motion } from "motion/react";
+import Title from "../../ui/title";
+import HeartAnimate from "../../ui/heart-animate";
 
 const Hero = ({ handleToggle }) => {
   return (
     <div>
       <div className={styles.hero}>
         <div className={styles.hero__dark__building_shadow}></div>
-        <div className={styles.location__heart}></div>
+        <HeartAnimate />
 
-        <motion.h1
-          className={styles.title}
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 100 }}
-          transition={{ duration: 0.5 }}
-        >
-          coming soon
-        </motion.h1>
+        <Title textTitle="coming soon" />
 
         <p className={styles.description}>Запуск проекта в ноябре</p>
 
