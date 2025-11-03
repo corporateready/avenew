@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .hero__form {
-  @apply w-full h-screen fixed top-0 left-0 z-10;
+  @apply w-full min-h-screen fixed top-0 left-0 z-10;
   
   backdrop-filter: blur(6rem);
   background-color: rgba(0, 0, 0, 0.6);
@@ -54,7 +54,7 @@
   }
 
   input {
-    @apply w-full h-[43rem] text-[13rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[13rem] relative z-[2];
+    @apply w-full h-[43rem] text-[16px] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[16px] relative z-[2];
     
     background: linear-gradient(
       0deg,

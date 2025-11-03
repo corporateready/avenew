@@ -159,7 +159,7 @@ const Index = ({ handleToggleModal }) => {
                     "#060916",
                   "--react-international-phone-dropdown-top": isMobile ? "45rem" : "55rem",
                   "--react-international-phone-font-size": `${
-                    isMobile ? "13rem" : "17rem"
+                    isMobile ? "16px" : "17rem"
                   }`,
                 }}
                 value={phone}
