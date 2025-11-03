@@ -29,7 +29,8 @@
   }
 }
 .hero__form_inner {
-   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem];
+   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] px-[14rem];
+   overflow: visible;
 
    &::before {
     content: '';
@@ -111,7 +112,7 @@
     );
 
     // * {
-       @apply relative z-3;
+       @apply relative z-10;
     // }
 }
 .button__sparkle_1 {
