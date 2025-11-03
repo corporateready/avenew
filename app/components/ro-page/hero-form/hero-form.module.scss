@@ -1,9 +1,7 @@
 @reference "tailwindcss";
 
 .hero__form {
-  @apply w-full h-full fixed top-0 left-0 z-10 overflow-y-auto px-[10rem];
-  
-  -webkit-overflow-scrolling: touch; 
+  @apply w-full h-screen fixed top-0 left-0 z-10;
   
   backdrop-filter: blur(6rem);
   background-color: rgba(0, 0, 0, 0.6);
@@ -12,7 +10,11 @@
   font-family: "Montserrat", sans-serif;
 } 
 .form__wrapper {
-  @apply w-full min-h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+
+  @media screen and (min-width: 641px) {
+     @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  }
 
   @media screen and (min-width: 641px) and (max-height: 800px) {
     @apply scale-[90%];
@@ -25,21 +27,9 @@
   @media screen and (min-width: 1900px) and (max-height: 1100px) {
     @apply scale-[90%];
   }
-
-   @media screen and (min-width: 1900px) and (max-height: 1100px) {
-    @apply scale-[90%];
-  }
-
-  @media screen and (min-width: 1900px) and (max-height: 1100px) {
-    @apply scale-[90%];
-  }
-
-  @media screen and (min-width: 641px) {
-     @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
-  }
 }
 .hero__form_inner {
-   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem];
+   @apply w-full h-auto absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem] pb-[100rem];
 
    &::before {
     content: '';
@@ -77,7 +67,37 @@
   }
   
 }
+.hero__form_progress__wrapper {
+  @apply w-full h-[18rem] bg-white rounded-full mt-[45rem] sm:mt-[57rem] mx-auto border-[1rem] border-[#494B54] relative overflow-hidden;
 
+     background: linear-gradient(
+        0deg,
+        #16171E 0%,
+        #353746 50%,
+        #16171E 100%
+      );
+
+  &__line {
+    @apply w-full h-[20rem] bg-[url('/shared/progress-inner.png')] bg-cover bg-left rounded-full absolute top-1/2 -translate-y-1/2 left-[9%] -translate-x-1/2;
+    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
+  }
+
+  @media screen and (min-width: 641px) {
+   @apply w-[526rem] h-[18rem] bg-white rounded-full mt-[54rem] mx-auto border-[1rem] border-[#494B54] relative;
+
+     background: linear-gradient(
+        0deg,
+        #16171E 0%,
+        #353746 50%,
+        #16171E 100%
+      );
+
+  &__line {
+    @apply w-full h-[20rem] absolute top-1/2 -translate-y-1/2 left-[8%] -translate-x-1/2;
+    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
+  }
+  }
+}
 .hero__form_title {
   @apply text-[22rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 

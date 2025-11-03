@@ -15,10 +15,7 @@
       @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[-140rem] left-0 z-0;
     }
   }
-
-  @media screen and (min-width: 641px) {
-    // @apply ;
-  }
+  
 }
 .letter__logo {
   @apply w-[82rem] h-[18rem] absolute top-[390rem] left-1/2 -translate-1/2 z-[1];

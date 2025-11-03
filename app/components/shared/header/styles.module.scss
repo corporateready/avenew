@@ -10,11 +10,11 @@
 }
 
 .container {
-  @media screen and (max-width: 640px) {
+  @media screen and (width < 640px) {
     @apply w-full h-full;
   }
   
-  @media screen and (min-width: 641px) {
+  @media screen and (width >= 641px) {
     @apply w-[1234rem] h-full mx-auto;
   }
 }

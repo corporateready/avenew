@@ -6,6 +6,7 @@ import Footer from "../components/shared/footer";
 import Header from "../components/shared/header";
 import HeroForm from "../components/en-page/hero-form";
 import HeroFormBottom from "../components/en-page/hero-form-bottom";
+import { motion } from "motion/react";
 
 export default function Home() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -28,7 +29,13 @@ export default function Home() {
   }, [isOpen, isOpenBottom]);
 
   return (
-    <div className="w-full h-full ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className="w-full h-full "
+    >
       <Header />
       <Hero handleToggle={handleToggleModal} />
       <Letter handleToggleModalBottom={handleToggleModalBottom} />
@@ -37,6 +44,6 @@ export default function Home() {
       {isOpenBottom && (
         <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} />
       )}
-    </div>
+    </motion.div>
   );
 }

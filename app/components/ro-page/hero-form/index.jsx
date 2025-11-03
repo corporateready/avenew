@@ -10,7 +10,6 @@ import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
 
 const Index = ({ handleToggleModal }) => {
-
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -116,7 +115,11 @@ const Index = ({ handleToggleModal }) => {
             Introdu datele tale de contact
             <br /> pentru a primi detalii
           </p>
-          <form action="" className={styles.hero__form_content} onSubmit={e => e.preventDefault()}>
+          <form
+            action=""
+            className={styles.hero__form_content}
+            onSubmit={(e) => e.preventDefault()}
+          >
             <input
               type="text"
               name="name"
@@ -134,13 +137,13 @@ const Index = ({ handleToggleModal }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                isValid={(value, country) => {
-                  if (value.match(/3730/)) {
-                    setPhoneValue("+373");
-                  } else {
-                    return true;
-                  }
-                }}
+                // isValid={(value, country) => {
+                //   if (value.match(/3730/)) {
+                //     setPhoneValue("+373");
+                //   } else {
+                //     return true;
+                //   }
+                // }}
                 defaultCountry="md"
                 style={{
                   "--react-international-phone-flag-width": "40rem",
@@ -155,7 +158,7 @@ const Index = ({ handleToggleModal }) => {
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
                     "#060916",
-                  "--react-international-phone-dropdown-top": "60rem",
+                  "--react-international-phone-dropdown-top": "45rem",
                   "--react-international-phone-font-size": `${
                     isMobile ? "13rem" : "17rem"
                   }`,
@@ -166,53 +169,10 @@ const Index = ({ handleToggleModal }) => {
             </div>
             <FormButton formSubmitTrack={formSubmitTrack} />
           </form>
-          <motion.span
-            className={styles.button__sparkle_1}
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-          ></motion.span>
-          <motion.span
-            className={styles.button__sparkle_2}
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   delay: 0.5,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-          ></motion.span>
-          <motion.span
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   delay: 1,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-            className={styles.button__sparkle_3}
-          ></motion.span>
-          <motion.span
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 0.5,
-            //   delay: 1.5,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-            className={styles.button__sparkle_4}
-          ></motion.span>
+          <motion.span className={styles.button__sparkle_1}></motion.span>
+          <motion.span className={styles.button__sparkle_2}></motion.span>
+          <motion.span className={styles.button__sparkle_3}></motion.span>
+          <motion.span className={styles.button__sparkle_4}></motion.span>
         </motion.div>
       </div>
     </motion.div>
