@@ -102,16 +102,17 @@
   }
 }
 .phone__input {
-    background: linear-gradient(
+  @apply relative z-3;
+  background: linear-gradient(
       0deg,
       #353746 0%,
       #16171E 64%,
       #16171E 100%  
     );
 
-    * {
+    // * {
        @apply relative z-3;
-    }
+    // }
 }
 .button__sparkle_1 {
 
