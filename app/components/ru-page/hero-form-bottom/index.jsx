@@ -5,8 +5,10 @@ import FormButton from "./form-button";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
+import { useRouter } from "next/navigation";
 
 const Index = ({ handleToggleModalBottom }) => {
+  const router = useRouter();
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
   });
@@ -30,7 +32,8 @@ const Index = ({ handleToggleModalBottom }) => {
   console.log(name, email, phone);
 
   const formSubmitTrack = () => {
-    handleToggleModalBottom();
+    router.push("/thank-you-ru");
+    // handleToggleModalBottom();
     // analytics?.identify("form_submitted", {
     //   form_name: "descarca_prezentare_pdf_ro",
     //   form_type: "click_form",

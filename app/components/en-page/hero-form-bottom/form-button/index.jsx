@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from "./button.module.scss";
 
-function Index({ handleToggleModalBottom, formSubmitTrack }) {
+function Index({ formSubmitTrack }) {
   return (
-    <button className={styles.button} onClick={handleToggleModalBottom}>
+    <button className={styles.button} onClick={formSubmitTrack}>
       Send
     </button>
   );
