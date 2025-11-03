@@ -158,7 +158,7 @@ const Index = ({ handleToggleModal }) => {
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
                     "#060916",
-                  "--react-international-phone-dropdown-top": "45rem",
+                  "--react-international-phone-dropdown-top": isMobile ? "45rem" : "55rem",
                   "--react-international-phone-font-size": `${
                     isMobile ? "13rem" : "17rem"
                   }`,

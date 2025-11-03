@@ -10,7 +10,7 @@
   font-family: "Montserrat", sans-serif;
 } 
 .form__wrapper {
-  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5] overflow-hidden;
 
   @media screen and (min-width: 641px) {
      @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
@@ -29,7 +29,7 @@
   }
 }
 .hero__form_inner {
-   @apply w-full h-auto absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem] pb-[100rem];
+   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden px-[14rem];
 
    &::before {
     content: '';
