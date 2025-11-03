@@ -21,14 +21,14 @@ const Index = () => {
     }
   }, []);
   
-  const [isActiveButton, setIsActiveButton] = React.useState(true);
+  const [isActiveButton, setIsActiveButton] = React.useState(false);
   const [isLanguageActive, setIsLanguageActive] = React.useState("");
 
   return (
     <motion.button
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.1 }}
       type="button"
       className={
         !isActiveButton

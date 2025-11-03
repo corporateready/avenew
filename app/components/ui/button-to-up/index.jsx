@@ -1,29 +1,10 @@
-import React from 'react'
-import { motion, useInView } from "motion/react";
+import React from 'react';
 import styles from "./styles.module.scss";
-import { useMediaQuery } from "react-responsive";
 
 const Index = () => {
-  const isMobile = useMediaQuery({
-    query: "(max-width: 640px)",
-  });
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, {
-    once: false,
-    margin: isMobile ? "-50px" : "90px",
-  });
+
   return (
-    <motion.a
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.9 }}
-      ref={ref}
-      initial={{ opacity: 0, y: 100 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
-      transition={{
-        duration: 0.3,
-        delay: 0.3,
-        ease: "easeInOut",
-      }}
+    <a
       href="#header"
       className={styles.letter__button_up}
     >
@@ -46,7 +27,7 @@ const Index = () => {
           strokeLinejoin="round"
         />
       </svg>
-    </motion.a>
+    </a>
   );
 }
 
