@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .hero__form {
-  @apply w-full min-h-screen fixed top-0 left-0 z-10;
+  @apply w-full min-h-dvh fixed top-0 left-0 z-10;
   
   backdrop-filter: blur(6rem);
   background-color: rgba(0, 0, 0, 0.6);
