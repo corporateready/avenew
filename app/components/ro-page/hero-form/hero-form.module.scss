@@ -10,7 +10,7 @@
   font-family: "Montserrat", sans-serif;
 } 
 .form__wrapper {
-  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5] overflow-hidden;
+  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
 
   @media screen and (min-width: 641px) {
      @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
@@ -67,37 +67,6 @@
   }
   
 }
-.hero__form_progress__wrapper {
-  @apply w-full h-[18rem] bg-white rounded-full mt-[45rem] sm:mt-[57rem] mx-auto border-[1rem] border-[#494B54] relative overflow-hidden;
-
-     background: linear-gradient(
-        0deg,
-        #16171E 0%,
-        #353746 50%,
-        #16171E 100%
-      );
-
-  &__line {
-    @apply w-full h-[20rem] bg-[url('/shared/progress-inner.png')] bg-cover bg-left rounded-full absolute top-1/2 -translate-y-1/2 left-[9%] -translate-x-1/2;
-    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
-  }
-
-  @media screen and (min-width: 641px) {
-   @apply w-[526rem] h-[18rem] bg-white rounded-full mt-[54rem] mx-auto border-[1rem] border-[#494B54] relative;
-
-     background: linear-gradient(
-        0deg,
-        #16171E 0%,
-        #353746 50%,
-        #16171E 100%
-      );
-
-  &__line {
-    @apply w-full h-[20rem] absolute top-1/2 -translate-y-1/2 left-[8%] -translate-x-1/2;
-    box-shadow: 0 0 20rem rgba(255, 255, 255, 0.1);
-  }
-  }
-}
 .hero__form_title {
   @apply text-[22rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 
@@ -106,14 +75,14 @@
   }
 }
 .hero__form_content {
-  @apply w-full h-full mt-[32rem] mx-auto flex flex-col gap-[19rem] relative z-[2]  ;
+  @apply w-full h-full mt-[32rem] mx-auto flex flex-col gap-[19rem];
 
   @media screen and (min-width: 641px) {
-   @apply w-[524rem] h-full mt-[51rem] mx-auto flex flex-col gap-[28rem] relative z-[2]  ;
+   @apply w-[524rem] h-full mt-[51rem] mx-auto flex flex-col gap-[28rem];
   }
 
   input {
-    @apply w-full h-[43rem] text-[13rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[13rem];
+    @apply w-full h-[43rem] text-[13rem] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[13rem] relative z-[2];
     
     background: linear-gradient(
       0deg,
@@ -140,9 +109,9 @@
       #16171E 100%  
     );
 
-    // * {
-    //    @apply relative z-[20];
-    // }
+    * {
+       @apply relative z-3;
+    }
 }
 .button__sparkle_1 {
 
