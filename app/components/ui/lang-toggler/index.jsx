@@ -21,13 +21,8 @@ const Index = () => {
     }
   }, []);
   
-  const [isActiveButton, setIsActiveButton] = React.useState(false);
+  const [isActiveButton, setIsActiveButton] = React.useState(true);
   const [isLanguageActive, setIsLanguageActive] = React.useState("");
-
-  // const handleOpenSelect = () => {
-  //   setIsOpenSelect(!isOpenSelect);
-  //   setDisabled(true);
-  // };
 
   return (
     <motion.button
@@ -43,9 +38,9 @@ const Index = () => {
       onClick={() => setIsActiveButton(!isActiveButton)}
     >
       <span
-        className={`flex justify-center items-center h-[44rem] w-[52rem] sm:w-[38rem] ${
+        className={`flex justify-center items-center h-[52rem] w-[52rem] sm:w-[30rem] ${
           isActiveButton
-            ? "border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] sm:w-[37.5rem] h-[44rem] sm:h-[42rem]"
+            ? "border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] sm:w-[30rem] h-[52rem] sm:h-[42rem]"
             : "border-0"
         }`}
       >
@@ -67,7 +62,7 @@ const Index = () => {
                 ? "/en"
                 : "/"
             }
-            className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[48rem] h-[44rem] sm:w-[38rem] sm:h-[40rem] absolute top-0 sm:top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
+            className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[40rem] absolute top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
           >
             {isLanguageActive === "/ro" && "ru"}
             {isLanguageActive === "/ru" && "ro"}
@@ -81,7 +76,7 @@ const Index = () => {
                 ? "/en"
                 : "/ru"
             }
-            className="flex justify-center items-center absolute top-[52rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[26rem] h-[26rem] sm:w-[38rem] sm:h-[44rem]"
+            className="flex justify-center items-center absolute top-[52rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[44rem]"
           >
             {isLanguageActive === "/ro" && "en"}
             {isLanguageActive === "/ru" && "en"}

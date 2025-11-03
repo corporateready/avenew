@@ -2,7 +2,6 @@ import React from 'react'
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
 import FormButton from "./form-button";
-// import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
@@ -109,7 +108,6 @@ const Index = ({ handleToggleModalBottom }) => {
           className={styles.hero__form_inner}
           onClick={(e) => e.stopPropagation()}
         >
-    
           <div className={styles.hero__form_progress__wrapper}>
             <span className={styles.hero__form_progress__wrapper__line}></span>
             <span className="text-[6rem] text-white font-semibold absolute top-1/2  left-[48%] -translate-x-1/2 -translate-y-1/2 z-10">
@@ -157,9 +155,9 @@ const Index = ({ handleToggleModalBottom }) => {
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
                     "#060916",
-                  "--react-international-phone-dropdown-top": "60rem",
+                  "--react-international-phone-dropdown-top": "55rem",
                   "--react-international-phone-font-size": `${
-                    isMobile ? "14rem" : "17rem"
+                    isMobile ? "13rem" : "17rem"
                   }`,
                 }}
                 value={phone}

@@ -1,12 +1,16 @@
 import React from 'react'
 import { motion, useInView } from "motion/react";
 import styles from "./styles.module.scss";
+import { useMediaQuery } from "react-responsive";
 
 const Index = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 640px)",
+  });
   const ref = React.useRef(null);
   const isInView = useInView(ref, {
     once: false,
-    // margin: "-190px",
+    margin: isMobile ? "-50px" : "90px",
   });
   return (
     <motion.a

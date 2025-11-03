@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
 import FormButton from "./form-button";
-// import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
@@ -78,7 +77,6 @@ const Index = ({ handleToggleModalBottom }) => {
       className={styles.hero__form}
       onClick={handleToggleModalBottom}
     >
-      {/* <Header /> */}
       <div className={styles.form__wrapper}>
         <button
           className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
@@ -109,7 +107,7 @@ const Index = ({ handleToggleModalBottom }) => {
         >
           <div className={styles.hero__form_progress__wrapper}>
             <span className={styles.hero__form_progress__wrapper__line}></span>
-            <span className="text-[6rem] text-white font-semibold absolute top-1/2  left-[48%] -translate-x-1/2 -translate-y-1/2 z-10">
+            <span className="text-[8rem] text-white font-semibold absolute top-1/2 left-[47%] -translate-x-1/2 -translate-y-1/2 z-10">
               50%
             </span>
           </div>
@@ -150,11 +148,11 @@ const Index = ({ handleToggleModalBottom }) => {
                   "--react-international-phone-border-radius": "7rem",
                   "--react-international-phone-width": "100%",
                   "--react-international-phone-height": `${
-                    isMobile ? "43rem" : "50rem"
+                    isMobile ? "45rem" : "50rem"
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
                     "#060916",
-                  "--react-international-phone-dropdown-top": "60rem",
+                  "--react-international-phone-dropdown-top": isMobile ? "45rem" : "55rem",
                   "--react-international-phone-font-size": `${
                     isMobile ? "13rem" : "17rem"
                   }`,
