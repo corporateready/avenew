@@ -2,7 +2,7 @@
 import React from "react";
 import Header from "../components/ro-page/shared/header-thanks";
 import Footer from "../components/ro-page/shared/footer-thanks";
-import styles from "./thanks.module.scss";
+import styles from "../thanks.module.scss";
 import { motion } from "motion/react";
 
 const page = () => {

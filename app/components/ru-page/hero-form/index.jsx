@@ -25,11 +25,12 @@ const Index = ({ handleToggleModal }) => {
     setEmail(e.target.value);
   };
 
-  const handleChangePhone = (phone) => {
-    setPhone(phone);
-  };
+ const handleChangePhone = (value) => {
+   let cleanedValue = value.replace(/^\+0+/, "+3730");
+   cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
-  console.log(name, email, phone);
+   setPhone(cleanedValue);
+ };
 
   const formSubmitTrack = () => {
     router.push("/thank-you-ru");
@@ -137,10 +138,6 @@ const Index = ({ handleToggleModal }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                // inputProps={{
-                //   id: "phone",
-                //   name: "phone",
-                // }}
                 defaultCountry="md"
                 style={{
                   "--react-international-phone-flag-width": "40rem",

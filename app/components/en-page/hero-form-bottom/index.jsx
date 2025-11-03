@@ -25,11 +25,12 @@ const Index = ({ handleToggleModalBottom }) => {
     setEmail(e.target.value);
   };
 
-  const handleChangePhone = (phone) => {
-    setPhone(phone);
-  }
+ const handleChangePhone = (value) => {
+   let cleanedValue = value.replace(/^\+0+/, "+3730");
+   cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
-  console.log(name, email, phone);
+   setPhone(cleanedValue);
+ };
 
     const formSubmitTrack = () => {
       router.push("/thank-you-en");
@@ -81,7 +82,6 @@ const Index = ({ handleToggleModalBottom }) => {
       className={styles.hero__form}
       onClick={handleToggleModalBottom}
     >
-      {/* <Header /> */}
       <div className={styles.form__wrapper}>
         <button
           className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"

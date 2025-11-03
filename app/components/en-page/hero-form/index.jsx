@@ -25,12 +25,13 @@ const Index = ({ handleToggleModal }) => {
     setEmail(e.target.value);
   };
 
-  const handleChangePhone = (phone) => {
-    setPhone(phone);
+  const handleChangePhone = (value) => {
+    let cleanedValue = value.replace(/^\+0+/, "+3730");
+    cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
+
+    setPhone(cleanedValue);
   };
-
-  console.log(name, email, phone);
-
+  
   const formSubmitTrack = () => {
     router.push("/thank-you-en");
     // handleToggleModal();

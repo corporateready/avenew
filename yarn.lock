@@ -1528,6 +1528,7 @@ __metadata:
     clsx: ^2.1.1
     eslint: ^9
     eslint-config-next: 15.5.5
+    google-libphonenumber: ^3.2.43
     lucide-react: ^0.545.0
     motion: ^12.23.24
     next: 15.5.5
@@ -2745,6 +2746,13 @@ __metadata:
     define-properties: ^1.2.1
     gopd: ^1.0.1
   checksum: 39ad667ad9f01476474633a1834a70842041f70a55571e8dcef5fb957980a92da5022db5430fca8aecc5d47704ae30618c0bc877a579c70710c904e9ef06108a
+  languageName: node
+  linkType: hard
+
+"google-libphonenumber@npm:^3.2.43":
+  version: 3.2.43
+  resolution: "google-libphonenumber@npm:3.2.43"
+  checksum: 906718994d63ff404e4643586059a7de449f035f8344af8ec9aae2b65641c382130f326e52420d3445df9dad570969b68163ed34f4fe32edf35a4f96ff745eb2
   languageName: node
   linkType: hard
 

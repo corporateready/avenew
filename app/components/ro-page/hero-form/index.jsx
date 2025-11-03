@@ -27,8 +27,11 @@ const Index = ({ handleToggleModal }) => {
     setEmail(e.target.value);
   };
 
-  const handleChangePhone = (phone) => {
-    setPhone(phone);
+  const handleChangePhone = (value) => {
+    let cleanedValue = value.replace(/^\+0+/, "+3730");
+    cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
+
+     setPhone(cleanedValue);
   };
 
   const formSubmitTrack = () => {
@@ -80,7 +83,6 @@ const Index = ({ handleToggleModal }) => {
       className={styles.hero__form}
       onClick={handleToggleModal}
     >
-      {/* <Header /> */}
       <div className={styles.form__wrapper}>
         <button
           className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
@@ -136,13 +138,6 @@ const Index = ({ handleToggleModal }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                // isValid={(value, country) => {
-                //   if (value.match(/3730/)) {
-                //     setPhoneValue("+373");
-                //   } else {
-                //     return true;
-                //   }
-                // }}
                 defaultCountry="md"
                 style={{
                   "--react-international-phone-flag-width": "40rem",
