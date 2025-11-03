@@ -29,39 +29,10 @@
   }
 }
 .hero__form_inner {
-   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[#16171E] px-[14rem];
+   @apply w-full h-[490rem] absolute top-0 left-0 z-0 bg-[url('/shared/form-bg-mobile.avif')] bg-cover bg-center px-[14rem];
    overflow: visible;
 
-   &::before {
-    content: '';
-
-    background: radial-gradient(
-      circle at center,
-      rgba(235, 139, 12, 5) 0%,
-      rgba(218, 119, 11, 0.6) 35%,
-       rgba(150, 40, 5, 0) 60%);
-    @apply w-[700rem] h-[800rem] rounded-full absolute top-0 -right-[205%] z-[1] -translate-x-1/2 opacity-17;
-
-    @media screen and (min-width: 641px) {
-     @apply w-[700rem] h-[800rem] rounded-full absolute top-[5%] -right-[120%] z-[1] -translate-x-1/2 opacity-17;
-    }
-
-  }
-  &::after {
-    content: '';
-    
-    background: radial-gradient(
-      circle at center,
-      rgba(235, 139, 12, 1) 0%,
-      rgba(218, 119, 11, 0.4) 0%,
-       rgba(150, 40, 5, 0) 50%);
-
-    @apply w-[700rem] h-[800rem] rounded-full absolute top-[-90%] left-[10%] -translate-x-1/2 z-[1] opacity-40;
-
-    @media screen and (min-width: 641px) {
-      @apply w-[700rem] h-[800rem] rounded-full absolute top-[-70%] left-[15%] -translate-x-1/2 z-[1] opacity-40;
-    }
-  }
+ 
 
   @media screen and (min-width: 641px) {
    @apply w-[650rem] h-[620rem] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
@@ -110,10 +81,6 @@
       #16171E 64%,
       #16171E 100%  
     );
-
-    // * {
-       @apply relative z-10;
-    // }
 }
 .button__sparkle_1 {
 

@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
 import ProgressBar from "../shared/form-progress-bar";
 import FormButton from "./form-button";
-// import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";

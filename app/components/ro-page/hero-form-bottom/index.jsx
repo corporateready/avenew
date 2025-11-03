@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
 import FormButton from "./form-button";
-// import Header from "../shared/header-form";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
@@ -81,7 +80,6 @@ const Index = ({ handleToggleModalBottom  }) => {
       className={styles.hero__form}
       onClick={handleToggleModalBottom}
     >
-      {/* <Header /> */}
       <div className={styles.form__wrapper}>
         <button
           className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
