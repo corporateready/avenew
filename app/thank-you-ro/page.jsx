@@ -19,10 +19,10 @@ const page = () => {
 
         <div className="w-full h-full flex flex-col ">
           <div className="px-60 sm:px-0 w-full sm:w-5256 h-full mx-auto">
-            <h2 className="w-full text-[40rem] sm:text-[78rem] text-white font-medium leading-[100%] mt-[23vh] sm:mt-[45.3vh] text-center sm:text-left">
+            <h2 className="w-full text-[40rem] sm:text-[78rem] text-white font-medium leading-[100%] mt-[20dvh] sm:mt-[44.3dvh] text-center sm:text-left">
               Mulțumim!
             </h2>
-            <p className="text-[26rem] sm:text-[30rem] text-[#86878B] font-normal leading-[120%] sm:leading-180 mt-[3vh] sm:mt-[4vh] text-center sm:text-left">
+            <p className="text-[26rem] sm:text-[30rem] text-[#86878B] font-normal leading-[120%] sm:leading-180 mt-[3dvh] sm:mt-[4vh] text-center sm:text-left">
               Solicitarea ta a fost {""}
               <br className="block sm:hidden" /> înregistrată cu succes. {""}
               <span className="block mt-[2.2vh] sm:mt-0">
