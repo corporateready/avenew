@@ -10,7 +10,7 @@
   font-family: "Montserrat", sans-serif;
 } 
 .form__wrapper {
-  @apply w-[400rem] h-[560rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
+  @apply w-[400rem] h-[560rem] fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
 
   @media screen and (min-width: 641px) {
      @apply w-[656rem] h-[660rem] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5];
@@ -85,7 +85,7 @@
   }
 
   input {
-    @apply w-full h-[43rem] text-base text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-base;
+    @apply w-full h-[43rem] text-[16px] text-white border-[1rem] border-[#494B54] rounded-[5rem] px-[19rem] py-[10rem] outline-none placeholder:text-[#B5B5B5] placeholder:text-[16px];
     
     background: linear-gradient(
       0deg,
