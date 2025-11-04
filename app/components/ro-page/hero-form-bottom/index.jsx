@@ -8,7 +8,22 @@ import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
 
 const Index = ({ handleToggleModalBottom  }) => {
+  
+    React.useEffect(() => {
+
+      const setVH = () => {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      };
+
+      setVH();
+      window.addEventListener("resize", setVH);
+
+      return () => window.removeEventListener("resize", setVH);
+    }, []);
+
   const router = useRouter();
+
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
   });
@@ -85,7 +100,7 @@ const Index = ({ handleToggleModalBottom  }) => {
     >
       <div className={styles.form__wrapper}>
         <button
-          className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
+          className="w-88 h-88 sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
           onClick={handleToggleModalBottom}
         >
           <svg
@@ -139,11 +154,6 @@ const Index = ({ handleToggleModalBottom  }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                // inputProps={{
-                //   id: "phone",
-                //   name: "phone",
-                // }}
-                // className="text-[20rem] placeholder:text-[27rem]"
                 isValid={(value, country) => {
                   if (value.match(/3730/)) {
                     setPhoneValue("+373");
@@ -167,7 +177,7 @@ const Index = ({ handleToggleModalBottom  }) => {
                     "#060916",
                   "--react-international-phone-dropdown-top": "60rem",
                   "--react-international-phone-font-size": `${
-                    isMobile ? "13rem" : "17rem"
+                    isMobile ? "16px" : "17rem"
                   }`,
                 }}
                 value={phone}
