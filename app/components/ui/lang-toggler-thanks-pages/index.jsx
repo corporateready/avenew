@@ -56,31 +56,31 @@ const Index = ({ borderColor }) => {
         >
           <Link
             href={
-              isLanguageActive === "/exfm/thank-you-ro"
-                ? "/exfm/thank-you-ru"
-                : isLanguageActive === "/exfm/thank-you-ru"
-                ? "/exfm/thank-you-en"
-                : "/exfm/thank-you-ro"
+              isLanguageActive === "/exfm-thank-you-ro"
+                ? "/exfm-thank-you-ru"
+                : isLanguageActive === "/exfm-thank-you-ru"
+                ? "/exfm-thank-you-en"
+                : "/exfm-thank-you-ro"
             }
             className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white sm:border-b-[#22333F] w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[40rem] absolute top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
           >
-            {isLanguageActive === "/exfm/thank-you-ro" && "ru"}
-            {isLanguageActive === "/exfm/thank-you-ru" && "ro"}
-            {isLanguageActive === "/exfm/thank-you-en" && "ro"}
+            {isLanguageActive === "/exfm-thank-you-ro" && "ru"}
+            {isLanguageActive === "/exfm-thank-you-ru" && "ro"}
+            {isLanguageActive === "/exfm-thank-you-en" && "ro"}
           </Link>
           <Link
             href={
-              isLanguageActive === "/exfm/thank-you-ro"
-                ? "/exfm/thank-you-en"
-                : isLanguageActive === "/exfm/thank-you-ru"
-                ? "/exfm/thank-you-en"
-                : "/exfm/thank-you-ru"
+              isLanguageActive === "/exfm-thank-you-ro"
+                ? "/exfm-thank-you-en"
+                : isLanguageActive === "/exfm-thank-you-ru"
+                ? "/exfm-thank-you-en"
+                : "/exfm-thank-you-ru"
             }
             className="flex justify-center items-center absolute top-[52rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[44rem]"
           >
-            {isLanguageActive === "/exfm/thank-you-ro" && "en"}
-            {isLanguageActive === "/exfm/thank-you-ru" && "en"}
-            {isLanguageActive === "/exfm/thank-you-en" && "ru"}
+            {isLanguageActive === "/exfm-thank-you-ro" && "en"}
+            {isLanguageActive === "/exfm-thank-you-ru" && "en"}
+            {isLanguageActive === "/exfm-thank-you-en" && "ru"}
           </Link>
         </motion.div>
       ) : (

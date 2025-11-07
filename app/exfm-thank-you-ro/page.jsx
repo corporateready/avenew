@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Header from "../../components/ro-exfm-page/shared/header-thanks";
-import Footer from "../../components/ro-exfm-page/shared/footer-thanks";
-import styles from "../thanks.module.scss";
+import Header from "../components/ro-exfm-page/shared/header-thanks";
+import Footer from "../components/ro-exfm-page/shared/footer-thanks";
+import styles from "../exfm/thanks.module.scss";
 import { motion } from "motion/react";
 
 const page = () => {

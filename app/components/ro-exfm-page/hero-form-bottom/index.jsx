@@ -39,7 +39,7 @@ const Index = ({ handleToggleModalBottom }) => {
   };
 
   const formSubmitTrack = () => {
-    router.push("/exfm/thank-you-ro");
+    router.push("/exfm-thank-you-ro");
     // handleToggleModal();
     // analytics?.identify("form_submitted", {
     //   form_name: "descarca_prezentare_pdf_ro",
