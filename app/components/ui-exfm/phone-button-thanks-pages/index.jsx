@@ -3,7 +3,7 @@ import styles from './styles.module.scss'
 
 const Index = () => {
   return (
-    <a href="tel:+37376039073" className={styles.phone__link}>
+    <a href="tel:+37369786756" className={styles.phone__link}>
       <svg
         className="w-[24rem] h-[24rem] sm:w-0 sm:h-0"
         viewBox="0 0 17 17"
@@ -15,7 +15,7 @@ const Index = () => {
           fill="white"
         />
       </svg>
-      +373 76 039 073
+      + 373 69 786 756
     </a>
   );
 }

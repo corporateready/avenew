@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <head>
@@ -41,8 +43,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
       </head>
-      <body className={`${montserrat.variable} antialiased`}>
-        {/* <style>@reference "./globals.scss"</style> */}
+      <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
         {children}
       </body>
     </html>

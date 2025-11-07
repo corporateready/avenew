@@ -7,8 +7,8 @@ html {
   @apply w-full h-full;
 
   scroll-behavior: smooth;
-
-  font-size: calc(100vw / (1440 * 1));
+  
+  font-size: calc(100vw / (1920 * 1));
 
   @media screen and (min-width: 641px) {
     font-size: calc(100vw / (1440 * 1));
@@ -17,10 +17,15 @@ html {
   @media screen and (max-width: 640px) {
     font-size: calc(100vw / (428 * 1));
   }
+
+  @media screen and (width >= 1440px) {
+   font-size: calc(100vw / (1440 * 1));
+  }
+  
 }
 
 body {
-  @apply w-full h-full bg-[#060916] overflow-x-hidden;
+  @apply max-w-full h-full relative mx-auto;
 }
 
 .react-international-phone-country-selector-button__dropdown-arrow {
@@ -38,25 +43,29 @@ body {
   }
 }
 .react-international-phone-input {
-  background: linear-gradient(
-      0deg,
-      #353746 0%,
-      #16171E 64%,
-      #16171E 100%  
-    ) !important;
+ background: #fff !important;
     padding: 0 15rem !important;
+
+    @media screen and (width >= 1920px) {
+      height: 50px !important;
+    }
 }
-.react-international-phone-country-selector-dropdown {
-  /* @apply w-[100%] h-[100%] bg-transparent; */
-/* position: absolute !important;
-top: 45rem !important;
-left: 0 !important;
-width: 100% !important;
-height: 100% !important;
-background: transparent !important;
-border: none !important;
-border-radius: 0 !important;
-box-shadow: none !important;
-padding: 0 !important;
-margin: 0 !important; */
+
+.react-international-phone-country-selector-button{
+  @media screen and (width >= 1920px) {
+    height: 50px !important;
+    width: 50px !important;
+  }
+}
+.react-international-phone-flag-emoji {
+  @media screen and (width >= 1920px) {
+    width: 50px !important;
+    height: 20px !important;
+  }
+}
+
+.react-international-phone-input-container .react-international-phone-input {
+  @media screen and (width >= 1920px) {
+    font-size: 18px !important;
+  }
 }
