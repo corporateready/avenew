@@ -4,6 +4,7 @@ import Link from "next/link";
 import {motion} from "motion/react";
 
 const Index = ({ borderColor }) => {
+  
   React.useEffect(() => {
     const path = window.location.pathname;
 

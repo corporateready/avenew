@@ -20,11 +20,13 @@ export default function Home() {
     
   }, [path]);
 
-  if (isExfm) {
-    document.body.style.backgroundColor = "#070b1b";
-  } else {
-    document.body.style.backgroundColor = "#060916";
-  }
+  React.useEffect(() => {
+    if (isExfm) {
+      document.body.style.backgroundColor = "#070b1b";
+    } else {
+      document.body.style.backgroundColor = "#060916";
+    }
+  }, [isExfm]);
 
   const [isOpen, setIsOpen] = React.useState(false);
   const [isOpenBottom, setIsOpenBottom] = React.useState(false);
