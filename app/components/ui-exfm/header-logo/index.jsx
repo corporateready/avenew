@@ -5,10 +5,7 @@ import styles from "./styles.module.scss";
 const Index = ({ widthMobile, heightMobile, widthLaptop, heightLaptop }) => {
   return (
     <div
-      className={`w-[${widthMobile}] 
-      h-[${heightMobile}] 
-      sm:w-[${widthLaptop}] 
-      sm:h-[${heightLaptop}] ${styles.logo}`}
+      className={styles.logo}
     >
       <motion.img
         initial={{ opacity: 0 }}

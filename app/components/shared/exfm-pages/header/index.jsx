@@ -10,12 +10,7 @@ const Index = () => {
     <header className={styles.header} id="header">
       <div className={styles.container}>
         <div className={styles.inner}>
-          <HeaderLogo
-            widthMobile="122rem"
-            heightMobile="25rem"
-            widthLaptop="212rem"
-            heightLaptop="44rem"
-          />
+          <HeaderLogo />
 
           <div className={styles.navigate}>
             <LangToggler />
