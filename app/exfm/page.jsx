@@ -15,7 +15,7 @@ export default function Home() {
 
   React.useEffect(() => {
     posthog.init("phc_yM2yvy4tmvUDIXwYjowV0wskT8g19nfhNFVuwaR6JCM", {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+      api_host: "https://eu.i.posthog.com",
       loaded: (posthog) => {
         if (process.env.NODE_ENV === "development") posthog.debug();
       },

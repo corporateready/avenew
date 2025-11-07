@@ -8,7 +8,6 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
-import posthog from "posthog-js";
 
 const Index = ({ handleToggleModal, posthog }) => {
   const router = useRouter();
@@ -45,11 +44,9 @@ const Index = ({ handleToggleModal, posthog }) => {
 
   const formSubmitTrack = () => {
     posthog?.capture("form_submitted",{
-      form_location: "hero",
       name: name,
       phone: phone,
       email: email,
-      domain_source: "avenew.md",
     });
 
     if (!isFormSubmitted) {

@@ -40,18 +40,16 @@ const Index = ({ handleToggleModalBottom, posthog }) => {
   };
 
   const formSubmitTrack = () => {
-    posthog?.capture("form_submitted", {
-      form_location: "hero",
-      name: name,
-      phone: phone,
-      email: email,
-      domain_source: "avenew.md",
-    });
+      posthog?.capture("form_submitted", {
+        name: name,
+        phone: phone,
+        email: email,
+      });
 
-    if (!isFormSubmitted) {
-      setIsFormSubmitted(true);
-      router.push("/exfm-thank-you-ro");
-    }
+      if (!isFormSubmitted) {
+        setIsFormSubmitted(true);
+        router.push("/exfm-thank-you-ro");
+      }
   };
 
   return (

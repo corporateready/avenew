@@ -11,7 +11,7 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: "Botanica Avenew",
-  description: "Botanica Avenew site",
+  description: "Botanica Avenew project",
 };
 
 export const viewport = {
