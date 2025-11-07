@@ -26,7 +26,7 @@ const Index = () => {
             </div>
           </div>
           <img
-            src="/shared/Avenew botanica-logo.png"
+            src="/shared/Avenew-botanica-gray.png"
             alt="logo"
             className="w-[130rem] h-[26rem] sm:w-0] sm:h-0"
           />
