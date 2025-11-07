@@ -2,15 +2,13 @@ import React from "react";
 import { motion } from "motion/react";
 import styles from "./styles.module.scss";
 
-const Index = ({ widthMobile, heightMobile,widthLaptop, heightLaptop, widthDesktop, heightDesktop }) => {
+const Index = ({ widthMobile, heightMobile, widthLaptop, heightLaptop }) => {
   return (
     <div
       className={`w-[${widthMobile}] 
       h-[${heightMobile}] 
-      sm:w-[${widthDesktop}] 
-      sm:h-[${heightLaptop}] 
-      xxl:w-[${widthDesktop}] 
-      xxl:h-[${heightDesktop}] ${styles.logo}`}
+      sm:w-[${widthLaptop}] 
+      sm:h-[${heightLaptop}] ${styles.logo}`}
     >
       <motion.img
         initial={{ opacity: 0 }}

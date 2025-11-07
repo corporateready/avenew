@@ -15,8 +15,6 @@ const Index = () => {
             heightMobile="25rem"
             widthLaptop="212rem"
             heightLaptop="44rem"
-            widthDesktop="225rem"
-            heightDesktop="45rem"
           />
 
           <div className={styles.navigate}>
