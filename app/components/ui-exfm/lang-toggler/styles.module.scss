@@ -57,7 +57,7 @@
   @apply flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[34rem] h-[40rem] sm:w-[30rem] sm:h-[40rem] absolute top-[2rem] left-1/2 -translate-x-1/2 z-[2];
 
   @media screen and (width >= 1920px) {
-    @apply flex justify-center items-center border-b-[1px] border-b-white w-[30px] h-[30rem] absolute top-[-5px] left-1/2 -translate-x-1/2 z-[2];
+    @apply flex justify-center items-center border-b-[1px] border-b-white w-[30px] h-[45px] absolute top-[-5px] left-1/2 -translate-x-1/2 z-[2];
   }
 
 }

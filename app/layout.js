@@ -1,5 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+// import { PHProvider } from "./providers/posthog-provider";
+// import PostHogPageView from "./components/posthog-pageview";
 
 
 const montserrat = Montserrat({
@@ -43,8 +45,9 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
       </head>
+
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
-        {children}
+          {children}
       </body>
     </html>
   );

@@ -8,7 +8,7 @@ import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
 
-const Index = ({ handleToggleModalBottom }) => {
+const Index = ({ handleToggleModalBottom, posthog }) => {
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -22,6 +22,7 @@ const Index = ({ handleToggleModalBottom }) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -39,43 +40,18 @@ const Index = ({ handleToggleModalBottom }) => {
   };
 
   const formSubmitTrack = () => {
-    router.push("/exfm-thank-you-ro");
-    // handleToggleModal();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
+    posthog?.capture("form_submitted", {
+      form_location: "hero",
+      name: name,
+      phone: phone,
+      email: email,
+      domain_source: "avenew.md",
+    });
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+    if (!isFormSubmitted) {
+      setIsFormSubmitted(true);
+      router.push("/exfm-thank-you-ro");
+    }
   };
 
   return (

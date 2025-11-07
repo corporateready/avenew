@@ -2,7 +2,7 @@
 
 .hero {
   font-family: "Montserrat", sans-serif;
-
+overflow-x: hidden;
   .hero__dark__building_shadow {
         
          @apply  block absolute top-[584rem] left-0 z-[3] w-full h-[290rem];
@@ -74,7 +74,7 @@
    }
 
   @media screen and (width >= 1920px) {
-    @apply w-[1920px] h-[3084px] relative z-0 overflow-x-hidden;
+    @apply w-[1920px] h-[3084px] relative z-0;
 
      &::before {
       content: '';

@@ -8,17 +8,17 @@ const Index = () => {
   React.useEffect(() => {
     const path = window.location.pathname;
 
-    if (path === "/exfm") {
+    if (path ) {
       setIsLanguageActive(path);
     }
     if (path === "/exfm") {
-      setIsLanguageActive("/ro");
+      setIsLanguageActive("/exfm-ro");
     }
-    if (path === "/exfm/ru") {
-      setIsLanguageActive("/ru");
+    if (path === "/exfm-ru") {
+      setIsLanguageActive("/exfm-ru");
     }
-    if (path === "/exfm/en") {
-      setIsLanguageActive("/en");
+    if (path === "/exfm-en") {
+      setIsLanguageActive("/exfm-en");
     }
   }, []);
   
@@ -45,7 +45,7 @@ const Index = () => {
             : "border-0"
         }`}
       >
-        {isLanguageActive.slice(1, 3)}
+        {isLanguageActive.slice(6, 8)}
       </span>
       {isActiveButton ? (
         <motion.div
@@ -57,31 +57,31 @@ const Index = () => {
         >
           <Link
             href={
-              isLanguageActive === "/ro"
-                ? "/ru"
-                : isLanguageActive === "/"
-                ? "/en"
-                : "/"
+              isLanguageActive === "/exfm-ro"
+                ? "/exfm-ru"
+                : isLanguageActive === "/exfm"
+                ? "/exfm-en"
+                : "/exfm"
             }
             className={styles.header__drop_lang__link}
           >
-            {isLanguageActive === "/ro" && "ru"}
-            {isLanguageActive === "/ru" && "ro"}
-            {isLanguageActive === "/en" && "ro"}
+            {isLanguageActive === "/exfm-ro" && "ru"}
+            {isLanguageActive === "/exfm-ru" && "ro"}
+            {isLanguageActive === "/exfm-en" && "ro"}
           </Link>
           <Link
             href={
-              isLanguageActive === "/ro"
-                ? "/en"
-                : isLanguageActive === "/ru"
-                ? "/en"
-                : "/ru"
+              isLanguageActive === "/exfm-ro"
+                ? "/exfm-en"
+                : isLanguageActive === "/exfm-ru"
+                ? "/exfm-en"
+                : "/exfm-ru"
             }
             className={styles.header__drop_lang__link_2}
           >
-            {isLanguageActive === "/ro" && "en"}
-            {isLanguageActive === "/ru" && "en"}
-            {isLanguageActive === "/en" && "ru"}
+            {isLanguageActive === "/exfm-ro" && "en"}
+            {isLanguageActive === "/exfm-ru" && "en"}
+            {isLanguageActive === "/exfm-en" && "ru"}
           </Link>
         </motion.div>
       ) : (

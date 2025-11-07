@@ -5,8 +5,8 @@ import ButtonToUp from "../../../ui-exfm/button-to-up";
 
 const text = {
   "/": `${new Date().getFullYear()} Toate drepturile sunt rezervate.`,
-  "/ru": `${new Date().getFullYear()} Все права защищены.`,
-  "/en": `${new Date().getFullYear()} All rights reserved.`,
+  "/exfm-ru": `${new Date().getFullYear()} Все права защищены.`,
+  "/exfm-en": `${new Date().getFullYear()} All rights reserved.`,
 }
 
 const Index = () => {
@@ -127,19 +127,23 @@ const Index = () => {
           <p className={styles.footer__inner_bottom__text}>
             {isPathName === "/exfm" &&
               "© 2025 Toate drepturile sunt rezervate."}
-            {isPathName === "/exfm/ru" && "© 2025 Все права защищены."}
-            {isPathName === "/exfm/en" && "© 2025 All rights reserved."}
+            {isPathName === "/exfm-ru" && "© 2025 Все права защищены."}
+            {isPathName === "/exfm-en" && "© 2025 All rights reserved."}
           </p>
 
           <div className={styles.footer__inner_bottom__links}>
             <Link href="/">
               <p className={styles.footer__inner_bottom__links__text}>
-                Terms & conditions
+                {isPathName === "/exfm" && "Terms & conditions"}
+                {isPathName === "/exfm-ru" && "Условия и положения"}
+                {isPathName === "/exfm-en" && "Terms & conditions"}
               </p>
             </Link>
             <Link href="/">
               <p className={styles.footer__inner_bottom__links__text}>
-                Privacy policy
+                {isPathName === "/exfm" && "Privacy policy"}
+                {isPathName === "/exfm-ru" && "Политика конфиденциальности"}
+                {isPathName === "/exfm-en" && "Privacy policy"}
               </p>
             </Link>
           </div>

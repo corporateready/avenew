@@ -9,6 +9,7 @@ import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
 
 const Index = ({ handleToggleModal }) => {
+
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -35,141 +36,125 @@ const Index = ({ handleToggleModal }) => {
   };
 
   const formSubmitTrack = () => {
-    router.push("/thank-you-ro");
-    // handleToggleModal();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
+    posthog?.capture("test_form_submitted");
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+    // if (typeof posthog !== "undefined") {
+    //    posthog.capture("form_submitted", {
+    //      fbc: isFBC,
+    //      fbp: isFBP,
+    //      email: emailValue,
+    //      phone: phoneValue,
+    //      name: nameValue,
+    //      pageview_event_id: isPageViewEventId,
+    //      external_id: isExternalId,
+    //      form_submitted_event_id: isFormSubmittedEventId,
+    //    })
+    // router.push("/thank-you-ro");
+   
+    // handleToggleModal();
+   
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className={styles.hero__form}
-      onClick={handleToggleModal}
-    >
-      <div className={styles.form__wrapper}>
-        <button
-          className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
-          onClick={handleToggleModal}
-        >
-          <svg
-            className="w-full h-full absolute top-0 left-0"
-            viewBox="0 0 18 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className={styles.hero__form}
+        onClick={handleToggleModal}
+      >
+        <div className={styles.form__wrapper}>
+          <button
+            className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
+            onClick={handleToggleModal}
           >
-            <path
-              d="M17 1L1 17M1 1L17 17"
-              stroke="#494B54"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className={styles.hero__form_inner}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <ProgressBar />
-          <p className={styles.hero__form_title}>
-            Introdu datele tale de contact
-            <br /> pentru a primi detalii
-          </p>
-          <form
-            action=""
-            className={styles.hero__form_content}
-            onSubmit={(e) => e.preventDefault()}
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Nume, Prenume"
-              value={name}
-              onChange={handleChangeName}
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              value={email}
-              onChange={handleChangeEmail}
-            />
-            <div className={styles.phone__input}>
-              <PhoneInput
-                name="phone"
-                defaultCountry="md"
-                style={{
-                  "--react-international-phone-flag-width": "40rem",
-                  "--react-international-phone-flag-height": "20rem",
-                  "--react-international-phone-background-color": "none",
-                  "--react-international-phone-text-color": "#B5B5B5",
-                  "--react-international-phone-border-color": "#494B54",
-                  "--react-international-phone-border-radius": "7rem",
-                  "--react-international-phone-width": "100%",
-                  "--react-international-phone-height": `${
-                    isMobile ? "43rem" : "50rem"
-                  }`,
-                  "--react-international-phone-dropdown-item-background-color":
-                    "#060916",
-                  "--react-international-phone-dropdown-top": isMobile ? "45rem" : "55rem",
-                  "--react-international-phone-font-size": `${
-                    isMobile ? "16px" : "17rem"
-                  }`,
-                }}
-                value={phone}
-                onChange={handleChangePhone}
+            <svg
+              className="w-full h-full absolute top-0 left-0"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 1L1 17M1 1L17 17"
+                stroke="#494B54"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
-            </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
-          </form>
-          <motion.span className={styles.button__sparkle_1}></motion.span>
-          <motion.span className={styles.button__sparkle_2}></motion.span>
-          <motion.span className={styles.button__sparkle_3}></motion.span>
-          <motion.span className={styles.button__sparkle_4}></motion.span>
-        </motion.div>
-      </div>
-    </motion.div>
+            </svg>
+          </button>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className={styles.hero__form_inner}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ProgressBar />
+            <p className={styles.hero__form_title}>
+              Introdu datele tale de contact
+              <br /> pentru a primi detalii
+            </p>
+            <form
+              action=""
+              className={styles.hero__form_content}
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Nume, Prenume"
+                value={name}
+                onChange={handleChangeName}
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={email}
+                onChange={handleChangeEmail}
+              />
+              <div className={styles.phone__input}>
+                <PhoneInput
+                  name="phone"
+                  defaultCountry="md"
+                  style={{
+                    "--react-international-phone-flag-width": "40rem",
+                    "--react-international-phone-flag-height": "20rem",
+                    "--react-international-phone-background-color": "none",
+                    "--react-international-phone-text-color": "#B5B5B5",
+                    "--react-international-phone-border-color": "#494B54",
+                    "--react-international-phone-border-radius": "7rem",
+                    "--react-international-phone-width": "100%",
+                    "--react-international-phone-height": `${
+                      isMobile ? "43rem" : "50rem"
+                    }`,
+                    "--react-international-phone-dropdown-item-background-color":
+                      "#060916",
+                    "--react-international-phone-dropdown-top": isMobile
+                      ? "45rem"
+                      : "55rem",
+                    "--react-international-phone-font-size": `${
+                      isMobile ? "16px" : "17rem"
+                    }`,
+                  }}
+                  value={phone}
+                  onChange={handleChangePhone}
+                />
+              </div>
+              <FormButton formSubmitTrack={formSubmitTrack} />
+            </form>
+            <motion.span className={styles.button__sparkle_1}></motion.span>
+            <motion.span className={styles.button__sparkle_2}></motion.span>
+            <motion.span className={styles.button__sparkle_3}></motion.span>
+            <motion.span className={styles.button__sparkle_4}></motion.span>
+          </motion.div>
+        </div>
+      </motion.div>
+    
   );
 };
 

@@ -45,5 +45,5 @@ export default function Home() {
         <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} />
       )}
     </motion.div>
-  );
+    );
 }

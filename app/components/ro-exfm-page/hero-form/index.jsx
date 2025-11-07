@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
@@ -7,8 +8,9 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import posthog from "posthog-js";
 
-const Index = ({ handleToggleModal }) => {
+const Index = ({ handleToggleModal, posthog }) => {
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -22,6 +24,7 @@ const Index = ({ handleToggleModal }) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -38,44 +41,21 @@ const Index = ({ handleToggleModal }) => {
      setPhone(cleanedValue);
   };
 
-  const formSubmitTrack = () => {
-    router.push("/exfm-thank-you-ro");
-    // handleToggleModal();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
+  
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+  const formSubmitTrack = () => {
+    posthog?.capture("form_submitted",{
+      form_location: "hero",
+      name: name,
+      phone: phone,
+      email: email,
+      domain_source: "avenew.md",
+    });
+
+    if (!isFormSubmitted) {
+      setIsFormSubmitted(true);
+      router.push("/exfm-thank-you-ro");
+    }
   };
 
   return (
