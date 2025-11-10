@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export function PHProvider({ children }) {
   useEffect(() => {
-    const key = "phc_yM2yvy4tmvUDIXwYjowV0wskT8g19nfhNFVuwaR6JCM";
+    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
 
     if (!key) {
       console.warn("PostHog key is missing");
@@ -15,7 +15,7 @@ export function PHProvider({ children }) {
 
     posthog.init(key, {
       api_host: "/ingest",
-      ui_host: "https://eu.i.posthog.com",
+      ui_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
       person_profiles: "identified_only",
       capture_pageview: false,
       capture_pageleave: true,
