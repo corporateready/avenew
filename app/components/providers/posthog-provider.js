@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 export function PHProvider({ children }) {
   useEffect(() => {
-    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+    const key = "phc_yM2yvy4tmvUDIXwYjowV0wskT8g19nfhNFVuwaR6JCM";
 
     if (!key) {
       console.warn("PostHog key is missing");
