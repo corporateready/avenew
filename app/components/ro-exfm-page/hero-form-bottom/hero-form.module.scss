@@ -41,7 +41,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply w-[650px] h-[666px] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
+    @apply w-[650px] h-[620px] absolute top-0 left-0 z-0 bg-[#16171E] overflow-hidden;
   }
 }
 .hero__form_title {
@@ -125,6 +125,10 @@
       @media screen and (min-width: 641px) {
         @apply w-[8rem] h-[8rem] rounded-full absolute bottom-[76rem] left-[153rem] -translate-x-1/2;
       }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[10px] h-[10px] rounded-full absolute bottom-[76px] left-[148px] -translate-x-1/2;
+      }
 }
 .button__sparkle_2 {
   background: content-box radial-gradient(
@@ -141,6 +145,10 @@
 
       @media screen and (min-width: 641px) {
         @apply w-[13rem] h-[13rem] rounded-full absolute bottom-[36rem] left-1/2 -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[13px] h-[13px] rounded-full absolute bottom-[30px] left-1/2 -translate-x-1/2;
       }
 }
 .button__sparkle_3 {
@@ -159,6 +167,10 @@
       @media screen and (min-width: 641px) {
         @apply w-[11rem] h-[11rem] rounded-full absolute bottom-[47rem] right-[178rem] -translate-x-1/2;
       }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[11px] h-[11px] rounded-full absolute bottom-[150px] right-[188px] -translate-x-1/2;
+      }
 }
 .button__sparkle_4 {
   background: content-box radial-gradient(
@@ -175,6 +187,10 @@
 
       @media screen and (min-width: 641px) {
 @apply w-[11rem] h-[11rem] rounded-full absolute bottom-[150rem] right-[188rem] -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[15px] h-[15px] rounded-full absolute bottom-[50px] right-[178px] -translate-x-1/2;
       }
 }
 .hero__form_close_button {

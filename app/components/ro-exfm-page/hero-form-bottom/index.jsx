@@ -7,8 +7,10 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
-const Index = ({ handleToggleModalBottom, posthog }) => {
+const Index = ({ handleToggleModalBottom }) => {
+  const posthog = usePostHog();
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -23,6 +25,7 @@ const Index = ({ handleToggleModalBottom, posthog }) => {
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+  const [isDisabled, setIsDisabled] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -38,6 +41,12 @@ const Index = ({ handleToggleModalBottom, posthog }) => {
 
     setPhone(cleanedValue);
   };
+
+   React.useEffect(() => {
+     if (name.length >= 3 && email.match("@") && phone.length >= 12) {
+       setIsDisabled(true);
+     }
+   }, [name, email, phone, isDisabled]);
 
   const formSubmitTrack = () => {
       posthog?.capture("form_submitted", {
@@ -142,7 +151,11 @@ const Index = ({ handleToggleModalBottom, posthog }) => {
                 onChange={handleChangePhone}
               />
             </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
+            <FormButton
+              textButton={"Trimite"}
+              formSubmitTrack={formSubmitTrack}
+              isDisabled={isDisabled}
+            />
           </form>
           <motion.span className={styles.button__sparkle_1}></motion.span>
           <motion.span className={styles.button__sparkle_2}></motion.span>

@@ -5,19 +5,18 @@ import Letter from "../components/en-exfm-page/letter";
 import Footer from "../components/shared/exfm-pages/footer";
 import HeroForm from "../components/en-exfm-page/hero-form";
 import HeroFormBottom from "../components/en-exfm-page/hero-form-bottom";
-import styles from "./styles.module.scss"
+import styles from "./styles.module.scss";
 import { motion } from "motion/react";
-import {usePathname} from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   const path = usePathname();
-  
+
   const [isExfm, setIsExfm] = React.useState(false);
   React.useEffect(() => {
     if (path === "/exfm-en") {
       setIsExfm(true);
     }
-    
   }, [path]);
 
   React.useEffect(() => {

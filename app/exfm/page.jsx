@@ -8,21 +8,8 @@ import HeroFormBottom from "../components/ro-exfm-page/hero-form-bottom";
 import styles from "./styles.module.scss"
 import { motion } from "motion/react";
 import {usePathname} from "next/navigation";
-import posthog from "posthog-js";
-
 
 export default function Home() {
-
-  React.useEffect(() => {
-    posthog.init("phc_yM2yvy4tmvUDIXwYjowV0wskT8g19nfhNFVuwaR6JCM", {
-      api_host: "https://eu.i.posthog.com",
-      loaded: (posthog) => {
-        if (process.env.NODE_ENV === "development") posthog.debug();
-      },
-      capture_pageview: false,
-    });
-  }, []);
-
   const path = usePathname();
   
   const [isExfm, setIsExfm] = React.useState(false);
@@ -71,9 +58,9 @@ export default function Home() {
       <Hero handleToggle={handleToggleModal} />
       <Letter handleToggleModalBottom={handleToggleModalBottom} />
       <Footer />
-      {isOpen && <HeroForm handleToggleModal={handleToggleModal} posthog={posthog}/>}
+      {isOpen && <HeroForm handleToggleModal={handleToggleModal} />}
       {isOpenBottom && (
-        <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} posthog={posthog}/>
+        <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} />
       )}
     </motion.div>
   );

@@ -7,8 +7,10 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
 const Index = ({ handleToggleModalBottom }) => {
+  const posthog = usePostHog();
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -22,6 +24,8 @@ const Index = ({ handleToggleModalBottom }) => {
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+  const [isDisabled, setIsDisabled] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -38,44 +42,23 @@ const Index = ({ handleToggleModalBottom }) => {
     setPhone(cleanedValue);
   };
 
-  const formSubmitTrack = () => {
-    router.push("/exfm-thank-you-ro");
-    // handleToggleModal();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
+  React.useEffect(() => {
+    if (name.length >= 3 && email.match("@") && phone.length >= 12) {
+      setIsDisabled(true);
+    }
+  }, [name, email, phone, isDisabled]);
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+  const formSubmitTrack = () => {
+    posthog?.capture("form_submitted", {
+      name: name,
+      phone: phone,
+      email: email,
+    });
+
+    if (!isFormSubmitted) {
+      setIsFormSubmitted(true);
+      router.push("/exfm-thank-you-en");
+    }
   };
 
   return (
@@ -117,8 +100,9 @@ const Index = ({ handleToggleModalBottom }) => {
         >
           <ProgressBar />
           <p className={styles.hero__form_title}>
-            Introdu datele tale de contact
-            <br /> pentru a primi detalii
+            Enter your contact detailst {""}
+            <br />
+            to receive more information
           </p>
           <form
             action=""
@@ -128,7 +112,7 @@ const Index = ({ handleToggleModalBottom }) => {
             <input
               type="text"
               name="name"
-              placeholder="Nume, Prenume"
+              placeholder="Name, Surname"
               value={name}
               onChange={handleChangeName}
             />
@@ -168,7 +152,11 @@ const Index = ({ handleToggleModalBottom }) => {
                 onChange={handleChangePhone}
               />
             </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
+            <FormButton
+              textButton={"Send"}
+              formSubmitTrack={formSubmitTrack}
+              isDisabled={isDisabled}
+            />
           </form>
           <motion.span className={styles.button__sparkle_1}></motion.span>
           <motion.span className={styles.button__sparkle_2}></motion.span>
@@ -181,4 +169,3 @@ const Index = ({ handleToggleModalBottom }) => {
 };
 
 export default Index;
- 

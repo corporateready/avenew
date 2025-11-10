@@ -8,8 +8,10 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
-const Index = ({ handleToggleModal, posthog }) => {
+const Index = ({ handleToggleModal }) => {
+  const posthog = usePostHog();
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -24,7 +26,8 @@ const Index = ({ handleToggleModal, posthog }) => {
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
   const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
-
+  const [isDisabled, setIsDisabled] = React.useState(false);
+  
   const handleChangeName = (e) => {
     setName(e.target.value);
   };
@@ -37,13 +40,17 @@ const Index = ({ handleToggleModal, posthog }) => {
     let cleanedValue = value.replace(/^\+0+/, "+3730");
     cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
-     setPhone(cleanedValue);
+    setPhone(cleanedValue);
   };
 
-  
+  React.useEffect(()=>{
+    if(name.length >= 3 && email.match("@") && phone.length >= 12) {
+      setIsDisabled(true);
+    }
+  }, [name,email, phone, isDisabled])
 
   const formSubmitTrack = () => {
-    posthog?.capture("form_submitted",{
+    posthog?.capture("form_submitted", {
       name: name,
       phone: phone,
       email: email,
@@ -130,7 +137,7 @@ const Index = ({ handleToggleModal, posthog }) => {
                   "--react-international-phone-border-radius": "50%",
                   "--react-international-phone-width": "100%",
                   "--react-international-phone-height": `${
-                    isMobile ? "43rem" : "50rem" 
+                    isMobile ? "43rem" : "50rem"
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
                     "#fff",
@@ -145,7 +152,11 @@ const Index = ({ handleToggleModal, posthog }) => {
                 onChange={handleChangePhone}
               />
             </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
+            <FormButton
+              textButton={"Trimite"}
+              formSubmitTrack={formSubmitTrack}
+              isDisabled={isDisabled}
+            />
           </form>
           <motion.span className={styles.button__sparkle_1}></motion.span>
           <motion.span className={styles.button__sparkle_2}></motion.span>
