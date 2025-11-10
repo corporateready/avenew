@@ -15,7 +15,7 @@ export function PHProvider({ children }) {
 
     posthog.init(key, {
       api_host: "/ingest",
-      ui_host: "https://eu.posthog.com",
+      ui_host: "https://eu.i.posthog.com",
       person_profiles: "identified_only",
       capture_pageview: false,
       capture_pageleave: true,

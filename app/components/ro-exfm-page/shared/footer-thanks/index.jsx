@@ -1,9 +1,16 @@
-import React from 'react'
-import styles from './footer.module.scss'
-import Link from 'next/link';
+import React from "react";
+import styles from "./footer.module.scss";
+import Link from "next/link";
 
 const Index = () => {
-
+  const [isPageLang, setIsPageLang] = React.useState("");
+  React.useEffect(() => {
+    const path = window.location.pathname;
+    if (path) {
+      setIsPageLang(path);
+    }
+  }, []);
+  
   return (
     <div className={styles.footer}>
       <div className={styles.footer__inner}>
@@ -116,17 +123,27 @@ const Index = () => {
         </div>
         <div className={styles.footer__inner_bottom}>
           <p className={styles.footer__inner_bottom__text}>
-            © 2025 Toate drepturile sunt rezervate.
+            {isPageLang === "/exfm-thank-you-ro" &&
+              `© ${new Date().getFullYear()} Toate drepturile sunt rezervate.`}
+            {isPageLang === "/exfm-thank-you-ru" &&
+              `© ${new Date().getFullYear()} Все права защищены.`}
+            {isPageLang === "/exfm-thank-you-en" &&
+              `© ${new Date().getFullYear()} All rights reserved.`}
           </p>
           <div className={styles.footer__inner_bottom__links}>
             <Link href="/">
               <p className={styles.footer__inner_bottom__links__text}>
-                Terms & conditions
+                {isPageLang === "/exfm-thank-you-ro" && "Terms & conditions"}
+                {isPageLang === "/exfm-thank-you-ru" && "Условия и положения"}
+                {isPageLang === "/exfm-thank-you-en" && "Terms & conditions"}
               </p>
             </Link>
             <Link href="/">
               <p className={styles.footer__inner_bottom__links__text}>
-                Privacy policy
+                {isPageLang === "/exfm-thank-you-ro" && "Privacy policy"}
+                {isPageLang === "/exfm-thank-you-ru" &&
+                  "Политика конфиденциальности"}
+                {isPageLang === "/exfm-thank-you-en" && "Privacy policy"}
               </p>
             </Link>
           </div>
@@ -134,6 +151,6 @@ const Index = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Index
+export default Index;
