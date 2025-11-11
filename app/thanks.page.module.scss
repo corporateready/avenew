@@ -8,30 +8,21 @@
    @apply w-full h-auto bg-[#0D101D] px-0 pb-[42rem] pt-[56rem];
   }
 
-  @media screen and (width >= 1920px) {
-    @apply w-full h-auto bg-[#0D101D] px-0 pb-[42px] pt-[40px];
-  }
 }
 .footer__logo {
   @apply w-[130rem] h-[26rem];
 
   @media screen and (min-width: 641px) {
-    @apply w-[212rem] h-[44rem];
+    @apply w-0 h-0;
   }
 
-  @media screen and (width >= 1920px) {
-    @apply w-[183px] h-[37px];
-  }
+  
 }
 .footer__inner {
   @apply w-full h-full flex flex-col gap-[30rem] relative;
 
   @media screen and (min-width: 641px) {
-    @apply  w-[1230rem] h-full flex flex-col gap-[80rem] mx-auto;
-  }
-
-  @media screen and (width >= 1920px) {
-    @apply w-[1200px] gap-[54px];
+    @apply  w-[1300rem] h-full flex flex-row-reverse gap-0 mx-auto;
   }
 }
 .footer__inner_top {

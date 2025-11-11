@@ -1,13 +1,8 @@
  import React from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
-import ButtonToUp from "../../../ui/button-to-up";
+import ButtonToUp from "../../../ui-exfm/button-to-up";
 
-const text = {
-  "/": `${new Date().getFullYear()} Toate drepturile sunt rezervate.`,
-  "/ru": `${new Date().getFullYear()} Все права защищены.`,
-  "/en": `${new Date().getFullYear()} All rights reserved.`,
-}
 
 const Index = () => {
   const [isPathName, setIsPathName] = React.useState("");
@@ -15,20 +10,11 @@ const Index = () => {
   React.useEffect(() => {
     const path = window.location.pathname;
 
-    console.log("path", path);
-
+  
     if (path) {
       setIsPathName(path);
     }
-    if (path === "/") {
-      setIsPathName("/");
-    }
-    if (path === "/ru") {
-      setIsPathName("/ru");
-    }
-    if (path === "/en") {
-      setIsPathName("/en");
-    }
+   
   }, []);
   
   

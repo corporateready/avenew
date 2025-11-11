@@ -1,13 +1,7 @@
 import React from "react";
-import styles from "../../../../components/shared/pages/footer/styles.module.scss";
+import styles from "../../../../thanks.page.module.scss";
 import Link from "next/link";
-import ButtonToUp from "../../../ui/button-to-up";
 
-const text = {
-  "/": `${new Date().getFullYear()} Toate drepturile sunt rezervate.`,
-  "/ru": `${new Date().getFullYear()} Все права защищены.`,
-  "/en": `${new Date().getFullYear()} All rights reserved.`,
-};
 
 const Index = () => {
   const [isPathName, setIsPathName] = React.useState("");
@@ -140,7 +134,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* <ButtonToUp /> */}
       </div>
     </div>
   );
