@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+.exfm_wrapper {
+  @apply w-full h-full relative z-0;
+
+  @media screen and (width >= 1920px) {
+    @apply w-[1920px] h-full mx-auto;
+ 
+     &::before {
+      content: '';
+      @apply w-[300px] h-[4460px] absolute top-0 left-[-50px] z-1;
+      background: linear-gradient(90deg, #070b1b 30%, rgba(7, 11, 27, 0) 70%);
+       filter: blur(10px);
+    }
+
+    &::after {
+      content: '';
+      @apply w-[300px] h-[4460px] absolute top-0 right-[-50px] z-1 rotate-180;
+      background: linear-gradient(90deg, #070b1b 30%, rgba(7, 11, 27, 0) 70%);
+      filter: blur(10px);
+    } }
+}

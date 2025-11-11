@@ -4,10 +4,11 @@ import Link from "next/link";
 import {motion} from "motion/react";
 
 const Index = () => {
+  
   React.useEffect(() => {
     const path = window.location.pathname;
 
-    if (path) {
+    if (path ) {
       setIsLanguageActive(path);
     }
     if (path === "/") {
@@ -38,9 +39,9 @@ const Index = () => {
       onClick={() => setIsActiveButton(!isActiveButton)}
     >
       <span
-        className={`flex justify-center items-center h-[52rem] w-[52rem] sm:w-[30rem] ${
+        className={`${styles.header__drop_lang__span_initial} ${
           isActiveButton
-            ? "border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] sm:w-[30rem] h-[52rem] sm:h-[42rem]"
+            ? styles.header__drop_lang__span
             : "border-0"
         }`}
       >
@@ -62,7 +63,7 @@ const Index = () => {
                 ? "/en"
                 : "/"
             }
-            className="flex justify-center items-center border-b-[0.36rem] sm:border-b-[1rem] border-b-white w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[40rem] absolute top-[4rem] left-1/2 -translate-x-1/2 z-[2]"
+            className={styles.header__drop_lang__link}
           >
             {isLanguageActive === "/ro" && "ru"}
             {isLanguageActive === "/ru" && "ro"}
@@ -76,7 +77,7 @@ const Index = () => {
                 ? "/en"
                 : "/ru"
             }
-            className="flex justify-center items-center absolute top-[52rem] sm:top-[44rem] left-1/2 -translate-x-1/2 z-[2] w-[52rem] h-[52rem] sm:w-[30rem] sm:h-[44rem]"
+            className={styles.header__drop_lang__link_2}
           >
             {isLanguageActive === "/ro" && "en"}
             {isLanguageActive === "/ru" && "en"}

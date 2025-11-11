@@ -45,7 +45,7 @@
   }
 }
 .hero__form_title {
-  @apply text-[22rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
+  @apply text-[20rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 
     @media screen and (min-width: 641px) {
     @apply text-[33rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[42rem];

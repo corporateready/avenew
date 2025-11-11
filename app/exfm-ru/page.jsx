@@ -14,7 +14,7 @@ export default function Home() {
   
   const [isExfm, setIsExfm] = React.useState(false);
   React.useEffect(() => {
-    if (path === "/exfm") {
+    if (path === "/exfm-ru") {
       setIsExfm(true);
     }
     

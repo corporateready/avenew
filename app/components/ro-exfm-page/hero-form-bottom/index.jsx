@@ -57,7 +57,7 @@ const Index = ({ handleToggleModalBottom }) => {
 
       if (!isFormSubmitted) {
         setIsFormSubmitted(true);
-        router.push("/exfm-thank-you-ro");
+        router.push("/thank-you-ro");
       }
   };
 

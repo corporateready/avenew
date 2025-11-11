@@ -2,19 +2,30 @@
 import React from "react";
 import styles from "./hero.module.scss";
 import Facilities from "../facilities";
-import Title from "../../ui/title";
-import HeartAnimate from "../../ui/heart-animate";
+import Title from "../../ui-exfm/title";
+import HeartAnimate from "../../ui-exfm/heart-animate";
+import Header from "../../shared/pages/header";
 
 const Hero = ({ handleToggle }) => {
   return (
-    <div>
+    <div className={styles.hero_wrapper}>
       <div className={styles.hero}>
+        <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
 
         <Title textTitle="coming soon" />
 
-        <p className={styles.description}>Project launch in November</p>
+        <p className={styles.hero__text}>
+Special Offer for Investors
+        </p>
+
+        <p className={styles.description}>
+          Invest in a new real estate project {""}
+          <br className="block sm:hidden" />
+          before sales{""} <br className="hidden sm:block" /> launch {""}
+          <span>in December 2025</span>
+        </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>
@@ -26,30 +37,32 @@ const Hero = ({ handleToggle }) => {
           <span className={styles.button__detail__sparkle_3}></span>
           <span className={styles.button__detail__sparkle_4}></span>
           <span className={styles.button__detail__sparkle_5}></span>
+          <span className={styles.button__detail__sparkle_6}></span>
         </button>
 
         <p className={styles.location__title_text}>
           Prime location {""}
           <br className="block sm:hidden" />
-          in the heart of {""}
-          <br />
+          in the heart {""} <br className="hidden sm:block" /> of {""}
+          <br className="block sm:hidden" />
           Botanica district
         </p>
         <p className={styles.location__description_text}>
           Soon, a new residential complex that will {""}
-          <br className="block" /> elevate the quality of urban living
+          <br className="block sm:hidden" />
+          elevate {""} <br className="hidden sm:block" /> the quality of urban living
         </p>
 
         <p className={styles.location__title_text__bottom}>
           A new standard {""}
-          <br className="block" /> of urban living
+          <br />
+          of urban living
         </p>
 
         <p className={styles.location__description_text__bottom}>
           Located between two iconic parks and two {""}
-          <br className="block" /> garden squares — where tranquility becomes{" "}
-          {""}
-          <br className="block" /> part of your everyday life
+          <br />garden squares— where tranquility becomes {""}
+          <br />part of your everyday life
         </p>
       </div>
       <Facilities />

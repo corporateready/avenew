@@ -18,7 +18,7 @@ const Index = () => {
           />
 
           <div className={styles.navigate}>
-            <LangToggler />
+            {/* <LangToggler /> */}
 
             <PhoneButton />
           </div>

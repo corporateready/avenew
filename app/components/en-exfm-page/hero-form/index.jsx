@@ -57,7 +57,7 @@ const Index = ({ handleToggleModal }) => {
 
     if (!isFormSubmitted) {
       setIsFormSubmitted(true);
-      router.push("/exfm-thank-you-en");
+      router.push("/thank-you-en");
     }
   };
 

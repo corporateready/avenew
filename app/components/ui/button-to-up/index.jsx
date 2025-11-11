@@ -9,7 +9,7 @@ const Index = () => {
       className={styles.letter__button_up}
     >
       <svg
-        className="w-[12rem] h-[24rem] sm:w-[26rem] sm:h-[52rem]"
+        className={styles.letter__button_up_icon}
         viewBox="0 0 27 53"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

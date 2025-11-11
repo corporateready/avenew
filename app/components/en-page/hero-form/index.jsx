@@ -1,21 +1,31 @@
 import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
+import ProgressBar from "../shared/form-progress-bar";
 import FormButton from "./form-button";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
-const Index = ({ handleToggleModal }) => {
+const Index = ({ handleToggleModal }) => { 
+  const posthog = usePostHog();
   const router = useRouter();
+
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
+  });
+
+  const isLarge = useMediaQuery({
+    query: "(max-width: 1920px)",
   });
 
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+  const [isDisabled, setIsDisabled] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -29,47 +39,26 @@ const Index = ({ handleToggleModal }) => {
     let cleanedValue = value.replace(/^\+0+/, "+3730");
     cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
-    setPhone(cleanedValue);
+     setPhone(cleanedValue);
   };
-  
-  const formSubmitTrack = () => {
-    router.push("/thank-you-en");
-    // handleToggleModal();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+    React.useEffect(() => {
+      if (name.length >= 3 && email.match("@") && phone.length >= 12) {
+        setIsDisabled(true);
+      }
+    }, [name, email, phone, isDisabled]);
+
+  const formSubmitTrack = () => {
+   posthog?.capture("form_submitted", {
+      name: name,
+      phone: phone,
+      email: email,
+    });
+
+    if (!isFormSubmitted) {
+      setIsFormSubmitted(true);
+      router.push("/thank-you-en");
+    }
   };
 
   return (
@@ -83,7 +72,7 @@ const Index = ({ handleToggleModal }) => {
     >
       <div className={styles.form__wrapper}>
         <button
-          className="w-[22rem] h-[22rem] sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
+          className={styles.hero__form_close_button}
           onClick={handleToggleModal}
         >
           <svg
@@ -94,7 +83,7 @@ const Index = ({ handleToggleModal }) => {
           >
             <path
               d="M17 1L1 17M1 1L17 17"
-              stroke="#494B54"
+              stroke={`${isLarge ? "#fff" : "#494B54"}`}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -109,17 +98,17 @@ const Index = ({ handleToggleModal }) => {
           className={styles.hero__form_inner}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className={styles.hero__form_progress__wrapper}>
-            <span className={styles.hero__form_progress__wrapper__line}></span>
-            <span className="text-[6rem] text-white font-semibold absolute top-1/2  left-[48%] -translate-x-1/2 -translate-y-1/2 z-10">
-              50%
-            </span>
-          </div>
+          <ProgressBar />
           <p className={styles.hero__form_title}>
-            Enter your contact details {""}
-            <br className="block" /> to receive more information
+            Enter your contact detailst {""}
+            <br />
+            to receive more information
           </p>
-          <form action="" className={styles.hero__form_content}>
+          <form
+            action=""
+            className={styles.hero__form_content}
+            onSubmit={(e) => e.preventDefault()}
+          >
             <input
               type="text"
               name="name"
@@ -137,41 +126,42 @@ const Index = ({ handleToggleModal }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                // inputProps={{
-                //   id: "phone",
-                //   name: "phone",
-                // }}
                 defaultCountry="md"
                 style={{
                   "--react-international-phone-flag-width": "40rem",
                   "--react-international-phone-flag-height": "20rem",
-                  "--react-international-phone-background-color": "none",
-                  "--react-international-phone-text-color": "#B5B5B5",
-                  "--react-international-phone-border-color": "#494B54",
-                  "--react-international-phone-border-radius": "7rem",
+                  "--react-international-phone-background-color":
+                    "rgba(35, 36, 47, 0.2)",
+                  "--react-international-phone-text-color": "#000",
+                  "--react-international-phone-border-color": "transparent",
+                  "--react-international-phone-border-radius": "50%",
                   "--react-international-phone-width": "100%",
                   "--react-international-phone-height": `${
-                    isMobile ? "45rem" : "50rem"
+                    isMobile ? "43rem" : "50rem"
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
-                    "#060916",
+                    "#fff",
                   "--react-international-phone-dropdown-top": isMobile
                     ? "45rem"
                     : "55rem",
                   "--react-international-phone-font-size": `${
-                    isMobile ? "13rem" : "17rem"
+                    isMobile ? "16px" : "17rem"
                   }`,
                 }}
                 value={phone}
                 onChange={handleChangePhone}
               />
             </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
+            <FormButton
+              textButton={"send"}
+              formSubmitTrack={formSubmitTrack}
+              isDisabled={isDisabled}
+            />
           </form>
-          <span className={styles.button__sparkle_1}></span>
-          <span className={styles.button__sparkle_2}></span>
-          <span className={styles.button__sparkle_3}></span>
-          <span className={styles.button__sparkle_4}></span>
+          <motion.span className={styles.button__sparkle_1}></motion.span>
+          <motion.span className={styles.button__sparkle_2}></motion.span>
+          <motion.span className={styles.button__sparkle_3}></motion.span>
+          <motion.span className={styles.button__sparkle_4}></motion.span>
         </motion.div>
       </div>
     </motion.div>

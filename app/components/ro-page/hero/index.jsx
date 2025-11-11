@@ -2,19 +2,35 @@
 import React from "react";
 import styles from "./hero.module.scss";
 import Facilities from "../facilities";
-import Title from "../../ui/title";
-import HeartAnimate from "../../ui/heart-animate";
+import Title from "../../ui-exfm/title";
+import HeartAnimate from "../../ui-exfm/heart-animate";
+import Header from "../../shared/pages/header";
 
 const Hero = ({ handleToggle }) => {
   return (
-    <div>
+    <div className={styles.hero_wrapper}>
       <div className={styles.hero}>
+        <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
 
         <Title textTitle="coming soon" />
 
-        <p className={styles.description}>Lansarea proiectului în noiembrie </p>
+        <p className={styles.hero__text}>
+          Ofertă specială {""}
+          <br className="inline-block sm:hidden" />
+          pentru {""}
+          {/* <br className="block sm:hidden" /> */}
+          investitori  {""}
+          {/* <br className="hidden sm:block" />la evenimentul {""}
+            <span className={styles.text__gradient}>EXPO FORUM MOLDOVA </span> */}
+        </p>
+
+        <p className={styles.description}>
+          Investește într-un proiect imobiliar nou, înainte {""}
+          <br className="block" /> de startul vânzărilor{" "}
+          <span>din decembrie 2025</span>
+        </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>Află detalii acum</span>
@@ -26,6 +42,9 @@ const Hero = ({ handleToggle }) => {
           <span className={styles.button__detail__sparkle_5}></span>
           <span className={styles.button__detail__sparkle_6}></span>
         </button>
+        {/* <p className={styles.oferta__text}>
+          Oferta disponibilă până în data de <span>15.11.2025</span>
+        </p> */}
 
         <p className={styles.location__title_text}>
           Locație fără {""}

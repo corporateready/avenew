@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./button.module.scss";
 
-function Index({ formSubmitTrack }) {
+function Index({ formSubmitTrack, textButton, isDisabled }) {
   return (
-    <button className={styles.button} onClick={formSubmitTrack}>
-      Trimite
+    <button className={styles.button} onClick={formSubmitTrack} disabled={!isDisabled}>
+      {textButton}
     </button>
   );
 }

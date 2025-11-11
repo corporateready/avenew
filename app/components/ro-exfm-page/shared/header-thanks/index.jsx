@@ -4,8 +4,14 @@ import styles from "./header.module.scss";
 import HeaderLogo from "../../../ui/header-logo";
 import LangToggler from "../../../ui/lang-toggler-thanks-pages";
 import PhoneButton from "../../../ui/phone-button-thanks-pages";
+import {useRouter} from "next/navigation";
 
 const Index = () => {
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    router.back()
+  }
 
   return (
     <header className={styles.header} id="header">
@@ -13,10 +19,7 @@ const Index = () => {
         <div className={styles.inner}>
           <div className={styles.logo}>
             <HeaderLogo
-              widthMobile="130rem"
-              heightMobile="27rem"
-              widthDesktop="212rem"
-              heightDesktop="44rem"
+              handleLogoClick={handleLogoClick}
             />
           </div>
           <div className={styles.navigate}>

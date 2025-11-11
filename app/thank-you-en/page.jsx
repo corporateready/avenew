@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import Header from "../components/ro-page/shared/header-thanks";
-import Footer from "../components/ro-page/shared/footer-thanks";
-import styles from "../thanks.module.scss";
+import Header from "../components/ro-exfm-page/shared/header-thanks";
+import Footer from "../components/ro-exfm-page/shared/footer-thanks";
+import styles from "../exfm/thanks.module.scss";
 import { motion } from "motion/react";
 
 const page = () => {
@@ -23,10 +23,12 @@ const page = () => {
               Thank you!
             </h2>
             <p className="text-[26rem] sm:text-[30rem] text-[#86878B] font-normal leading-[120%] sm:leading-180 mt-[3dvh] sm:mt-[4vh] text-center sm:text-left">
-              Your request has been successfully registered.
-              <span className="block mt-[2.2vh] sm:mt-0">
-                Our manager will contact you shortly to provide all {""}
-                <br className="block sm:hidden" /> the details.
+              Your request has been successfully registered. {""}
+              <br />
+              <span className="block mt-[1.5vh] sm:mt-0">
+                Our manager will contact you {""}
+                <br className="inline-block sm:hidden"/>shortly to provide all {""}
+                <br className="inline-block sm:hidden"/>the details.
               </span>
             </p>
           </div>

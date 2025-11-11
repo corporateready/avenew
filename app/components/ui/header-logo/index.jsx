@@ -1,11 +1,10 @@
 import React from "react";
+import { motion } from "motion/react";
 import styles from "./styles.module.scss";
-import {motion} from "motion/react";
 
-const Index = ({widthMobile, heightMobile, widthDesktop, heightDesktop}) => {
-
+const Index = ({ handleLogoClick }) => {
   return (
-    <div className={`w-[${widthMobile}] h-[${heightMobile}] sm:w-[${widthDesktop}] sm:h-[${heightDesktop}]`}>
+    <div className={styles.logo} onClick={handleLogoClick}>
       <motion.img
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

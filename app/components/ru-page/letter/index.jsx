@@ -4,26 +4,32 @@ import { motion, useInView } from "motion/react";
 
 const Index = ({ handleToggleModalBottom }) => {
 
-    const ref = React.useRef(null);
-    const isInView = useInView(ref, {
-      once: false,
-    });
-
   return (
-    <div className={styles.letter}>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+      className={styles.letter}
+    >
       <img
         src="/shared/Avenew botanica-logo.png"
         className={styles.letter__logo}
         alt="Avenew botanica logo"
       />
-      <p className={styles.letter__title}>Узнайте первым</p>
+      <p className={styles.letter__title}>
+        Забронируй своё {""}
+        <br />
+        место прямо сейчас
+      </p>
       <p className={styles.letter__description}>
-        Количество мест для предварительной {""}
-        <br className="" /> регистрации ограничено. {""}
-        <br className="block sm:hidden" /> Узнайте все {""}
-        <br className="hidden sm:block" /> детали о запуске {""}
-        <br className="block sm:hidden" /> проекта {""}
-        <br className="hidden sm:block" /> прямо сейчас.
+        Запроси детали эксклюзивного предложения для инвесторов. {""}
+        <br />
+        Ограниченное количество мест на этапе pre-sale — {""}
+        <br />
+        уникальная возможность, доступная только {""}
+        <br />
+        ограниченному числу инвесторов
       </p>
       <button
         className={styles.letter__button_access}
@@ -33,8 +39,10 @@ const Index = ({ handleToggleModalBottom }) => {
         <span className={styles.button__detail_sparkle_left}></span>
         <span className={styles.button__detail_sparkle_right}></span>
       </button>
-
-    </div>
+      {/* <p className={styles.oferta__text}>
+        Предложение действительно <span>до 15.11.2025</span>
+      </p> */}
+    </motion.div>
   );
 };
 

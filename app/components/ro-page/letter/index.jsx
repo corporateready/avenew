@@ -17,11 +17,15 @@ const Index = ({ handleToggleModalBottom }) => {
         className={styles.letter__logo}
         alt="Avenew botanica logo"
       />
-      <p className={styles.letter__title}>Află primul detalii</p>
+      <p className={styles.letter__title}>Rezervă-ți locul acum</p>
       <p className={styles.letter__description}>
-        Locurile pentru preînregistrare sunt limitate. {""}
-        <br className="block" /> Află toate detaliile despre lansarea {""}
-        <br className="block" /> proiectului chiar acum.
+        Solicită detaliile ofertei exclusive pentru investitori. {""}
+        <br className="block" /> Locuri limitate în faza de pre-sale — o
+        oportunitate {""}
+        <br />
+        disponibilă doar pentru un număr restrâns {""}
+        <br />
+        de investitori
       </p>
       <button
         className={styles.letter__button_access}
@@ -31,8 +35,9 @@ const Index = ({ handleToggleModalBottom }) => {
         <span className={styles.button__detail_sparkle_left}></span>
         <span className={styles.button__detail_sparkle_right}></span>
       </button>
-
-      
+      {/* <p className={styles.oferta__text}>
+        Oferta disponibilă până în data de <span>15.11.2025</span>
+      </p> */}
     </motion.div>
   );
 };

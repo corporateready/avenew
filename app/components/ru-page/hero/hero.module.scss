@@ -2,8 +2,7 @@
 
 .hero {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
-
+overflow-x: hidden;
   .hero__dark__building_shadow {
         
          @apply  block absolute top-[584rem] left-0 z-[3] w-full h-[290rem];
@@ -13,14 +12,19 @@
            @apply  block absolute top-[904rem] left-0 z-[3] w-full h-[590rem];
            background: linear-gradient(180deg, #050714 16%, rgba(7, 11, 27, 0) 44%);
           }
-        }
+
+          @media screen and (width >= 1920px) {
+           @apply  block absolute top-[904px] left-0 z-[3] w-full h-[500px];
+           background: linear-gradient(180deg,rgba(7, 11, 27, 1), rgba(7, 11, 27, 0.8), rgba(7, 11, 27, 0));
+          }
+  }
 
   @media screen and (max-width: 640px) {
      @apply w-full h-[2000rem] relative z-0;
 
       &::before {
         content: '';
-        @apply w-full h-full bg-[url('/mobile/hero/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-[-14rem] left-0 z-[1];
+        @apply w-full h-full bg-[url('/exfm/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
 
         animation: fadeIn 2s ease-in-out forwards;
       
@@ -36,19 +40,19 @@
 
       &::after {
         content: '';
-        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[160rem] left-0 z-[2] w-full h-[726rem];
+        @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[237rem] left-0 z-[2] w-full h-[726rem];
 
       }
 
       
     }
 
-   @media screen and (min-width: 641px) {
-    @apply w-full h-[3520rem] relative z-0;
+  @media screen and (min-width: 641px) {
+    @apply w-full h-[3580rem] relative z-0;
 
      &::before {
       content: '';
-      @apply w-full h-full bg-[url('/desktop/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1];
+      @apply w-full h-full bg-[url('/exfm/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1];
 
       animation: fadeIn 2s ease-in-out forwards;
       
@@ -65,18 +69,58 @@
 
     &::after {
         content: '';
-        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[294rem] object-cover left-0 z-[2] w-full h-[1200rem];
+        @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[292rem] object-cover left-0  z-[2] w-full h-[1200rem];
+      }
+   }
+
+  @media screen and (width >= 1920px) {
+    @apply w-[1920px] h-[3084px] relative z-0;
+
+     &::before {
+      content: '';
+      @apply w-full h-full bg-[url('/exfm/hero-light-bg-large.avif')] bg-cover bg-bottom bg-no-repeat absolute top-[-40px] left-0 z-[1];
+    }
+
+    &::after {
+        content: '';
+        @apply bg-[url('/shared/dark-building-large.avif')] bg-contain bg-center bg-no-repeat absolute top-[267px] object-cover left-0  z-[2] w-full h-[640px];
       }
    }
 
 }
+.hero__text {
+  @apply text-[24rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[554rem] left-1/2 -translate-1/2 z-[3];
+
+  .text__gradient {
+    @apply inline-block font-extrabold;
+     background: linear-gradient(
+        45deg,
+        rgba(228, 27, 246, 1) 60%,
+        rgba(89, 40, 199, 1) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      }
+
+  @media screen and (min-width: 641px) {
+   @apply text-[50.5rem] text-center leading-[120%] w-full text-white font-bold absolute top-[737rem] left-1/2 -translate-1/2 z-[3];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[48px] text-center leading-[120%] text-white font-bold absolute top-[734px] left-1/2 -translate-1/2 z-[3] w-[1200px];
+  }
+  .hero__text__br {
+    @apply block sm:hidden;
+  }
+}
 .description { 
-  @apply text-[22rem] text-center leading-[100%] w-full absolute z-[5] top-[544rem] left-[25rem] -translate-x-[25rem];
-  
-  letter-spacing: 3%;
-  background: linear-gradient(
+  @apply text-[14rem] text-center leading-[120%] w-full text-white font-normal absolute top-[584rem] left-0 z-[3];
+
+   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.7) 0%,
+    rgba(255, 255, 255, 0.8) 0%,
     rgba(255, 255, 255, 1) 100%
   );
   -webkit-background-clip: text;
@@ -84,24 +128,21 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 
+  span {
+    @apply font-semibold text-white;
+  }
+
   @media screen and (min-width: 641px) {
-    @apply text-[40rem] text-center font-normal leading-[100%] w-full absolute z-[5] top-[852rem] left-[32rem] -translate-x-[25rem];
-  letter-spacing: 3%;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
+  @apply text-[30.2rem] text-center leading-[120%] w-full text-white font-normal absolute top-[787rem] left-0 z-[3];
+  }
+
+  @media screen and (width >= 1920px) {
+   @apply text-[30px] text-center leading-[120%] w-full text-white font-normal absolute top-[784px] left-0 z-[3];
   }
 }
 .button__detail {
-  @apply text-white text-[22rem] font-semibold leading-[100%] w-[354rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[582rem] left-1/2 -translate-x-1/2;
-  font-family: "Montserrat", sans-serif;
-  letter-spacing: 3%;
+  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[612rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem];
+ 
   background: linear-gradient(
     0deg,
     #060915 40%,
@@ -141,41 +182,25 @@
 }
 
 @media screen and (min-width: 641px) {
-  @apply text-white text-[27rem] leading-[100%] w-[422rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[924rem] left-1/2 -translate-x-1/2 hover:cursor-pointer;
+  @apply text-white text-[30rem] leading-[100%] w-[423rem] h-[76rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[876rem] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal;
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 3%;
+  
+}
+
+@media screen and (width >= 1920px) {
+  @apply text-white text-[30px] font-medium leading-[100%] w-[438px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[904px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(
     0deg,
     #060915 40%,
     #50525B 100%,
     #FFF 100%,
   );
-
-//   &::before {
-//   content: '';
-//   position: absolute;
-//   bottom: -2rem;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 70%;
-//   height: 4rem;
-//   background: linear-gradient(
-//   90deg,
-//     transparent 0%,
-  
-//     #ffffff 40%,
-//     #ffffff 60%,
-  
-//     transparent 100%
-//   );
-//   box-shadow: 
-//     0 0 1rem rgba(255, 255, 255, .1);
-// }
 }
 
 }
 .button__detail__sparkle {
-  @apply w-[11rem] h-[11rem] rounded-full absolute top-[20rem] left-[40rem];
+  @apply w-[8rem] h-[8rem] rounded-full absolute top-[58rem] left-[-13rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -190,11 +215,15 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-        @apply w-[13rem] h-[13rem] rounded-full absolute top-[17rem] left-[-40rem];
+        @apply w-[13rem] h-[13rem] rounded-full absolute top-[17rem] left-[-64rem];
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[13px] h-[13px] rounded-full absolute top-[17px] left-[-64px];
       }
 }
 .button__detail__sparkle_2 {
-  @apply w-[14rem] h-[14rem] rounded-full absolute top-[3rem] left-[94rem] -translate-x-1/2;
+  @apply w-[12rem] h-[12rem] rounded-full absolute top-[-65rem] left-[6rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -210,11 +239,15 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-10rem] left-[50rem] -translate-x-1/2;
+         @apply w-[18rem] h-[18rem] rounded-full absolute top-[-10rem] left-[24rem];
+      }
+
+      @media screen and (width >= 1920px) {
+         @apply w-[18px] h-[18px] rounded-full absolute top-[-10px] left-[24px];
       }
 }
 .button__detail__sparkle_3 {
-  @apply w-[12rem] h-[12rem] rounded-full absolute bottom-[3rem] right-[65rem] -translate-x-1/2;
+  @apply w-[12rem] h-[12rem] rounded-full absolute bottom-[-30rem] right-[28rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -230,11 +263,15 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {  
-        @apply w-[18rem] h-[18rem] rounded-full absolute bottom-[-7rem] right-[-8rem];
+        @apply w-[30rem] h-[30rem] rounded-full absolute bottom-[2rem] right-[-56rem];
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[25px] h-[25px] rounded-full absolute bottom-[2px] right-[-56px];
       }
 }
 .button__detail__sparkle_4 {
-  @apply w-[12rem] h-[12rem] rounded-full absolute bottom-[-6rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply w-[10rem] h-[10rem] rounded-full absolute bottom-[-6rem] left-1/2 -translate-x-1/2 z-[1];
 
   background: content-box radial-gradient(
         circle at center,
@@ -257,9 +294,13 @@
         transparent 100%
       );
       }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[10px] h-[10px] rounded-full absolute bottom-[-5px] left-1/2 -translate-x-1/2 z-[1];
+      }
 }
 .button__detail__sparkle_5 {
-  @apply w-[10rem] h-[10rem] rounded-full absolute top-[-42rem] right-[65rem] -translate-x-1/2;
+  @apply w-[10rem] h-[10rem] rounded-full absolute top-[-51rem] right-[76rem] -translate-x-1/2;
 
   background: content-box radial-gradient(
         circle at center,
@@ -275,36 +316,76 @@
       background-blend-mode: screen;
 
       @media screen and (min-width: 641px) {
-       @apply w-[12rem] h-[12rem] rounded-full absolute top-[-90rem] right-[15rem] -translate-x-1/2;
+       @apply w-[14rem] h-[14rem] rounded-full absolute top-[-90rem] right-[-21rem] -translate-x-1/2;
+      }
+
+      @media screen and (width >= 1920px) {
+        @apply w-[14px] h-[14px] rounded-full absolute top-[-90px] right-[-21px] -translate-x-1/2;
+      }
+}
+.button__detail__sparkle_6 {
+  @apply w-[15rem] h-[15rem] rounded-full absolute bottom-[-53rem] left-[113rem] -translate-x-1/2;
+
+  background: content-box radial-gradient(
+        circle at center,
+        #ffffff 0%,
+        #fff5ec 5%,
+        #FFCDA2 10%,
+        #F5B780 15%,
+        #C79468 17%,
+        #9C7451 22%,
+        transparent 35%
+      );
+      // box-shadow: 0 0rem 60rem rgba(0, 0, 0, 0.1);
+      background-blend-mode: screen;
+
+      @media screen and (min-width: 641px) {
+       @apply w-0 h-0;
       }
 }
 .location__title_text {
-  @apply text-[26rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[890rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[25rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[940rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-     @apply text-[71.2rem] font-semibold text-white text-center leading-[71rem] w-full absolute top-[1427rem] left-1/2 -translate-x-1/2 z-[3] ml-[-10rem];
+     @apply text-[72rem] font-semibold text-white text-center leading-[71rem] w-full absolute top-[1434rem] left-1/2 -translate-x-1/2 z-[3] ml-[-10rem];
+     letter-spacing: .4%;
+  }
+
+  @media screen and (width >= 1920px) {
+     @apply text-[65px] font-semibold text-white text-center leading-[100%] w-full absolute top-[1296px] left-1/2 -translate-x-1/2 z-[3] ml-0;
      letter-spacing: .4%;
   }
 }
 .location__description_text {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[954rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[1004rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1584rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
+    @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1586rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[27px] font-normal text-white text-center leading-none w-full absolute top-[1452px] left-1/2 -translate-x-1/2 z-[3] ml-0;
   }
 }
-
 .location__title_text__bottom {
-  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[566rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute bottom-[502rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1222rem] left-1/2 -translate-x-1/2 z-[3];
+   @apply text-[72rem] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1282rem] left-1/2 -translate-x-1/2 z-[3];
+  }
+
+  @media screen and (width >= 1920px) {
+   @apply text-[72px] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1068px] left-1/2 -translate-x-1/2 z-[3];
   }
 }
 .location__description_text__bottom {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[487rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[424rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1084rem] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1160rem] left-1/2 -translate-x-1/2 z-[3];
+  }
+
+  @media screen and (width >= 1920px) {
+    @apply text-[30px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[942px] left-1/2 -translate-x-1/2 z-[3];
   }
 }

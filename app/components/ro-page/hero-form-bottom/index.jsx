@@ -1,36 +1,31 @@
 import React from "react";
 import { motion } from "motion/react";
 import styles from "./hero-form.module.scss";
+import ProgressBar from "../shared/form-progress-bar";
 import FormButton from "./form-button";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
+import { usePostHog } from "posthog-js/react";
 
-const Index = ({ handleToggleModalBottom  }) => {
-  
-    React.useEffect(() => {
-
-      const setVH = () => {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
-      };
-
-      setVH();
-      window.addEventListener("resize", setVH);
-
-      return () => window.removeEventListener("resize", setVH);
-    }, []);
-
+const Index = ({ handleToggleModalBottom }) => {
+  const posthog = usePostHog();
   const router = useRouter();
 
   const isMobile = useMediaQuery({
     query: "(max-width: 640px)",
   });
 
+  const isLarge = useMediaQuery({
+    query: "(max-width: 1920px)",
+  });
+
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [phone, setPhone] = React.useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = React.useState(false);
+  const [isDisabled, setIsDisabled] = React.useState(false);
 
   const handleChangeName = (e) => {
     setName(e.target.value);
@@ -44,49 +39,26 @@ const Index = ({ handleToggleModalBottom  }) => {
     let cleanedValue = value.replace(/^\+0+/, "+3730");
     cleanedValue = cleanedValue.replace(/^\+3730/, "+373");
 
-     setPhone(cleanedValue);
+    setPhone(cleanedValue);
   };
 
-  console.log(name, email, phone);
+   React.useEffect(() => {
+     if (name.length >= 3 && email.match("@") && phone.length >= 12) {
+       setIsDisabled(true);
+     }
+   }, [name, email, phone, isDisabled]);
 
   const formSubmitTrack = () => {
-    router.push("/thank-you-ro");
-    // handleToggleModalBottom();
-    // analytics?.identify("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    // });
+      posthog?.capture("form_submitted", {
+        name: name,
+        phone: phone,
+        email: email,
+      });
 
-    // analytics?.track("form_submitted", {
-    //   form_name: "descarca_prezentare_pdf_ro",
-    //   form_type: "click_form",
-    //   form_location: "hero",
-    //   element_location: "bottom_form",
-    //   element_type: "button",
-    //   element_text: "trimite",
-    //   action_type: "click",
-    //   name: nameValue,
-    //   phone: phoneValue,
-    //   email: emailValue,
-    //   location: userLocation,
-    //   domain_source: "artima.md",
-    //   fbp: isFBP,
-    //   fbc: isFBC,
-    //   eventID: isEventId,
-    //   pageview_event_id: isPageViewEventId,
-    //   external_id: isExternalId,
-    // }
-    // );
+      if (!isFormSubmitted) {
+        setIsFormSubmitted(true);
+        router.push("/thank-you-ro");
+      }
   };
 
   return (
@@ -100,7 +72,7 @@ const Index = ({ handleToggleModalBottom  }) => {
     >
       <div className={styles.form__wrapper}>
         <button
-          className="w-88 h-88 sm:w-[24rem] sm:h-[24rem] absolute right-[-6rem] top-[-32rem] sm:top-[-36rem] sm:right-[-4rem] -translate-x-1/2 z-[5] sm:hover:cursor-pointer"
+          className={styles.hero__form_close_button}
           onClick={handleToggleModalBottom}
         >
           <svg
@@ -111,7 +83,7 @@ const Index = ({ handleToggleModalBottom  }) => {
           >
             <path
               d="M17 1L1 17M1 1L17 17"
-              stroke="#494B54"
+              stroke={`${isLarge ? "#fff" : "#494B54"}`}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -126,17 +98,16 @@ const Index = ({ handleToggleModalBottom  }) => {
           className={styles.hero__form_inner}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className={styles.hero__form_progress__wrapper}>
-            <span className={styles.hero__form_progress__wrapper__line}></span>
-            <span className="text-[8rem] text-white font-semibold absolute top-1/2 left-[47%] -translate-x-1/2 -translate-y-1/2 z-10">
-              50%
-            </span>
-          </div>
+          <ProgressBar />
           <p className={styles.hero__form_title}>
             Introdu datele tale de contact
             <br /> pentru a primi detalii
           </p>
-          <form action="" className={styles.hero__form_content}>
+          <form
+            action=""
+            className={styles.hero__form_content}
+            onSubmit={(e) => e.preventDefault()}
+          >
             <input
               type="text"
               name="name"
@@ -154,28 +125,24 @@ const Index = ({ handleToggleModalBottom  }) => {
             <div className={styles.phone__input}>
               <PhoneInput
                 name="phone"
-                isValid={(value, country) => {
-                  if (value.match(/3730/)) {
-                    setPhoneValue("+373");
-                  } else {
-                    return true;
-                  }
-                }}
                 defaultCountry="md"
                 style={{
                   "--react-international-phone-flag-width": "40rem",
                   "--react-international-phone-flag-height": "20rem",
-                  "--react-international-phone-background-color": "none",
-                  "--react-international-phone-text-color": "#B5B5B5",
-                  "--react-international-phone-border-color": "#494B54",
-                  "--react-international-phone-border-radius": "7rem",
+                  "--react-international-phone-background-color":
+                    "rgba(35, 36, 47, 0.2)",
+                  "--react-international-phone-text-color": "#000",
+                  "--react-international-phone-border-color": "transparent",
+                  "--react-international-phone-border-radius": "50%",
                   "--react-international-phone-width": "100%",
                   "--react-international-phone-height": `${
                     isMobile ? "43rem" : "50rem"
                   }`,
                   "--react-international-phone-dropdown-item-background-color":
-                    "#060916",
-                  "--react-international-phone-dropdown-top": "60rem",
+                    "#fff",
+                  "--react-international-phone-dropdown-top": isMobile
+                    ? "45rem"
+                    : "55rem",
                   "--react-international-phone-font-size": `${
                     isMobile ? "16px" : "17rem"
                   }`,
@@ -184,55 +151,16 @@ const Index = ({ handleToggleModalBottom  }) => {
                 onChange={handleChangePhone}
               />
             </div>
-            <FormButton formSubmitTrack={formSubmitTrack} />
+            <FormButton
+              textButton={"Trimite"}
+              formSubmitTrack={formSubmitTrack}
+              isDisabled={isDisabled}
+            />
           </form>
-          <motion.span
-            className={styles.button__sparkle_1}
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-          ></motion.span>
-          <motion.span
-            className={styles.button__sparkle_2}
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   delay: 0.5,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-          ></motion.span>
-          <motion.span
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 1,
-            //   delay: 1,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-            className={styles.button__sparkle_3}
-          ></motion.span>
-          <motion.span
-            // initial={{ scale: 1 }}
-            // animate={{ scale: [1, 1.5, 1] }}
-            // exit={{ scale: 1 }}
-            // transition={{
-            //   duration: 0.5,
-            //   delay: 1.5,
-            //   repeat: Infinity,
-            //   repeatType: "reverse",
-            // }}
-            className={styles.button__sparkle_4}
-          ></motion.span>
+          <motion.span className={styles.button__sparkle_1}></motion.span>
+          <motion.span className={styles.button__sparkle_2}></motion.span>
+          <motion.span className={styles.button__sparkle_3}></motion.span>
+          <motion.span className={styles.button__sparkle_4}></motion.span>
         </motion.div>
       </div>
     </motion.div>
@@ -240,3 +168,4 @@ const Index = ({ handleToggleModalBottom  }) => {
 };
 
 export default Index;
+ 
