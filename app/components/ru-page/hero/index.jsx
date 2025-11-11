@@ -17,7 +17,7 @@ const Hero = ({ handleToggle }) => {
         <Title textTitle="coming soon" />
 
         <p className={styles.hero__text}>
-          Специальное предложение
+          Специальное предложение {""}
           <br className={styles.hero__text__br} />для инвесторов {""}
         </p>
 
