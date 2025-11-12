@@ -14,7 +14,7 @@
 "use client";
 import React from "react";
 import Hero from "./components/ro-page/hero";
-import Letter from "./components/ro-page/letter";
+import Letter from "./components/ro-page/letter-animate";
 import Footer from "./components/shared/pages/footer";
 import HeroForm from "./components/ro-page/hero-form";
 import HeroFormBottom from "./components/ro-page/hero-form-bottom";

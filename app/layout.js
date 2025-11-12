@@ -1,8 +1,8 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { PHProvider } from "./components/providers/posthog-provider";
-import { PostHogPageView } from "./components/posthog-pageview";
-import { Suspense } from "react";
+// import { PHProvider } from "./components/providers/posthog-provider";
+// import { PostHogPageView } from "./components/posthog-pageview";
+// import { Suspense } from "react";
 
 
 const montserrat = Montserrat({
@@ -48,12 +48,12 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
-        <PHProvider>
+        {/* <PHProvider>
           <Suspense fallback={null}>
-            <PostHogPageView />
+            <PostHogPageView /> */}
             {children}
-          </Suspense>
-        </PHProvider>
+          {/* </Suspense>
+        </PHProvider> */}
       </body>
     </html>
   );

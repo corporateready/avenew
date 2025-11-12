@@ -14,7 +14,7 @@
 
   &::before {
     content: '';
-    @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-3rem] left-[3rem] z-0;
+    // @apply w-full h-full bg-[url('/mobile/facilities/facilities-light-email.avif')] bg-cover bg-center bg-no-repeat absolute top-[-3rem] left-[3rem] z-0;
 
     @media screen and (min-width: 641px) {
       @apply w-full h-full bg-[url('/desktop/facility-light-letter-bg.avif')] bg-contain bg-center bg-no-repeat absolute top-[-123rem] left-0 z-0;
@@ -123,75 +123,54 @@
     @apply text-[27px] leading-[100%] w-[454px] h-[70px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[923px] left-1/2 -translate-x-1/2 hover:cursor-pointer;
   }
 
-  .button__detail_sparkle_left {
-  @apply w-0 h-0;
+  // .button__detail_sparkle_left {
+  // @apply w-0 h-0;
 
-      @media screen and (min-width: 641px) {
-        @apply w-[13rem] h-[13rem] rounded-full absolute top-[-47rem] left-[60rem] -translate-x-1/2;
+  //     @media screen and (min-width: 641px) {
+  //       @apply w-[13rem] h-[13rem] rounded-full absolute top-[-47rem] left-[60rem] -translate-x-1/2;
 
-        background: content-box radial-gradient(
-        circle at center,
-        #ffffff 0%,
-        #fff5ec 5%,
-        #FFCDA2 10%,
-        #F5B780 15%,
-        #C79468 17%,
-        #9C7451 22%,
-        transparent 50%
-      );
-      background-blend-mode: screen;
-      }
+  //       background: content-box radial-gradient(
+  //       circle at center,
+  //       #ffffff 0%,
+  //       #fff5ec 5%,
+  //       #FFCDA2 10%,
+  //       #F5B780 15%,
+  //       #C79468 17%,
+  //       #9C7451 22%,
+  //       transparent 50%
+  //     );
+  //     background-blend-mode: screen;
+  //     }
 
-      @media screen and (width >= 1920px) {
-        @apply w-[13px] h-[13px] rounded-full absolute top-[-47px] left-[60px] -translate-x-1/2;
-      }
-  }
+  //     @media screen and (width >= 1920px) {
+  //       @apply w-[13px] h-[13px] rounded-full absolute top-[-47px] left-[60px] -translate-x-1/2;
+  //     }
+  // }
 
-  .button__detail_sparkle_right {
-  @apply w-0 h-0;
+  // .button__detail_sparkle_right {
+  // @apply w-0 h-0;
 
   
 
-      @media screen and (min-width: 641px) {
-        @apply w-[16rem] h-[16rem] rounded-full absolute bottom-[-30rem] right-[10rem] -translate-x-1/2;
+  //     @media screen and (min-width: 641px) {
+  //       @apply w-[16rem] h-[16rem] rounded-full absolute bottom-[-30rem] right-[10rem] -translate-x-1/2;
 
-        background: content-box radial-gradient(
-        circle at center,
-        #ffffff 0%,
-        #fff5ec 5%,
-        #FFCDA2 10%,
-        #F5B780 15%,
-        #C79468 17%,
-        #9C7451 22%,
-        transparent 50%
-      );
-      background-blend-mode: screen;
-      }
+  //       background: content-box radial-gradient(
+  //       circle at center,
+  //       #ffffff 0%,
+  //       #fff5ec 5%,
+  //       #FFCDA2 10%,
+  //       #F5B780 15%,
+  //       #C79468 17%,
+  //       #9C7451 22%,
+  //       transparent 50%
+  //     );
+  //     background-blend-mode: screen;
+  //     }
 
-      @media screen and (width >= 1920px) {
-        @apply w-[16px] h-[16px] rounded-full absolute bottom-[-30px] right-[10px] -translate-x-1/2;
-      }
-  }
+  //     @media screen and (width >= 1920px) {
+  //       @apply w-[16px] h-[16px] rounded-full absolute bottom-[-30px] right-[10px] -translate-x-1/2;
+  //     }
+  // }
 
-}
-.oferta__text {
-  @apply text-[9rem] sm:text-[16rem] text-center leading-[100%] w-full text-white font-normal absolute bottom-[-102rem] sm:bottom-[154rem] left-1/2 -translate-x-1/2 z-[4];
-
-  @media screen and (width >= 1920px) {
-    @apply text-[16px] bottom-[156px] left-1/2 -translate-x-1/2 z-[4];
-  }
-  
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  span {
-    @apply font-semibold text-white;
-  }
 }

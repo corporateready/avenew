@@ -21,7 +21,7 @@
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[10rem] left-1/2 -translate-x-1/2 z-[1];
 
   @media screen and (min-width: 641px) {
-    @apply text-[74rem] font-semibold text-white text-center leading-[100%] w-full relative top-[-369rem] left-1/2 -translate-x-1/2 z-[1] ml-[10rem] tracking-[-1rem];
+    @apply text-[74rem] font-semibold text-white text-center leading-[100%] w-fit relative top-[-369rem] left-1/2 -translate-x-1/2 z-[1] ml-[10rem] tracking-[-1rem];
   }
 
   @media screen and (width >= 1920px) {
