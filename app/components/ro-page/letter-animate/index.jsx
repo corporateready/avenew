@@ -12,7 +12,7 @@ const Index = ({ handleToggleModalBottom }) => {
 
 const isVisible = useInView(letterSection, {
   once: false,
-  margin: isLaptop ? "-450px" : "-190px"
+  margin: isLaptop ? "-200px" : "-190px"
 });
 console.log("isVisible ", isVisible)
   return (
