@@ -2,12 +2,17 @@
 import React from "react";
 import styles from "./letter.module.scss";
 import { motion, useInView } from "motion/react";
+import { useMediaQuery } from "react-responsive";
 
 const Index = ({ handleToggleModalBottom }) => {
+  const isLaptop = useMediaQuery({
+    query: '(min-width: 1200px)'
+  })
   const letterSection = React.useRef()
-const [isLoaded, setIsLoaded] = React.useState(true)
+
 const isVisible = useInView(letterSection, {
   once: false,
+  margin: isLaptop ? "-450px" : "-190px"
 });
 console.log("isVisible ", isVisible)
   return (
