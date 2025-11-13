@@ -25,7 +25,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-fit absolute top-[-168px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem];
+    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-full absolute top-[-168px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem];
   }
 }
 .facilities__inner {
