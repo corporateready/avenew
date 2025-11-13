@@ -2,7 +2,7 @@
 
 .hero {
   font-family: "Montserrat", sans-serif;
-overflow-x: hidden;
+  overflow-x: hidden;
   .hero__dark__building_shadow {
         
          @apply  block absolute top-[584rem] left-0 z-[3] w-full h-[290rem];
@@ -44,7 +44,6 @@ overflow-x: hidden;
 
       }
 
-      
     }
 
   @media screen and (min-width: 641px) {
@@ -109,7 +108,7 @@ overflow-x: hidden;
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[52px] text-center leading-[120%] w-full text-white font-bold absolute top-[731px] left-1/2 -translate-1/2 z-[3];
+    @apply text-[52px] text-center leading-[120%] w-fit text-white font-bold absolute top-[731px] left-1/2 -translate-1/2 z-[3];
   }
 }
 .description { 

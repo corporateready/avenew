@@ -19,11 +19,7 @@ const Hero = ({ handleToggle }) => {
         <p className={styles.hero__text}>
           Ofertă specială {""}
           <br className="inline-block sm:hidden" />
-          pentru {""}
-          {/* <br className="block sm:hidden" /> */}
-          investitori  {""}
-          {/* <br className="hidden sm:block" />la evenimentul {""}
-            <span className={styles.text__gradient}>EXPO FORUM MOLDOVA </span> */}
+          pentru {""}investitori  {""}
         </p>
 
         <p className={styles.description}>

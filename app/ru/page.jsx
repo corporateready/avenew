@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Hero from "../components/ru-page/hero";
-import Letter from "../components/ru-page/letter";
+import Letter from "../components/ru-page/letter/letter-animate";
 import Footer from "../components/shared/pages/footer";
 import HeroForm from "../components/ru-page/hero-form";
 import HeroFormBottom from "../components/ru-page/hero-form-bottom";

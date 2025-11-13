@@ -221,7 +221,7 @@
 
   &::after {
     content: '';
-    @apply  w-[340rem] h-[300rem] rounded-full absolute top-[100rem] left-1/2 -translate-1/2 z-1;
+    @apply  w-[320rem] h-[300rem] rounded-full absolute top-[100rem] left-1/2 -translate-1/2 z-1;
 
     background: radial-gradient(circle,rgba(235, 139, 12, 1) 0%, rgba(218, 119, 11, 1) 40%, rgba(150, 40, 5, 0) 100%);
     filter: blur(50px);
@@ -237,40 +237,40 @@
   }
 }
 .letter__logo {
-  @apply w-[86rem] h-[17rem] absolute top-[50rem] left-1/2 -translate-1/2 z-[2];
+  @apply w-[86rem] h-[17rem] absolute top-[40rem] left-1/2 -translate-1/2 z-[2];
 
   @media screen and (min-width: 641px) {  
-    @apply w-[170rem] h-[34rem] absolute top-[124rem];
+    @apply w-[170rem] h-[34rem] absolute top-[88rem];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply w-[154px] h-[32px] absolute top-[92px];
+    @apply w-[154px] h-[32px] absolute top-[66px];
   }
 }
 .letter__title {
-  @apply text-[26rem] text-white font-semibold leading-none absolute top-[86rem] left-0 text-center w-full z-2;
+  @apply text-[26rem] text-white font-semibold leading-[90%] absolute top-[64rem] left-0 text-center w-full z-2;
 
     @media screen and (width >= 640px) {
-      @apply text-[46rem] top-[182rem];
+      @apply text-[46rem] top-[154rem];
     }
 
     @media screen and (width >= 1920px) {  
-      @apply text-[42px] top-[166px];
+      @apply text-[44px] top-[124px];
     }
 }
 .letter__description {
-  @apply text-[9.7rem] text-white font-normal leading-[112%] absolute top-[120rem] left-0 text-center w-full z-2;
+  @apply text-[8rem] text-white font-normal leading-[112%] absolute top-[122rem] left-0 text-center w-full z-2;
 
   @media screen and (width >= 640px) {
-    @apply text-[18rem] leading-[115%] top-[246rem];
+    @apply text-[14rem] leading-[115%] top-[250rem];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply text-[16px] leading-[112%] top-[218px];
+    @apply text-[14px] leading-[112%] top-[218px];
   }
 }
 .letter__button_access {
-  @apply text-white text-[21.2rem] font-medium leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[714rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[18.8rem] font-medium leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[714rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -318,7 +318,7 @@
 }
 
   @media screen and (min-width: 641px) {
-  @apply text-white text-[30rem] leading-[100%] w-[454rem] h-[78rem] border-[1rem] z-[4] top-[1154rem] hover:cursor-pointer;
+  @apply text-white text-[30rem] leading-[100%] w-[584rem] h-[78rem] border-[1rem] z-[4] top-[1154rem] hover:cursor-pointer;
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(
       0deg,
@@ -329,7 +329,7 @@
 
   }
   @media screen and (width >= 1920px) {
-    @apply text-[27px] leading-[100%] w-[454px] h-[70px] border-[1px] z-[4] top-[1033px] hover:cursor-pointer;
+    @apply text-[27px] leading-[100%] w-[564px] h-[68px] border-[1px] z-[4] top-[1042px] hover:cursor-pointer;
   }
   .button__detail_sparkle_left {
   @apply w-0 h-0;

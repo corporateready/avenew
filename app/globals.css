@@ -4,7 +4,11 @@
 @tailwind utilities;
 
 html {
-  @apply w-full h-full;
+  @apply w-full h-full relative;
+
+  h1,h2,h3,h4,h5,h6,div,p,span,img,body {
+    @apply p-0 m-0 box-border;
+  }
 
   scroll-behavior: smooth;
   
@@ -21,11 +25,16 @@ html {
   @media screen and (width >= 1440px) {
    font-size: calc(100vw / (1440 * 1));
   }
+
+  @media screen and (width >= 1920px) {
+    @apply ml-[-32rem];
+  }
   
 }
 
 body {
-  @apply max-w-full h-full relative mx-auto;
+  @apply w-full h-full relative mx-auto;
+  overflow-x: hidden !important; 
 }
 
 .react-international-phone-country-selector-button__dropdown-arrow {
