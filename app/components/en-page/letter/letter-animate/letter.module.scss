@@ -15,7 +15,7 @@
 
   &::before {
     content: '';
-     @apply w-[358rem] h-[210rem] bg-[url('/letter/up-letter.png')] bg-cover bg-center bg-no-repeat ml-0 absolute bottom-0 left-1/2 -translate-x-1/2 z-4;
+     @apply w-[378rem] h-[220rem] bg-[url('/letter/up-letter.png')] bg-cover bg-center bg-no-repeat ml-0 absolute bottom-0 left-1/2 -translate-x-1/2 z-4;
     
      @media screen and (width >= 640px) {
       @apply w-[830rem] h-[495rem] ml-[10rem];
@@ -221,7 +221,7 @@
 
   &::after {
     content: '';
-    @apply  w-[250rem] h-[200rem] rounded-full absolute top-[140rem] left-1/2 -translate-1/2 z-1;
+    @apply  w-[330rem] h-[250rem] rounded-full absolute top-[100rem] left-1/2 -translate-1/2 z-1;
 
     background: radial-gradient(circle,rgba(235, 139, 12, 1) 0%, rgba(218, 119, 11, 1) 40%, rgba(150, 40, 5, 0) 100%);
     filter: blur(50px);
