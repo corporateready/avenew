@@ -14,14 +14,14 @@ const Index = () => {
         <path
           d="M4.39844 15.9V0.5"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M0.5 3.8L4.4 0.5L8.3 3.8"
           stroke="white"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </a>

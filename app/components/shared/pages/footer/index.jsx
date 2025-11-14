@@ -1,4 +1,5 @@
- import React from "react";
+"use client"
+import React from "react";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import ButtonToUp from "../../../ui-exfm/button-to-up";

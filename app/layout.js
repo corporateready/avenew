@@ -1,5 +1,6 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import { PHProvider } from "./components/providers/posthog-provider";
 import { PostHogPageView } from "./components/posthog-pageview";
 import { Suspense } from "react";
@@ -52,7 +53,7 @@ export default function RootLayout({ children }) {
           <Suspense fallback={null}>
             <PostHogPageView />
         {children}
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `history.scrollRestoration = "manual"`,
           }}

@@ -209,7 +209,7 @@
   
 }
 .letter__body {
-  @apply w-[310rem] h-[582rem] bg-[#962805] absolute top-[646rem] left-1/2 -translate-1/2 z-1;
+  @apply w-[310rem] h-[590rem] bg-[#962805] absolute top-[646rem] left-1/2 -translate-1/2 z-1;
 
   @media screen and (width >= 640px) {
     @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[932rem] left-1/2 -translate-1/2 z-1;
@@ -221,17 +221,14 @@
 
   &::after {
     content: '';
-    @apply  w-[320rem] h-[300rem] rounded-full absolute top-[100rem] left-1/2 -translate-1/2 z-1;
-
-    background: radial-gradient(circle,rgba(235, 139, 12, 1) 0%, rgba(218, 119, 11, 1) 40%, rgba(150, 40, 5, 0) 100%);
-    filter: blur(50px);
+    @apply inline-block  w-[410rem] h-[370rem] rounded-full absolute top-[-100rem] left-1/2 -translate-x-1/2 z-1 bg-[url('/letter/letter-light.avif')] bg-cover bg-top object-cover bg-no-repeat;
 
     @media screen and (width >= 640px) {
-      @apply  w-[600rem] h-[500rem] top-[250rem];
+      @apply  w-[960rem] h-[870rem] top-[-250rem];
     }
 
     @media screen and (width >= 1920px) {
-      @apply  w-[600px] h-[500px] top-[210px];
+      @apply  w-[800px] h-[700px] top-[-200px];
     }
 
   }
