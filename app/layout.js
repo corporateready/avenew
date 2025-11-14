@@ -54,6 +54,7 @@ export default function RootLayout({ children }) {
             <PostHogPageView />
         {children}
         <Script
+        id="to-top"
           dangerouslySetInnerHTML={{
             __html: `history.scrollRestoration = "manual"`,
           }}
