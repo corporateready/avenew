@@ -14,7 +14,7 @@ const isVisible = useInView(letterSection, {
   once: false,
   margin: isLaptop ? "-200px" : "-190px"
 });
-console.log("isVisible ", isVisible)
+
   return (
     <div className="w-full h-auto relative">
       <motion.div
@@ -35,7 +35,7 @@ console.log("isVisible ", isVisible)
             transition={{ duration: 1 }}
           >
             <img
-              src="/shared/Avenew botanica-logo.png"
+              src="/shared/Avenew-botanica-logo.png"
               className={styles.letter__logo}
               alt="Avenew botanica logo"
             />

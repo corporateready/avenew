@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -7,14 +8,6 @@ const nextConfig = {
   theme: {
     screens: {
       sm: "640px",
-      // xxl: "1920px",
-      // => @media (min-width: 640px) { ... }
-
-      // md: "768px",
-      // => @media (min-width: 768px) { ... }
-
-      // lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
     },
   },
   async rewrites() {

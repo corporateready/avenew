@@ -13,7 +13,7 @@ const Index = ({ handleToggleModalBottom }) => {
       className={styles.letter}
     >
       <img
-        src="/shared/Avenew botanica-logo.png"
+        src="/shared/Avenew-botanica-logo.png"
         className={styles.letter__logo}
         alt="Avenew botanica logo"
       />

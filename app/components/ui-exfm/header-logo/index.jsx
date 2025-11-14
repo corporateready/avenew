@@ -11,7 +11,7 @@ const Index = ({ widthMobile, heightMobile, widthLaptop, heightLaptop }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
-        src="/shared/Avenew botanica-logo.png"
+        src="/shared/Avenew-botanica-logo.png"
         alt="logo"
         className="w-full h-full"
       />

@@ -9,6 +9,8 @@ import { Suspense } from "react";
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  display: "swap",
+  preload: false
 });
 
 export const metadata = {
@@ -26,7 +28,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link
           rel="apple-touch-icon"
@@ -52,14 +54,14 @@ export default function RootLayout({ children }) {
         <PHProvider>
           <Suspense fallback={null}>
             <PostHogPageView />
-        {children}
-        <Script
-        id="to-top"
-          dangerouslySetInnerHTML={{
-            __html: `history.scrollRestoration = "manual"`,
-          }}
-        />
-        </Suspense>
+            {children}
+            <Script
+              id="to-top"
+              dangerouslySetInnerHTML={{
+                __html: `history.scrollRestoration = "manual"`,
+              }}
+            />
+          </Suspense>
         </PHProvider>
       </body>
     </html>
