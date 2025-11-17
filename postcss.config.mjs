@@ -3,7 +3,7 @@ const config = {
     "@tailwindcss/postcss": {
       config: "./tailwind.config.js",
     },
-    cssnano:
+    'cssnano':
       process.env.NODE_ENV === "production"
         ? {
             preset: [
