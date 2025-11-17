@@ -13,13 +13,19 @@ export function PHProvider({ children }) {
       return;
     }
 
-    posthog.init(key, {
-      api_host: "https://eu.i.posthog.com",
-      person_profiles: "identified_only",
-      capture_pageview: false,
-      capture_pageleave: true,
-    });
-    
+    if (typeof window !== "undefined") {
+      setTimeout(() => {
+        posthog.init(key, {
+          api_host: "https://eu.i.posthog.com",
+          person_profiles: "identified_only",
+          capture_pageview: false,
+          capture_pageleave: true,
+          loaded: (posthog) => {
+            if (process.env.NODE_ENV === "development") posthog.debug();
+          },
+        });
+      }, [2000]);
+    }
   }, []);
 
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
