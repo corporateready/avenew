@@ -9,16 +9,14 @@ import Header from "../../shared/pages/header";
 const Hero = ({ handleToggle }) => {
   return (
     <div className={styles.hero_wrapper}>
-      <div className={styles.hero}>
+      <div fetchPriority="high" className={styles.hero}>
         <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
 
         <Title textTitle="coming soon" />
 
-        <p className={styles.hero__text}>
-Special Offer for Investors
-        </p>
+        <p className={styles.hero__text}>Special Offer for Investors</p>
 
         <p className={styles.description}>
           Invest in a new real estate project {""}
@@ -50,7 +48,8 @@ Special Offer for Investors
         <p className={styles.location__description_text}>
           Soon, a new residential complex that will {""}
           <br className="block sm:hidden" />
-          elevate {""} <br className="hidden sm:block" /> the quality of urban living
+          elevate {""} <br className="hidden sm:block" /> the quality of urban
+          living
         </p>
 
         <p className={styles.location__title_text__bottom}>
@@ -61,8 +60,10 @@ Special Offer for Investors
 
         <p className={styles.location__description_text__bottom}>
           Located between two iconic parks and two {""}
-          <br />garden squares— where tranquility becomes {""}
-          <br />part of your everyday life
+          <br />
+          garden squares— where tranquility becomes {""}
+          <br />
+          part of your everyday life
         </p>
       </div>
       <Facilities />

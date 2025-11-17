@@ -9,7 +9,7 @@ import Header from "../../shared/pages/header";
 const Hero = ({ handleToggle }) => {
   return (
     <div className={styles.hero_wrapper}>
-      <div className={styles.hero}>
+      <div fetchPriority="high" className={styles.hero}>
         <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
