@@ -14,20 +14,10 @@ const montserrat = Montserrat({
 
 export const metadata = {
   title: "Botanica Avenew",
-  description: "Botanica Avenew project",
+  description: "Avenew Botanica coming soon",
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
-  },
-  title: "Название сайта",
-  description: "Описание",
-  robots: {
-    index: true, // ← Разрешить индексацию
-    follow: true, // ← Следовать по ссылкам
     googleBot: {
       index: true,
       follow: true,
