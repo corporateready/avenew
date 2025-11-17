@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./facilities.module.scss";
+import Image from "next/image";
 import { motion } from "motion/react";
 
 const Index = () => {
@@ -12,59 +13,42 @@ const Index = () => {
         <br className="block sm:hidden" /> în stil de viață
       </p>
       <div className={styles.facilities__inner}>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.1 }}
+        <Image
+          src="/shared/facilities-item-1.avif"
+          alt="Hero"
+          width={420}
+          height={368}
+          quality={85}
           className={styles.facilities__item}
-        >
-          <span className={styles.facilities__item__title}>
-            Terenuri de joacă {""}
-            <br className="" /> pentru toate {""}
-            <br className="hidden sm:block" />
-            vârstele
-          </span>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.1 }}
-          className={styles.facilities__item_2}
-        >
-          <span className={styles.facilities__item__title}>
-            Școală și grădiniță {""}
-            <br className="" /> în incinta {""}
-            <br className="hidden sm:block" /> complexului
-          </span>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.1 }}
-          className={styles.facilities__item_3}
-        >
-          <span className={styles.facilities__item__title}>
-            Locuri de parcări subterane {""}
-            <br className="block sm:hidden" /> suficiente pentru fiecare {""}
-            <br className="block sm:hidden" /> locatar
-          </span>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.1 }}
-          className={styles.facilities__item_4}
-        >
-          <span className={styles.facilities__item__title}>
-            Art&Lounge exterior pentru {""}
-            <br className="block sm:hidden" /> adulți {""}{" "}
-            <br className="hidden sm:block" /> cu BBQ și WiFi
-          </span>
-        </motion.div>
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw, 33vw"
+        />
+        <Image
+          src="/shared/facilities-item-2.avif"
+          alt="Hero"
+          width={420}
+          height={368}
+          quality={85}
+          className={styles.facilities__item}
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw, 33vw"
+        />
+        <Image
+          src="/shared/facilities-item-3.avif"
+          alt="Hero"
+          width={420}
+          height={368}
+          quality={85}
+          className={styles.facilities__item}
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw, 33vw"
+        />
+        <Image
+          src="/shared/facilities-item-4.avif"
+          alt="Hero"
+          width={420}
+          height={368}
+          quality={85}
+          className={styles.facilities__item}
+          sizes="(max-width: 640px) 100vw, (min-width: 641px) 50vw, 33vw"
+        />     
       </div>
     </div>
   );

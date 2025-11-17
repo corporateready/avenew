@@ -14,17 +14,21 @@ export function PHProvider({ children }) {
     }
 
     if (typeof window !== "undefined") {
-      setTimeout(() => {
+     const timer =  setTimeout(() => {
         posthog.init(key, {
           api_host: "https://eu.i.posthog.com",
           person_profiles: "identified_only",
           capture_pageview: false,
           capture_pageleave: true,
+          batch_size: 10,
+          batch_flush_interval_ms: 3000,
+          persistence: "localStorage",
           loaded: (posthog) => {
             if (process.env.NODE_ENV === "development") posthog.debug();
           },
         });
-      }, [2000]);
+      }, [2000])
+      return () => clearTimeout(timer)
     }
   }, []);
 

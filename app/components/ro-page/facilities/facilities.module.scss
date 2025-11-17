@@ -40,13 +40,10 @@
     }
 }
 .facilities__item {
-  @apply w-full h-[438rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[438rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-      &:nth-child(1) {
-        @apply order-1
-    } 
+    @apply w-full h-[368rem] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
   }
 
    @media screen and (width >= 1920px) {  
@@ -66,14 +63,10 @@
   }
 }
 .facilities__item_2 {
-  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(2) {
-      @apply order-3
-  } 
+    @apply w-full h-[368rem];
 }
 
   @media screen and (width >= 1920px) {  
@@ -93,14 +86,10 @@
   }
 }
 .facilities__item_3 {
-  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(3) {
-      @apply order-2;
-  } 
+    @apply w-full h-[368rem];
   }
 
   @media screen and (width >= 1920px) {  
@@ -120,14 +109,10 @@
   }
 }
 .facilities__item_4 {
-  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(4) {
-      @apply order-4;
-  } 
+    @apply w-full h-[368rem];
   }
 
   @media screen and (width >= 1920px) {  
