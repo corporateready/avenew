@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  swcMinify: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
@@ -15,11 +14,6 @@ const nextConfig = {
     qualities: [25, 50, 85],
   },
   productionBrowserSourceMaps: false,
-  theme: {
-    screens: {
-      sm: "640px",
-    },
-  },
   async rewrites() {
     return [
       {
