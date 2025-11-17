@@ -60,11 +60,11 @@ export default function Home() {
   }, [isOpen, isOpenBottom]);
 
   return (
-    <div
-      // initial={{ opacity: 0 }}
-      // animate={{ opacity: 1 }}
-      // exit={{ opacity: 0 }}
-      // transition={{ duration: 0.3 }}
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.1 }}
       className={styles.exfm_wrapper}
     >
       <Hero handleToggle={handleToggleModal} />
@@ -74,6 +74,6 @@ export default function Home() {
       {isOpenBottom && (
         <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} />
       )}
-    </div>
+    </motion.div>
   );
 }
