@@ -209,7 +209,7 @@
   
 }
 .letter__body {
-  @apply w-[310rem] h-[582rem] bg-[#962805] absolute top-[646rem] left-1/2 -translate-1/2 z-1;
+  @apply w-[310rem] h-[582rem] bg-[#962805]/90 absolute top-[646rem] left-1/2 -translate-1/2 z-1;
 
   @media screen and (width >= 640px) {
     @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[932rem] left-1/2 -translate-1/2 z-1;
@@ -221,7 +221,7 @@
 
   &::after {
     content: '';
-    @apply inline-block  w-[410rem] h-[370rem] rounded-full absolute top-[-100rem] left-1/2 -translate-x-1/2 z-1 bg-[url('/letter/letter-light.avif')] bg-cover bg-top object-cover bg-no-repeat;
+    @apply inline-block  w-[510rem] h-[470rem] rounded-full absolute top-[-150rem] left-1/2 -translate-x-1/2 z-1 bg-[url('/letter/letter-light.avif')] bg-cover bg-top object-cover bg-no-repeat;
 
     @media screen and (width >= 640px) {
       @apply  w-[960rem] h-[870rem] top-[-250rem];
