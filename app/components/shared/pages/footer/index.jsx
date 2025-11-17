@@ -42,7 +42,10 @@ const Index = () => {
                 />
               </svg>
             </Link>
-            <Link href="https://www.facebook.com/people/Avenew/61581776767162/">
+            <Link
+              href="https://www.facebook.com/people/Avenew/61581776767162/"
+              rel="noopener noreferrer"
+            >
               <svg
                 className={styles.footer__facebook_icon}
                 viewBox="0 0 14 25"
@@ -55,7 +58,10 @@ const Index = () => {
                 />
               </svg>
             </Link>
-            <Link href="https://www.instagram.com/avenew.md/">
+            <Link
+              href="https://www.instagram.com/avenew.md/"
+              rel="noopener noreferrer"
+            >
               <svg
                 className={styles.footer__instagram_icon}
                 viewBox="0 0 25 25"
@@ -83,7 +89,10 @@ const Index = () => {
                 </defs>
               </svg>
             </Link>
-            <Link href="https://consent.youtube.com/ml?continue=https://www.youtube.com/@avenewmd?cbrd%3D1&gl=IE&hl=en&cm=2&pc=yt&src=1&rffu=true&escs=ATOEXqIE8ekr-1wRMUmjz-d417vldd5N_IthihSgWXW2KJZ4vYlTKQdGiX6yn0myEfplcXUpttOhWVIH-gMa64iJt80VIzGDjUJG">
+            <Link
+              href="https://consent.youtube.com/ml?continue=https://www.youtube.com/@avenewmd?cbrd%3D1&gl=IE&hl=en&cm=2&pc=yt&src=1&rffu=true&escs=ATOEXqIE8ekr-1wRMUmjz-d417vldd5N_IthihSgWXW2KJZ4vYlTKQdGiX6yn0myEfplcXUpttOhWVIH-gMa64iJt80VIzGDjUJG"
+              rel="noopener noreferrer"
+            >
               <svg
                 className={styles.footer__youtube_icon}
                 viewBox="0 0 27 27"
@@ -112,8 +121,7 @@ const Index = () => {
 
         <div className={styles.footer__inner_bottom}>
           <p className={styles.footer__inner_bottom__text}>
-            {isPathName === "/" &&
-              "© 2025 Toate drepturile sunt rezervate."}
+            {isPathName === "/" && "© 2025 Toate drepturile sunt rezervate."}
             {isPathName === "/ru" && "© 2025 Все права защищены."}
             {isPathName === "/en" && "© 2025 All rights reserved."}
           </p>

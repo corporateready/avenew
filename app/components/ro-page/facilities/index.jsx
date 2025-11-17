@@ -5,18 +5,18 @@ import { motion } from "motion/react";
 const Index = () => {
   return (
     <div className={styles.facilities}>
-      <h6 className={styles.facilities__title}>
+      <p className={styles.facilities__title}>
         Facilități care {""}
         <br className="block sm:hidden" /> transformă {""}
         <br className="hidden sm:block" /> confortul {""}
         <br className="block sm:hidden" /> în stil de viață
-      </h6>
+      </p>
       <div className={styles.facilities__inner}>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           className={styles.facilities__item}
         >
           <span className={styles.facilities__item__title}>
@@ -26,12 +26,11 @@ const Index = () => {
             vârstele
           </span>
         </motion.div>
-
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           className={styles.facilities__item_2}
         >
           <span className={styles.facilities__item__title}>
@@ -44,7 +43,7 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.1 }}
           className={styles.facilities__item_3}
         >
           <span className={styles.facilities__item__title}>
@@ -53,7 +52,13 @@ const Index = () => {
             <br className="block sm:hidden" /> locatar
           </span>
         </motion.div>
-        <motion.div className={styles.facilities__item_4}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.1 }}
+          className={styles.facilities__item_4}
+        >
           <span className={styles.facilities__item__title}>
             Art&Lounge exterior pentru {""}
             <br className="block sm:hidden" /> adulți {""}{" "}

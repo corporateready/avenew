@@ -4,7 +4,11 @@ import styles from "./styles.module.scss";
 const Index = () => {
 
   return (
-    <a href="#header" className={styles.letter__button_up}>
+    <a
+      href="#header"
+      className={styles.letter__button_up}
+      rel="noopener noreferrer"
+    >
       <svg
         className={styles.letter__button_up_icon}
         viewBox="0 0 9 17"

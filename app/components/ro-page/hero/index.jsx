@@ -38,9 +38,6 @@ const Hero = ({ handleToggle }) => {
           <span className={styles.button__detail__sparkle_5}></span>
           <span className={styles.button__detail__sparkle_6}></span>
         </button>
-        {/* <p className={styles.oferta__text}>
-          Oferta disponibilă până în data de <span>15.11.2025</span>
-        </p> */}
 
         <p className={styles.location__title_text}>
           Locație fără {""}
