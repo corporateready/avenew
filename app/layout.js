@@ -5,7 +5,6 @@ import { PHProvider } from "./components/providers/posthog-provider";
 import { PostHogPageView } from "./components/posthog-pageview";
 import { Suspense } from "react";
 
-
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],

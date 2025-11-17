@@ -19,6 +19,7 @@ export function PHProvider({ children }) {
       capture_pageview: false,
       capture_pageleave: true,
     });
+    
   }, []);
 
   return <PostHogProvider client={posthog}>{children}</PostHogProvider>;
