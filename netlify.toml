@@ -1,0 +1,10 @@
+[[redirects]]
+  from = "/posthog-assets/*"
+  to = "https://eu-assets.i.posthog.com/:splat"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/posthog-assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

@@ -48,6 +48,7 @@ export default function RootLayout({ children }) {
           href="/favicon_io/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
+        <link rel="stylesheet" href="/app/components/ro-page/hero/hero.module.scss"/>
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>

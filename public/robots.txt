@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+Disallow: /_next/static/
+Disallow: /api/
+
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+Allow: /_next/image
+Allow: /images/
+Allow: /fonts/
+Allow: /favicon.ico
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: YandexImages
+Allow: /
