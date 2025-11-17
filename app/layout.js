@@ -16,6 +16,24 @@ const montserrat = Montserrat({
 export const metadata = {
   title: "Botanica Avenew",
   description: "Botanica Avenew project",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  title: "Название сайта",
+  description: "Описание",
+  robots: {
+    index: true, // ← Разрешить индексацию
+    follow: true, // ← Следовать по ссылкам
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export const viewport = {
@@ -48,7 +66,6 @@ export default function RootLayout({ children }) {
           href="/favicon_io/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
-        <link rel="stylesheet" href="/app/components/ro-page/hero/hero.module.scss"/>
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
