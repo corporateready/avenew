@@ -21,11 +21,11 @@
   @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-fit relative top-[10rem] left-1/2 -translate-x-1/2 z-[1];
 
   @media screen and (min-width: 641px) {
-    @apply text-[74rem] font-semibold text-white text-center leading-[100%] w-fit relative top-[-369rem] left-1/2 -translate-x-1/2 z-[1] ml-[10rem] tracking-[-1rem];
+    @apply text-[74rem] leading-[100%] top-[-369rem] z-[1] ml-[10rem] tracking-[-1rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-fit absolute top-[-188px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem];
+    @apply text-[67px] absolute top-[-188px] ml-0 tracking-[-1rem];
   }
 }
 .facilities__inner {
@@ -47,75 +47,6 @@
   }
 
    @media screen and (width >= 1920px) {  
-    @apply w-full h-[366px];
-  }
-
-  span {
-    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
-
-    @media screen and (min-width: 641px) {
-     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
-    }
-
-    @media screen and (width >= 1920px) {
-     @apply text-[22px] font-medium text-white leading-[24px] w-full absolute top-[18px] left-[26px] z-[2];
-    }
-  }
-}
-.facilities__item_2 {
-  @apply w-full h-[440rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-  @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem];
-}
-
-  @media screen and (width >= 1920px) {  
-    @apply w-full h-[366px];
-  }
-
-  span {
-    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
-
-    @media screen and (min-width: 641px) {
-     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
-    }
-
-    @media screen and (width >= 1920px) {
-     @apply text-[22px] font-medium text-white leading-[24px] w-full absolute top-[18px] left-[26px] z-[2];
-    }
-  }
-}
-.facilities__item_3 {
-  @apply w-full h-[440rem] object-cover bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-  @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem];
-  }
-
-  @media screen and (width >= 1920px) {  
-    @apply w-full h-[366px];
-  }
-
-  span {
-    @apply text-[22rem] font-medium text-white leading-[120%] w-full absolute top-[20rem] left-[30rem] z-[2];
-
-    @media screen and (min-width: 641px) {
-     @apply text-[22rem] font-medium text-white leading-[24rem] w-full absolute top-[18rem] left-[26rem] z-[2];
-    }
-
-    @media screen and (width >= 1920px) {
-     @apply text-[22px] font-medium text-white leading-[24px] w-full absolute top-[18px] left-[26px] z-[2];
-    }
-  }
-}
-.facilities__item_4 {
-  @apply w-full h-[440rem] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-  @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem];
-  }
-
-  @media screen and (width >= 1920px) {  
     @apply w-full h-[366px];
   }
 

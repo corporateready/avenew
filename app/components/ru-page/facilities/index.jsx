@@ -54,7 +54,7 @@ const Index = () => {
         </motion.div>
         <motion.div className={styles.facilities__item_4}>
           <span className={styles.facilities__item__title}>
-            Уличный Art&Lounge {""}
+            Уличный Art & Lounge {""}
             <br />
             для взрослых {""}
             <br className="hidden sm:block" />с BBQ и WiFi

@@ -26,16 +26,6 @@
         content: '';
         @apply w-full h-full bg-[url('/exfm/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
 
-      //   animation: fadeIn 2s ease-in-out forwards;
-      
-      // @keyframes fadeIn {
-      //   from {
-      //     opacity: 0;
-      //   }
-      //   to {
-      //     opacity: 1;
-      //   }
-      // }
       }
 
       &::after {
@@ -382,10 +372,10 @@
   @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[424rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1160rem] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1146rem] left-1/2 -translate-x-1/2 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[30px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[942px] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[30px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[926px] left-1/2 -translate-x-1/2 z-[3];
   }
 }
