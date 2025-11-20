@@ -153,7 +153,7 @@ const Index = ({ handleToggleModal }) => {
               />
             </div>
             <FormButton
-              textButton={"Send"}
+              textButton={"Reserve Now"}
               formSubmitTrack={formSubmitTrack}
               isDisabled={isDisabled}
             />

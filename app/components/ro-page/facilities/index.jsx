@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./facilities.module.scss";
 import Image from "next/image";
-import { motion } from "motion/react";
 
 const Index = () => {
   return (
@@ -28,7 +27,7 @@ const Index = () => {
             <br className="hidden sm:block" />
             vârstele
           </span>
-        </div>
+        </div>    
         <div className={styles.facilities__item}>
           <Image
             src="/shared/facilities-item-2.avif"
@@ -77,7 +76,6 @@ const Index = () => {
             <br className="hidden sm:block" /> cu BBQ și WiFi
           </span>
         </div>
-        
       </div>
     </div>
   );

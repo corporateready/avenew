@@ -8,7 +8,8 @@ const Index = () => {
       <h6 className={styles.facilities__title}>
         Удобства, которые {""}
         <br className="block sm:hidden" />
-        превращают {""} <br className="hidden 2xl:block" />комфорт {""}
+        превращают {""} <br className="hidden 2xl:block" />
+        комфорт {""}
         <br className="block sm:hidden" />в стиль жизни
       </h6>
       <div className={styles.facilities__inner}>
@@ -34,9 +35,9 @@ const Index = () => {
           className={styles.facilities__item_2}
         >
           <span className={styles.facilities__item__title}>
-            Школа и детский сад {""}
-            <br />на территории {""}
-            <br className="hidden sm:block" />комплекса
+            Подземный паркинг {""}
+            <br />
+            для каждого жильца
           </span>
         </motion.div>
         <motion.div
@@ -47,9 +48,11 @@ const Index = () => {
           className={styles.facilities__item_3}
         >
           <span className={styles.facilities__item__title}>
-            Подземный паркинг {""}
+            Школа и детский сад {""}
             <br />
-            для каждого жильца
+            на территории {""}
+            <br className="hidden sm:block" />
+            комплекса
           </span>
         </motion.div>
         <motion.div className={styles.facilities__item_4}>

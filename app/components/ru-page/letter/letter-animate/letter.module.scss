@@ -6,7 +6,7 @@
   font-family: "Montserrat", sans-serif;
 
   @media screen and (width >= 640px) {
-    @apply w-full h-[1300rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
+    @apply w-full h-[1316rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
   }
 
   @media screen and (width >= 1920px) {
@@ -212,7 +212,7 @@
   @apply w-[310rem] h-[590rem] bg-[#962805]/90 absolute top-[646rem] left-1/2 -translate-1/2 z-1;
 
   @media screen and (width >= 640px) {
-    @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[932rem] left-1/2 -translate-1/2 z-1;
+    @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[940rem] left-1/2 -translate-1/2 z-1;
   }
 
   @media screen and (width >= 1920px) {

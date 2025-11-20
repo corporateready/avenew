@@ -1,16 +1,16 @@
 @reference "tailwindcss";
 
 .letter {
-  @apply w-full h-[716rem] bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-no-repeat bg-center relative mt-[-196rem] mb-[140rem] z-[-1];
+  @apply w-full h-[690rem] bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-no-repeat bg-center relative mt-[-226rem] mb-[120rem] z-[-1];
   overflow-y: hidden;
   font-family: "Montserrat", sans-serif;
 
   @media screen and (width >= 640px) {
-    @apply w-full h-[1380rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
+    @apply w-full h-[1320rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
   }
 
   @media screen and (width >= 1920px) {
-    @apply w-full h-[1314px] mt-[-340px] mb-[128px] bg-contain;
+    @apply w-full h-[1180px] mt-[-340px] mb-[112px] bg-contain;
   }
 
   &::before {
@@ -212,11 +212,11 @@
   @apply w-[330rem] h-[582rem] bg-[#962805]/90 absolute top-[656rem] left-1/2 -translate-1/2 z-1;
 
   @media screen and (width >= 640px) {
-    @apply w-[596rem] h-[582rem] bg-[#962805] absolute top-[974rem] left-1/2 -translate-1/2 z-1;
+    @apply w-[596rem] h-[630rem] bg-[#962805] absolute top-[968rem] left-1/2 -translate-1/2 z-1;
   }
 
   @media screen and (width >= 1920px) {
-    @apply w-[580px] h-[582px] bg-[#962805] absolute top-[940px] left-1/2 -translate-1/2 z-1;
+    @apply w-[500px] h-[582px] bg-[#962805] absolute top-[874px] left-1/2 -translate-1/2 z-1;
   }
 
    &::after {
@@ -237,22 +237,22 @@
   @apply w-[86rem] h-[17rem] absolute top-[45rem] left-1/2 -translate-1/2 z-[2];
 
   @media screen and (min-width: 641px) {  
-    @apply w-[170rem] h-[34rem] absolute top-[118rem];
+    @apply w-[170rem] h-[34rem] absolute top-[100rem];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply w-[154px] h-[32px] absolute top-[72px];
+    @apply w-[154px] h-[32px] absolute top-[84px];
   }
 }
 .letter__title {
-  @apply text-[26rem] text-white font-semibold leading-[90%] absolute top-[90rem] left-0 text-center w-full z-2;
+  @apply text-[32rem] text-white font-semibold leading-[90%] absolute top-[90rem] left-0 text-center w-full z-2;
 
     @media screen and (width >= 640px) {
-      @apply text-[44rem] top-[210rem];
+      @apply text-[52rem] top-[176rem];
     }
 
     @media screen and (width >= 1920px) {  
-      @apply text-[45px] top-[140px];
+      @apply text-[52px] top-[150px];
     }
 
     .br {
@@ -267,15 +267,15 @@
   @apply text-[12rem] text-white font-normal leading-[112%] absolute top-[126rem] left-0 text-center w-full z-2;
 
   @media screen and (width >= 640px) {
-    @apply text-[19rem] leading-[115%] top-[280rem];
+    @apply text-[22rem] leading-[115%] top-[236rem];
   }
 
   @media screen and (width >= 1920px) {  
-    @apply text-[18px] leading-[112%] top-[242px];
+    @apply text-[20px] leading-[112%] top-[216px];
   }
 }
 .letter__button_access {
-  @apply text-white text-[19rem] font-semibold leading-[100%] w-[360rem] h-[54rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[764rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[19rem] font-semibold leading-[100%] w-[360rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[724rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(
@@ -305,11 +305,6 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 
-//  box-shadow: 
-//     0 0 3rem rgba(255, 255, 255, .1),
-//     0 0 1rem rgba(255, 255, 255, .1);
-  
-
     animation: rotate 3s linear infinite ;
 
     pointer-events: none;
@@ -323,7 +318,7 @@
 }
 
   @media screen and (min-width: 641px) {
-  @apply text-white text-[30rem] leading-[100%] w-[394rem] h-[78rem] border-[1rem] z-[4] top-[1248rem] hover:cursor-pointer;
+  @apply text-white text-[30rem] leading-[100%] w-[394rem] h-[74rem] border-[1rem] z-[4] top-[1158rem] hover:cursor-pointer;
     font-family: "Montserrat", sans-serif;
     background: linear-gradient(
       0deg,
@@ -334,7 +329,7 @@
 
   }
   @media screen and (width >= 1920px) {
-    @apply text-[27px] leading-[100%] w-[584px] h-[76px] border-[1px] z-[4] top-[1162px] hover:cursor-pointer;
+    @apply text-[27px] leading-[100%] w-[570px] h-[68px] border-[1px] z-[4] top-[1045px] hover:cursor-pointer;
   }
   .button__detail_sparkle_left {
   @apply w-0 h-0;

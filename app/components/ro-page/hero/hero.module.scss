@@ -18,52 +18,20 @@
            background: linear-gradient(180deg,rgba(7, 11, 27, 1), rgba(7, 11, 27, 0.8), rgba(7, 11, 27, 0));
           }
   }
-
-  @media screen and (max-width: 640px) {
      @apply w-full h-[2000rem] relative z-0;
-
       &::before {
         content: '';
         @apply w-full h-full bg-[url('/exfm/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
-
-      //   animation: fadeIn 2s ease-in-out forwards;
-      
-      // @keyframes fadeIn {
-      //   from {
-      //     opacity: 0;
-      //   }
-      //   to {
-      //     opacity: 1;
-      //   }
-      // }
       }
-
       &::after {
         content: '';
         @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[237rem] left-0 z-[2] w-full h-[726rem];
-
       }
-
-    }
-
   @media screen and (min-width: 641px) {
     @apply w-full h-[3580rem] relative z-0;
-
      &::before {
       content: '';
-      @apply w-full h-full bg-[url('/exfm/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1];
-
-      // animation: fadeIn 2s ease-in-out forwards;
-      
-      // @keyframes fadeIn {
-      //   from {
-      //     opacity: 0;
-      //   }
-      //   to {
-      //     opacity: 1;
-      //   }
-      // }
-      
+      @apply w-full h-full bg-[url('/exfm/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1]; 
     }
 
     &::after {
@@ -71,7 +39,6 @@
         @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[292rem] object-cover left-0  z-[2] w-full h-[1200rem];
       }
    }
-
   @media screen and (width >= 1920px) {
     @apply w-[1920px] h-[3084px] relative z-0;
 
@@ -85,10 +52,9 @@
         @apply bg-[url('/shared/dark-building-large.avif')] bg-contain bg-center bg-no-repeat absolute top-[267px] object-cover left-0  z-[2] w-full h-[640px];
       }
    }
-
 }
 .hero__text {
-  @apply text-[32rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[540rem] left-1/2 -translate-1/2 z-[3];
+  @apply text-[32rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[534rem] left-1/2 -translate-1/2 z-[3];
 
   .text__gradient {
     @apply inline-block font-extrabold;
@@ -104,15 +70,15 @@
       }
 
   @media screen and (min-width: 641px) {
-   @apply text-[52.2rem] text-center leading-[120%] w-full text-white font-bold absolute top-[742rem] left-1/2 -translate-1/2 z-[3];
+   @apply text-[52.2rem] text-center leading-[120%] w-full text-white font-bold absolute top-[738rem] left-1/2 -translate-1/2 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[52px] text-center leading-[120%] w-fit text-white font-bold absolute top-[731px] left-1/2 -translate-1/2 z-[3];
+    @apply text-[52px] text-center leading-[120%] w-fit text-white font-bold absolute top-[723px] left-1/2 -translate-1/2 z-[3];
   }
 }
 .description { 
-  @apply text-[14rem] text-center leading-[120%] w-full text-white font-normal absolute top-[578rem] left-0 z-[3];
+  @apply text-[16rem] text-center leading-[112%] w-full text-white font-normal absolute top-[579rem] left-0 z-[3];
 
    background: linear-gradient(
     90deg,
@@ -129,15 +95,15 @@
   }
 
   @media screen and (min-width: 641px) {
-  @apply text-[30.2rem] text-center leading-[120%] w-full text-white font-normal absolute top-[792rem] left-0 z-[3];
+  @apply text-[36rem] text-center leading-[120%] w-full text-white font-normal absolute top-[784rem] left-0 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-   @apply text-[30px] text-center leading-[120%] w-full text-white font-normal absolute top-[785px] left-0 z-[3];
+   @apply text-[36px] text-center leading-[120%] w-full text-white font-normal absolute top-[772px] left-0 z-[3];
   }
 }
 .button__detail {
-  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[608rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem];
+  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[613rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem];
  
   background: linear-gradient(
     0deg,
@@ -184,7 +150,7 @@
 }
 
 @media screen and (width >= 1920px) {
-  @apply text-white text-[30px] font-medium leading-[100%] w-[345px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[898px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
+  @apply text-white text-[30px] font-medium leading-[100%] w-[345px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[890px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
     0deg,
@@ -195,7 +161,6 @@
 }
 
 }
-
 .button__detail__sparkle {
   @apply w-[8rem] h-[8rem] rounded-full absolute top-[58rem] left-[-13rem] -translate-x-1/2;
 
@@ -341,7 +306,7 @@
       }
 }
 .location__title_text {
-  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[934rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[946rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
      @apply text-[72rem] font-semibold text-white text-center leading-[71rem] w-full absolute top-[1434rem] left-1/2 -translate-x-1/2 z-[3] ml-[-10rem];
@@ -349,19 +314,19 @@
   }
 
   @media screen and (width >= 1920px) {
-     @apply text-[65px] font-semibold text-white text-center leading-[100%] w-full absolute top-[1330px] left-1/2 -translate-x-1/2 z-[3] ml-0;
+     @apply text-[72px] font-semibold text-white text-center leading-[100%] w-full absolute top-[1248px] left-1/2 -translate-x-1/2 z-[3] ml-0;
      letter-spacing: .4%;
   }
 }
 .location__description_text {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[1053rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[1062rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1586rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
+    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full absolute top-[1598rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[27px] font-normal text-white text-center leading-none w-full absolute top-[1470px] left-1/2 -translate-x-1/2 z-[3] ml-0;
+    @apply text-[36px] font-normal text-white text-center leading-none w-full absolute top-[1406px] left-1/2 -translate-x-1/2 z-[3] ml-0;
   }
 }
 .location__title_text__bottom {
@@ -372,17 +337,17 @@
   }
 
   @media screen and (width >= 1920px) {
-   @apply text-[65px] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1068px] left-1/2 -translate-x-1/2 z-[3];
+   @apply text-[72px] font-semibold text-white text-center leading-[100%] w-full absolute bottom-[1088px] left-1/2 -translate-x-1/2 z-[3];
   }
 }
 .location__description_text__bottom {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[444rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[440rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1170rem] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1156rem] left-1/2 -translate-x-1/2 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[27px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[972px] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[36px] font-normal text-white text-center leading-[100%] w-full absolute bottom-[960px] left-1/2 -translate-x-1/2 z-[3];
   }
 }

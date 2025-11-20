@@ -16,13 +16,16 @@ const Hero = ({ handleToggle }) => {
 
         <Title textTitle="coming soon" />
 
-        <p className={styles.hero__text}>Special Offer for Investors</p>
+        <p className={styles.hero__text}>
+          Special Offer {""}
+          <br className="inline-block sm:hidden" />
+          for Investors
+        </p>
 
         <p className={styles.description}>
           Invest in a new real estate project {""}
-          <br className="block sm:hidden" />
-          before sales{""} <br className="hidden sm:block" /> launch {""}
-          <span>in December 2025</span>
+          <br className="block" />
+          before <span className="inline sm:hidden">the official</span> sales launch
         </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
@@ -39,11 +42,13 @@ const Hero = ({ handleToggle }) => {
         </button>
 
         <p className={styles.location__title_text}>
-          Prime location {""}
+          Prime Location {""}
           <br className="block sm:hidden" />
-          in the heart {""} <br className="hidden sm:block" /> of {""}
+          in the {""}
+          <br className="hidden sm:inline-block" />
+          Heart {""}
           <br className="block sm:hidden" />
-          Botanica district
+          of Botanica District
         </p>
         <p className={styles.location__description_text}>
           Soon, a new residential complex that will {""}
@@ -53,17 +58,17 @@ const Hero = ({ handleToggle }) => {
         </p>
 
         <p className={styles.location__title_text__bottom}>
-          A new standard {""}
+          A New Standard {""}
           <br />
-          of urban living
+          of Urban Living
         </p>
 
         <p className={styles.location__description_text__bottom}>
           Located between two iconic parks and two {""}
           <br />
-          garden squares— where tranquility becomes {""}
+          garden squares — where urban living {""}
           <br />
-          part of your everyday life
+          embraces natural serenity
         </p>
       </div>
       <Facilities />

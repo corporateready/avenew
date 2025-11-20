@@ -36,7 +36,7 @@
     }
 
     @media screen and (width >= 1920px) {
-      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-168px];
+      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-150px];
     }
 }
 .facilities__item {
@@ -44,9 +44,6 @@
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-      &:nth-child(1) {
-        @apply order-1
-    } 
   }
 
    @media screen and (width >= 1920px) {  
@@ -69,11 +66,7 @@
   @apply w-full h-[440rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(2) {
-      @apply order-3
-  } 
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 }
 
   @media screen and (width >= 1920px) {  
@@ -96,11 +89,7 @@
   @apply w-full h-[440rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
-    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(3) {
-      @apply order-2;
-  } 
+    @apply w-full h-[368rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
   }
 
   @media screen and (width >= 1920px) {  
@@ -124,10 +113,6 @@
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
-
-    &:nth-child(4) {
-      @apply order-4;
-  } 
   }
 
   @media screen and (width >= 1920px) {  

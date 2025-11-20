@@ -6,9 +6,10 @@ const Index = () => {
   return (
     <div className={styles.facilities}>
       <h6 className={styles.facilities__title}>
-        Amenities that transform {""}
-        <br />
-        comfort into lifestyle
+        Amenities That {""}
+        <br className="inline-block sm:hidden" />
+        Transform {""}<br className="hidden sm:inline-block"/>Comfort {""}
+        <br className="inline-block sm:hidden" />into Lifestyle
       </h6>
       <div className={styles.facilities__inner}>
         <motion.div

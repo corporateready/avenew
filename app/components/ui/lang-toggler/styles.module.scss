@@ -8,7 +8,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply bg-none  border-white leading-0 font-medium uppercase text-[17px] text-white w-[45px] h-[45px] border-[0.56rem] rounded-[22rem] flex justify-center items-center relative cursor-pointer;
+    @apply bg-none  border-white leading-0 font-medium uppercase text-[17px] text-white w-[45px] h-[45px] border-[1rem] rounded-[22rem] flex justify-center items-center relative cursor-pointer;
   }
 
 }

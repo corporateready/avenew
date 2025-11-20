@@ -127,14 +127,14 @@ const Index = () => {
           </p>
 
           <div className={styles.footer__inner_bottom__links}>
-            <Link href="/">
+            <Link href="/terms-and-conditions">
               <p className={styles.footer__inner_bottom__links__text}>
                 {isPathName === "/" && "Terms & conditions"}
                 {isPathName === "/ru" && "Условия и положения"}
                 {isPathName === "/en" && "Terms & conditions"}
               </p>
             </Link>
-            <Link href="/">
+            <Link href="/privacy-policy">
               <p className={styles.footer__inner_bottom__links__text}>
                 {isPathName === "/" && "Privacy policy"}
                 {isPathName === "/ru" && "Политика конфиденциальности"}

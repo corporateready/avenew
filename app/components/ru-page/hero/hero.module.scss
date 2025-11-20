@@ -79,7 +79,7 @@
 
 }
 .hero__text {
-  @apply text-[24rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[554rem] left-1/2 -translate-1/2 z-[3];
+  @apply text-[25rem] text-center leading-[110%] w-full text-white font-semibold absolute top-[542rem] left-1/2 -translate-1/2 z-[3];
 
   .text__gradient {
     @apply inline-block font-extrabold;
@@ -95,18 +95,18 @@
       }
 
   @media screen and (min-width: 641px) {
-   @apply text-[50.5rem] text-center leading-[120%] w-full text-white font-bold absolute top-[737rem] left-1/2 -translate-1/2 z-[3];
+   @apply text-[52rem] text-center leading-[120%] w-full text-white font-bold absolute top-[740rem] left-1/2 -translate-1/2 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[48px] text-center leading-[120%] text-white font-bold absolute top-[734px] left-1/2 -translate-1/2 z-[3] w-[1200px];
+    @apply text-[52px] text-center leading-[120%] text-white font-bold absolute top-[733px] left-1/2 -translate-1/2 z-[3] w-full;
   }
   .hero__text__br {
     @apply block sm:hidden;
   }
 }
 .description { 
-  @apply text-[14rem] text-center leading-[120%] w-full text-white font-normal absolute top-[584rem] left-0 z-[3];
+  @apply text-[16rem] text-center leading-[120%] w-full text-white font-normal absolute top-[574rem] left-0 z-[3];
 
    background: linear-gradient(
     90deg,
@@ -118,20 +118,16 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 
-  span {
-    @apply font-semibold text-white;
-  }
-
   @media screen and (min-width: 641px) {
-  @apply text-[30.2rem] text-center leading-[120%] w-full text-white font-normal absolute top-[787rem] left-0 z-[3];
+  @apply text-[36rem] text-center leading-[120%] w-full text-white font-normal absolute top-[787rem] left-0 z-[3];
   }
 
   @media screen and (width >= 1920px) {
-   @apply text-[30px] text-center leading-[120%] w-full text-white font-normal absolute top-[784px] left-0 z-[3];
+   @apply text-[36px] text-center leading-[120%] w-full text-white font-normal absolute top-[783px] left-0 z-[3];
   }
 }
 .button__detail {
-  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[612rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem];
+  @apply text-white text-[21.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[614rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem];
  
   background: linear-gradient(
     0deg,
@@ -178,7 +174,7 @@
 }
 
 @media screen and (width >= 1920px) {
-  @apply text-white text-[30px] font-medium leading-[100%] w-[438px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[904px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
+  @apply text-white text-[30px] font-medium leading-[100%] w-[438px] h-[76px] border-[1px] border-white rounded-full flex items-center justify-center absolute z-[4] top-[898px] left-1/2 -translate-x-1/2 hover:cursor-pointer tracking-normal mt-0;
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
     0deg,
@@ -334,7 +330,7 @@
       }
 }
 .location__title_text {
-  @apply text-[25rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[940rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[25rem] font-semibold text-white text-center leading-[110%] w-full absolute top-[955rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
      @apply text-[72rem] font-semibold text-white text-center leading-[71rem] w-full absolute top-[1434rem] left-1/2 -translate-x-1/2 z-[3] ml-[-10rem];
@@ -342,19 +338,19 @@
   }
 
   @media screen and (width >= 1920px) {
-     @apply text-[65px] font-semibold text-white text-center leading-[100%] w-full absolute top-[1296px] left-1/2 -translate-x-1/2 z-[3] ml-0;
+     @apply text-[65px] font-semibold text-white text-center leading-[110%] w-full absolute top-[1292px] left-1/2 -translate-x-1/2 z-[3] ml-0;
      letter-spacing: .4%;
   }
 }
 .location__description_text {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[1004rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute top-[1021rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-none w-full absolute top-[1586rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
+    @apply text-[36rem] font-normal text-white text-center leading-[100%] w-full absolute top-[1596rem] left-1/2 -translate-x-1/2 z-[3] ml-[2rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[27px] font-normal text-white text-center leading-none w-full absolute top-[1452px] left-1/2 -translate-x-1/2 z-[3] ml-0;
+    @apply text-[36px] font-normal text-white text-center leading-none w-full absolute top-[1454px] left-1/2 -translate-x-1/2 z-[3] ml-0;
   }
 }
 .location__title_text__bottom {
@@ -369,10 +365,10 @@
   }
 }
 .location__description_text__bottom {
-  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[424rem] left-1/2 -translate-x-1/2 z-[3];
+  @apply text-[16rem] font-normal text-white text-center leading-[110%] w-full absolute bottom-[427rem] left-1/2 -translate-x-1/2 z-[3];
 
   @media screen and (min-width: 641px) {
-    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1146rem] left-1/2 -translate-x-1/2 z-[3];
+    @apply text-[30rem] font-normal text-white text-center leading-[100%] w-full absolute bottom-[1150rem] left-1/2 -translate-x-1/2 z-[3];
   }
 
   @media screen and (width >= 1920px) {

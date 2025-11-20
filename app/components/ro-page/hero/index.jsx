@@ -5,6 +5,7 @@ import Facilities from "../facilities";
 import Title from "../../ui-exfm/title";
 import HeartAnimate from "../../ui-exfm/heart-animate";
 import Header from "../../shared/pages/header";
+import Image from "next/image";
 
 const Hero = ({ handleToggle }) => {
   return (
@@ -23,9 +24,9 @@ const Hero = ({ handleToggle }) => {
         </p>
 
         <p className={styles.description}>
-          Investește într-un proiect imobiliar nou, înainte {""}
-          <br className="block" /> de startul vânzărilor{" "}
-          <span>din decembrie 2025</span>
+          Investește într-un proiect imobiliar nou, {""}
+          <br className="block" />
+          înainte de startul vânzărilor{" "}
         </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
@@ -47,8 +48,8 @@ const Hero = ({ handleToggle }) => {
         </p>
         <p className={styles.location__description_text}>
           În curând, un nou ansamblu rezidențial
-          <br className="block sm:hidden" /> care va ridica {""}
-          <br className="hidden sm:block" /> calitatea vieții urbane
+          <br className="block" /> care va ridica calitatea {""}
+          <br className="hidden sm:block" />vieții urbane
         </p>
 
         <p className={styles.location__title_text__bottom}>

@@ -45,10 +45,10 @@
   }
 }
 .hero__form_title {
-  @apply text-[20em] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
+  @apply text-[20.2rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 
     @media screen and (min-width: 641px) {
-    @apply text-[33rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[42rem];
+    @apply text-[28rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[48rem];
     }
 
     @media screen and (width >= 1920px) {
@@ -59,7 +59,7 @@
   @apply w-full h-full mt-[32rem] mx-auto flex flex-col gap-[19rem];
 
   @media screen and (min-width: 641px) {
-   @apply w-[524rem] h-full mt-[51rem] mx-auto flex flex-col gap-[28rem];
+   @apply w-[524rem] h-full mt-[56rem] mx-auto flex flex-col gap-[26rem];
   }
 
   @media screen and (width >= 1920px) {

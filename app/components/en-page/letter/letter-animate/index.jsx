@@ -39,15 +39,12 @@ const isVisible = useInView(letterSection, {
               className={styles.letter__logo}
               alt="Avenew botanica logo"
             />
-            <p className={styles.letter__title}>Reserve Your Spot{""}
-            <br className={styles.br}/> Now</p>
+            <p className={styles.letter__title}>Pre-Sale Access{""}</p>
             <p className={styles.letter__description}>
-              Request details of the exclusive investor offer. {""}
-              <br />
-              Limited spots available at the pre-sale stage — {""}
-              <br />a unique opportunity available only {""}
-              <br />
-              to a select number of investors
+              Pre-registration spots are limited. {""}
+              <br />Get all the details about {""}<br className="hidden sm:inline-block"/>the
+              project {""}
+              <br className="sm:hidden"/>launch right now.
             </p>
           </motion.div>
         )}
@@ -56,7 +53,7 @@ const isVisible = useInView(letterSection, {
         className={styles.letter__button_access}
         onClick={handleToggleModalBottom}
       >
-        <span>Get priority access</span>
+        <span>Get Priority Access</span>
         <span className={styles.button__detail_sparkle_left}></span>
         <span className={styles.button__detail_sparkle_right}></span>
       </button>

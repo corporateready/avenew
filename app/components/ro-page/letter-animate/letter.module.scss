@@ -1,12 +1,12 @@
 @reference "tailwindcss";
 
 .letter {
-  @apply w-full h-[676rem] bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-no-repeat bg-center relative mt-[-216rem] mb-[120rem] z-[-1];
+  @apply w-full h-[676rem] bg-[url('/letter/body-letter-mobile.avif')] bg-cover bg-no-repeat bg-center relative mt-[-216rem] mb-[118rem] z-[-1];
   overflow-y: hidden;
   font-family: "Montserrat", sans-serif;
 
   @media screen and (width >= 640px) {
-    @apply w-full h-[1300rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
+    @apply w-full h-[1308rem] mt-[-360rem] mb-[95rem] bg-[url('/letter/body-letter.avif')] bg-cover bg-no-repeat bg-center;
   }
 
   @media screen and (width >= 1920px) {
@@ -209,7 +209,7 @@
   
 }
 .letter__body {
-  @apply w-[310rem] h-[582rem] bg-[#962805]/90 absolute top-[646rem] left-1/2 -translate-1/2 z-1;
+  @apply w-[310rem] h-[582rem] bg-[#962805]/90 absolute top-[642rem] left-1/2 -translate-1/2 z-1;
 
   @media screen and (width >= 640px) {
     @apply w-[576rem] h-[582rem] bg-[#962805] absolute top-[932rem] left-1/2 -translate-1/2 z-1;
@@ -234,10 +234,10 @@
   }
 }
 .letter__logo {
-  @apply w-[86rem] h-[17rem] absolute top-[50rem] left-1/2 -translate-1/2 z-[2];
+  @apply w-[86rem] h-[17rem] absolute top-[52rem] left-1/2 -translate-1/2 z-[2];
 
   @media screen and (min-width: 641px) {  
-    @apply w-[170rem] h-[34rem] absolute top-[124rem];
+    @apply w-[170rem] h-[34rem] absolute top-[104rem];
   }
 
   @media screen and (width >= 1920px) {  
@@ -256,7 +256,7 @@
     }
 }
 .letter__description {
-  @apply text-[9.7rem] text-white font-normal leading-[112%] absolute top-[120rem] left-0 text-center w-full z-2;
+  @apply text-[9.7rem] text-white font-normal leading-[112%] absolute top-[122rem] left-0 text-center w-full z-2;
 
   @media screen and (width >= 640px) {
     @apply text-[18rem] leading-[115%] top-[246rem];
@@ -267,7 +267,7 @@
   }
 }
 .letter__button_access {
-  @apply text-white text-[21.2rem] font-medium leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[714rem] left-1/2 -translate-x-1/2;
+  @apply text-white text-[21.2rem] font-medium leading-[100%] w-[360rem] h-[52rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute z-[4] top-[710rem] left-1/2 -translate-x-1/2;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 3%;
   background: linear-gradient(

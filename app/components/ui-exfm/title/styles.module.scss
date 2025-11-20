@@ -1,7 +1,7 @@
 @reference "tailwindcss";
 
 .title {
-  @apply text-white/63 text-[71rem] uppercase leading-[102%] absolute top-[120rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply text-white/63 text-[74rem] font-medium uppercase leading-[102%] absolute top-[120rem] left-1/2 -translate-x-1/2 z-[1];
   letter-spacing: 9rem;
 
   @media screen and (min-width: 641px) {

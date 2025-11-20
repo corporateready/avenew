@@ -19,7 +19,7 @@ const page = () => {
 
         <div className="w-full h-full flex flex-col ">
           <div className="px-60 sm:px-0 w-full sm:w-5256 h-full mx-auto">
-            <h2 className="w-full text-[40rem] sm:text-[78rem] text-white font-medium leading-[100%] mt-[20dvh] sm:mt-[44.3dvh] text-center sm:text-left">
+            <h2 className="w-full text-[40rem] sm:text-[78rem] text-white font-medium leading-[100%] mt-[20dvh] sm:mt-[48dvh] text-center sm:text-left">
               Thank you!
             </h2>
             <p className="text-[26rem] sm:text-[30rem] text-[#86878B] font-normal leading-[120%] sm:leading-180 mt-[3dvh] sm:mt-[4vh] text-center sm:text-left">

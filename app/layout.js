@@ -1,9 +1,10 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import { PHProvider } from "./components/providers/posthog-provider";
-import { PostHogPageView } from "./components/posthog-pageview";
-import { Suspense } from "react";
+import GoogleTagManager from "./components/GoogleTagManager";
+// import { PHProvider } from "./components/providers/posthog-provider";
+// import { PostHogPageView } from "./components/posthog-pageview";
+// import { Suspense } from "react";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -33,6 +34,7 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
+  const GTM_ID = "GTM-K47WXXSB";
 
   return (
     <html lang="en" data-scroll-behavior="smooth">
@@ -55,21 +57,35 @@ export default function RootLayout({ children }) {
           href="/favicon_io/favicon-16x16.png"
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
+
+        <GoogleTagManager gtmId={GTM_ID} />
+
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html:`
+            <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K47WXXSB"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"
+          ></iframe>`
+          }}
+        />
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
-        <PHProvider>
+        {/* <PHProvider>
           <Suspense fallback={null}>
-            <PostHogPageView />
-            {children}
-            <Script
-              id="to-top"
-              dangerouslySetInnerHTML={{
-                __html: `history.scrollRestoration = "manual"`,
-              }}
-            />
-          </Suspense>
-        </PHProvider>
+            <PostHogPageView /> */}
+        {children}
+        <Script
+          id="to-top"
+          dangerouslySetInnerHTML={{
+            __html: `history.scrollRestoration = "manual"`,
+          }}
+        />
+        {/* </Suspense>
+        </PHProvider> */}
       </body>
     </html>
   );

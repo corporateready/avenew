@@ -4,32 +4,20 @@
 
 html {
   @apply w-full h-full relative;
-  /* overflow-x: hidden; */
-
-  /* h1,h2,h3,h4,h5,h6,div,p,span,img,body {
-    @apply p-0 m-0 box-border;
-  } */
-
   scroll-behavior: smooth;
-  
   font-size: calc(100vw / (1920 * 1));
-
   @media screen and (min-width: 641px) {
     font-size: calc(100vw / (1440 * 1));
   }
-
   @media screen and (max-width: 640px) {
     font-size: calc(100vw / (428 * 1));
   }
-
   @media screen and (width >= 1440px) {
    font-size: calc(100vw / (1440 * 1));
   }
-
   @media screen and (width >= 1920px) {
     @apply ml-[-32rem];
   }
-  
 }
 
 body {

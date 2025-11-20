@@ -23,15 +23,14 @@ const Hero = ({ handleToggle }) => {
         </p>
 
         <p className={styles.description}>
-          Инвестируй в новый проект недвижимости {""}
-          <br />
-          до старта продаж {""}
-          <span>в декабре 2025 года</span>
+          Инвестируй в новый проект {""}
+          <br className="inline-block sm:hidden"/>
+          недвижимости {""} <br className="hidden sm:inline-block" />до старта продаж
         </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>
-            Узнайте детали сейчас
+            Узнай детали сейчас
           </span>
           <span className={styles.button__detail__line_bottom}></span>
           <span className={styles.button__detail__sparkle}></span>
@@ -46,15 +45,15 @@ const Hero = ({ handleToggle }) => {
         </p>
 
         <p className={styles.location__title_text}>
-          Беспрецедентная локация {""}
+          Эксклюзивная локация {""}
           <br />в сердце сектора Ботаника
         </p>
         <p className={styles.location__description_text}>
           Совсем скоро — новый жилой комплекс, {""}
-          <br className="block xxl:hidden" />
+          <br className="block" />
           который поднимет качество городской {""}
-          <br />
-          жизни на новый уровень
+          <br className="inline-block sm:hidden"/>
+          жизни {""} <br className="hidden sm:inline-block"/>на новый уровень
         </p>
 
         <p className={styles.location__title_text__bottom}>

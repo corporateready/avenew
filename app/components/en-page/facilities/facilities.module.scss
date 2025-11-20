@@ -6,7 +6,7 @@
 
   &::before {
     content: '';
-    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[60rem] left-0 z-[1];
+    @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[50rem] left-0 z-[1];
 
     @media screen and (min-width: 641px) {
      @apply inline-block w-full h-[560rem] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[-390rem] left-0 z-[1];
@@ -18,29 +18,29 @@
   }
 }
 .facilities__title {
-  @apply text-[31rem] font-semibold text-white text-center leading-[110%] w-full relative top-[24rem] left-1/2 -translate-x-1/2 z-[1];
+  @apply text-[32rem] font-semibold text-white text-center leading-[110%] w-full relative top-[24rem] left-1/2 -translate-x-1/2 z-[1];
 
   @media screen and (min-width: 641px) {
     @apply text-[74rem] font-semibold text-white text-center leading-[100%] w-fit relative top-[-339rem] left-1/2 -translate-x-1/2 z-[1] ml-[10rem] tracking-[-1rem];
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[67px] font-semibold text-white text-center leading-[100%] w-full absolute top-[-168px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-[-1rem];
+    @apply text-[72px] absolute top-[-186px] left-1/2 -translate-x-1/2 z-[1] ml-0 tracking-normal w-full;
   }
 }
 .facilities__inner {
-  @apply w-full h-full flex flex-col items-center justify-center gap-[20rem] px-[38rem] pt-0 mt-[102rem];
+  @apply w-full h-full flex flex-col items-center justify-center gap-[20rem] px-[38rem] pt-0 mt-[52rem];
 
     @media screen and (min-width: 641px) {
     @apply w-[1198rem] h-full flex flex-row items-center justify-center gap-[18rem] px-0 mx-auto mt-[-286rem];
     }
 
     @media screen and (width >= 1920px) {
-      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-158px];
+      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-148px];
     }
 }
 .facilities__item {
-  @apply w-full h-[480rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-1.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
@@ -66,7 +66,7 @@
   }
 }
 .facilities__item_2 {
-  @apply w-full h-[480rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-2.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
@@ -89,7 +89,7 @@
   }
 }
 .facilities__item_3 {
-  @apply w-full h-[480rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-3.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
@@ -113,7 +113,7 @@
   }
 }
 .facilities__item_4 {
-  @apply w-full h-[480rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
+  @apply w-full h-[440rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
 
   @media screen and (min-width: 641px) {  
     @apply w-full h-[368rem] bg-[url('/shared/facilities-item-4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center relative z-[1];
