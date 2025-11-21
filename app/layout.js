@@ -23,12 +23,12 @@ export const metadata = {
   },
 };
 
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
-};
+// export const viewport = {
+//   width: "device-width",
+//   initialScale: 1,
+//   maximumScale: 1,
+//   userScalable: false,
+// };
 
 export default function RootLayout({ children }) {
   const GTM_ID = "GTM-K47WXXSB";
@@ -36,6 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
