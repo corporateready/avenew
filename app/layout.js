@@ -2,9 +2,6 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import GoogleTagManager from "./components/GoogleTagManager";
-// import { PHProvider } from "./components/providers/posthog-provider";
-// import { PostHogPageView } from "./components/posthog-pageview";
-// import { Suspense } from "react";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -74,9 +71,6 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
-        {/* <PHProvider>
-          <Suspense fallback={null}>
-            <PostHogPageView /> */}
         {children}
         <Script
           id="to-top"
@@ -84,8 +78,6 @@ export default function RootLayout({ children }) {
             __html: `history.scrollRestoration = "manual"`,
           }}
         />
-        {/* </Suspense>
-        </PHProvider> */}
       </body>
     </html>
   );

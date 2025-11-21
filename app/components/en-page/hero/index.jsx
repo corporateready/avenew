@@ -25,7 +25,7 @@ const Hero = ({ handleToggle }) => {
         <p className={styles.description}>
           Invest in a new real estate project {""}
           <br className="block" />
-          before <span className="inline sm:hidden">the official</span> sales launch
+          before sales launch
         </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>

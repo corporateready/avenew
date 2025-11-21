@@ -1,25 +1,34 @@
+"use client";
 import React from 'react'
 import styles from "./styles.module.scss"
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
+
+  const handleLogoClick = () => {
+    router.back();
+  };
   return (
     <div className={styles.terms}>
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.header__content}>
-            <Image
-              src="/Avenew-botanica-transparent.png"
-              width={120}
-              height={40}
-              alt="Botanica Avenew gray logo"
-              className={styles.logo}
-              style={{ width: "auto", height: "auto" }}
-            />
+            <div onClick={handleLogoClick} className="hover:cursor-pointer">
+              <Image
+                src="/Avenew-botanica-transparent.png"
+                width={120}
+                height={40}
+                alt="Botanica Avenew gray logo"
+                className={styles.logo}
+                style={{ width: "auto", height: "auto" }}
+              />
+            </div>
 
-            <Link href={"tel:+37378978789"} className={styles.phone}>
-              <span>+373 699 69 699</span>
+            <Link href={"tel:+37376039073"} className={styles.phone}>
+              <span>+373 76 039 073</span>
               <svg
                 width="26"
                 height="26"
@@ -49,7 +58,7 @@ const Page = () => {
           <p className={styles.description}>Welcome to AVENEW Botanica!</p>
           <p className={styles.description}>
             These terms and conditions outline the rules and regulations for the
-            use of "AVENEW CAPITAL" S.R.L.'s Website, located at artima.md.
+            use of "AVENEW CAPITAL" S.R.L.'s Website, located at avenew.md.
           </p>
           <p className={styles.description}>
             By accessing this website we assume you accept these terms and
