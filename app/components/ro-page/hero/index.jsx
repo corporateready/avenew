@@ -10,25 +10,39 @@ import Image from "next/image";
 const Hero = ({ handleToggle }) => {
   return (
     <div className={styles.hero_wrapper}>
-      <div fetchPriority="high" className={styles.hero}>
+      <div className={styles.hero}>
+        <Image
+          src="/exfm/hero-light-bg-mobile.avif"
+          alt="Avenew Botanica"
+          fill
+          priority
+          sizes="100vw"
+          className={styles.hero__bg_mobile}
+          style={{ objectFit: "cover" }}
+        />
+        <Image
+          src="/exfm/hero-light-bg-desktop.avif"
+          alt="Avenew Botanica"
+          fill
+          priority
+          sizes="100vw"
+          className={styles.hero__bg_desktop}
+          style={{ objectFit: "cover" }}
+        />
         <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
-
         <Title textTitle="coming soon" />
-
         <p className={styles.hero__text}>
           Ofertă specială {""}
           <br className="inline-block sm:hidden" />
           pentru {""}investitori  {""}
         </p>
-
         <p className={styles.description}>
           Investește într-un proiect imobiliar nou, {""}
           <br className="block" />
           înainte de startul vânzărilor{" "}
         </p>
-
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>Află detalii acum</span>
           <span className={styles.button__detail__line_bottom}></span>
@@ -39,7 +53,6 @@ const Hero = ({ handleToggle }) => {
           <span className={styles.button__detail__sparkle_5}></span>
           <span className={styles.button__detail__sparkle_6}></span>
         </button>
-
         <p className={styles.location__title_text}>
           Locație fără {""}
           <br className="block sm:hidden" /> precedent {""}
@@ -49,14 +62,13 @@ const Hero = ({ handleToggle }) => {
         <p className={styles.location__description_text}>
           În curând, un nou ansamblu rezidențial
           <br className="block" /> care va ridica calitatea {""}
-          <br className="hidden sm:block" />vieții urbane
+          <br className="hidden sm:block" />
+          vieții urbane
         </p>
-
         <p className={styles.location__title_text__bottom}>
           Un nou standard {""}
           <br className="" /> de trai urban
         </p>
-
         <p className={styles.location__description_text__bottom}>
           Între două parcuri emblematice
           <br className="" />

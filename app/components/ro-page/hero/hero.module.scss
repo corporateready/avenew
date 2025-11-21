@@ -19,9 +19,13 @@
           }
   }
      @apply w-full h-[2000rem] relative z-0;
-      &::before {
+     
+     .hero__bg_mobile {
         content: '';
-        @apply w-full h-full bg-[url('/exfm/hero-light-bg-mobile.avif')] bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+        @apply block w-full h-full bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+      }
+      .hero__bg_desktop {
+        @apply hidden;
       }
       &::after {
         content: '';
@@ -29,11 +33,13 @@
       }
   @media screen and (min-width: 641px) {
     @apply w-full h-[3580rem] relative z-0;
-     &::before {
-      content: '';
-      @apply w-full h-full bg-[url('/exfm/hero-light-bg-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1]; 
+    .hero__bg_mobile {
+      @apply hidden;
     }
-
+     .hero__bg_desktop {
+      content: '';
+      @apply block w-full h-full bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1]; 
+    }
     &::after {
         content: '';
         @apply bg-[url('/desktop/dark-building-desktop.avif')] bg-cover bg-center bg-no-repeat absolute top-[292rem] object-cover left-0  z-[2] w-full h-[1200rem];
@@ -41,6 +47,10 @@
    }
   @media screen and (width >= 1920px) {
     @apply w-[1920px] h-[3084px] relative z-0;
+
+    .hero__bg_desktop {
+        @apply hidden;
+      }
 
      &::before {
       content: '';
