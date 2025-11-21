@@ -7,8 +7,8 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
   experimental: {
-    // optimizeCss: true,
-    optimizePackageImports: ["posthog-js"],
+    optimizeCss: true,
+    optimizePackageImports: ["posthog-js", "react-icons"],
   },
   images: {
     formats: ["image/avif", "image/webp"],
