@@ -20,7 +20,7 @@ const Index = () => {
   
   
   return (
-    <div className={styles.footer} role="container-info">
+    <footer className={styles.footer} role="contentinfo">
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
           <img
@@ -149,7 +149,7 @@ const Index = () => {
 
         <ButtonToUp />
       </div>
-    </div>
+    </footer>
   );
 };
 
