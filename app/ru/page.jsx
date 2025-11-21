@@ -47,7 +47,7 @@ export default function Home() {
   }, [isOpen, isOpenBottom]);
 
   return (
-    <motion.div
+    <motion.main
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -61,6 +61,6 @@ export default function Home() {
       {isOpenBottom && (
         <HeroFormBottom handleToggleModalBottom={handleToggleModalBottom} />
       )}
-    </motion.div>
+    </motion.main>
   );
 }

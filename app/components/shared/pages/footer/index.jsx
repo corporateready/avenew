@@ -20,7 +20,7 @@ const Index = () => {
   
   
   return (
-    <div className={styles.footer}>
+    <div className={styles.footer} role="container-info">
       <div className={styles.footer__inner}>
         <div className={styles.footer__inner_top}>
           <img
@@ -29,7 +29,7 @@ const Index = () => {
             className={styles.footer__logo}
           />
           <div className={styles.footer__inner_top__links}>
-            <Link href="tel:+37376039073">
+            <Link href="tel:+37376039073" aria-label="Call to us">
               <svg
                 className={styles.footer__phone_icon}
                 viewBox="0 0 23 23"
@@ -45,6 +45,7 @@ const Index = () => {
             <Link
               href="https://www.facebook.com/people/Avenew/61581776767162/"
               rel="noopener noreferrer"
+              aria-label="Visit our Facebook page"
             >
               <svg
                 className={styles.footer__facebook_icon}
@@ -61,6 +62,7 @@ const Index = () => {
             <Link
               href="https://www.instagram.com/avenew.md/"
               rel="noopener noreferrer"
+              aria-label="Visit our Instagram page"
             >
               <svg
                 className={styles.footer__instagram_icon}
@@ -92,6 +94,7 @@ const Index = () => {
             <Link
               href="https://consent.youtube.com/ml?continue=https://www.youtube.com/@avenewmd?cbrd%3D1&gl=IE&hl=en&cm=2&pc=yt&src=1&rffu=true&escs=ATOEXqIE8ekr-1wRMUmjz-d417vldd5N_IthihSgWXW2KJZ4vYlTKQdGiX6yn0myEfplcXUpttOhWVIH-gMa64iJt80VIzGDjUJG"
               rel="noopener noreferrer"
+              aria-label="Visit our You Tube page"
             >
               <svg
                 className={styles.footer__youtube_icon}
