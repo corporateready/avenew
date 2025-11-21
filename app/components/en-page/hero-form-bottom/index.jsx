@@ -100,7 +100,7 @@ const Index = ({ handleToggleModalBottom }) => {
         >
           <ProgressBar />
           <p className={styles.hero__form_title}>
-            Enter your contact detailst {""}
+            Enter your contact details {""}
             <br />
             to receive more information
           </p>
