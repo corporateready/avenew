@@ -8,7 +8,7 @@ const Index = () => {
       href="#header"
       className={styles.letter__button_up}
       rel="noopener noreferrer"
-    >
+      aria-label="back to start web-site">
       <svg
         className={styles.letter__button_up_icon}
         viewBox="0 0 9 17"

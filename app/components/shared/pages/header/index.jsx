@@ -7,7 +7,7 @@ import HeaderLogo from "../../../ui/header-logo";
 
 const Index = () => {
   return (
-    <header className={styles.header} id="header" role="header">
+    <header className={styles.header} id="header" role="banner">
       <div className={styles.container}>
         <div className={styles.inner}>
           <HeaderLogo />
