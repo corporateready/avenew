@@ -4,6 +4,14 @@
   status = 200
   force = true
 
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NPM_FLAGS = "--include=dev"
+  NODE_VERSION = "20"
+
 [[headers]]
   for = "/posthog-assets/*"
   [headers.values]
