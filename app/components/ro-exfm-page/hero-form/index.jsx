@@ -8,10 +8,8 @@ import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import { useMediaQuery } from "react-responsive";
 import { useRouter } from "next/navigation";
-import { usePostHog } from "posthog-js/react";
 
 const Index = ({ handleToggleModal }) => {
-  const posthog = usePostHog();
   const router = useRouter();
 
   const isMobile = useMediaQuery({
@@ -50,11 +48,12 @@ const Index = ({ handleToggleModal }) => {
   }, [name,email, phone, isDisabled])
 
   const formSubmitTrack = () => {
-    posthog?.capture("form_submitted", {
-      name: name,
-      phone: phone,
-      email: email,
-    });
+    if (typeof window !== "undefined" && window.posthog)
+      window.posthog.capture("form_submitted", {
+        name: name,
+        phone: phone,
+        email: email,
+      });
 
     if (!isFormSubmitted) {
       setIsFormSubmitted(true);
