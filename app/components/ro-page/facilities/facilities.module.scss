@@ -4,6 +4,10 @@
   @apply w-full h-full relative mt-[-80rem] z-[0];
   font-family: "Montserrat", sans-serif;
 
+  @media screen and (width >= 640px) {
+    @apply mt-[-42rem];
+  }
+
   &::before {
     content: '';
     @apply inline-block w-full h-[1980rem] bg-[url('/mobile/facilities/facilities-light-bg.avif')] bg-cover bg-center bg-no-repeat absolute top-[48rem] left-0 z-[1];

@@ -18,27 +18,25 @@
            background: linear-gradient(180deg,rgba(7, 11, 27, 1), rgba(7, 11, 27, 0.8), rgba(7, 11, 27, 0));
           }
   }
-     @apply w-full h-[2000rem] relative z-0;
+  @apply w-full h-[2000rem] relative z-0;
      
-     .hero__bg_mobile {
-        content: '';
-        @apply block w-full h-full bg-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
-      }
-      .hero__bg_desktop {
-        @apply hidden;
-      }
-      &::after {
+  .hero__bg_mobile {
+        @apply block w-full h-full object-cover bg-center bg-no-repeat absolute top-0 left-0 z-[1];
+  }
+  .hero__bg_desktop {
+    @apply hidden;
+  }
+  &::after {
         content: '';
         @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[237rem] left-0 z-[2] w-full h-[726rem];
-      }
+  }
   @media screen and (min-width: 641px) {
     @apply w-full h-[3580rem] relative z-0;
     .hero__bg_mobile {
       @apply hidden;
     }
      .hero__bg_desktop {
-      content: '';
-      @apply block w-full h-full bg-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1]; 
+      @apply block w-full h-full object-cover bg-center bg-no-repeat absolute top-[-40rem] left-0 z-[1]; 
     }
     &::after {
         content: '';
