@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
   },
@@ -30,12 +30,9 @@
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "24.8.1",
     "@types/react": "19.2.2",
-    "autoprefixer": "^10.4.22",
     "eslint": "^9",
     "eslint-config-next": "15.5.5",
-    "postcss": "^8.5.6",
     "sass": "^1.94.2",
-    "tailwindcss": "^4.1.17",
     "tw-animate-css": "^1.4.0",
     "typescript": "5.9.3"
   }
