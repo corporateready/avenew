@@ -17,20 +17,32 @@ const Hero = ({ handleToggle }) => {
           fill
           priority={true}
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1919px) 90vw, 1200px"
           quality={85}
           className={styles.hero__bg_mobile}
           style={{ objectFit: "cover" }}
         />
         <Image
           src="/exfm/hero-light-bg-desktop.avif"
-          alt="Avenew Botanica"
+          alt="Avenew Botanica laptop background"
           fill
           priority={true}
           fetchPriority="high"
-          sizes="100vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1919px) 90vw, 1200px"
           quality={85}
           className={styles.hero__bg_desktop}
+          style={{ objectFit: "cover" }}
+        />
+        <Image
+          src="/exfm/hero-light-bg-large.avif"
+          alt="Avenew Botanica large background"
+          fill
+          priority={true}
+          fetchPriority="high"
+          sizes="(max-width: 640px) 100vw, (max-width: 1919px) 90vw, 1200px"
+          quality={85}
+          className={styles.hero__bg_large}
+          style={{ objectFit: "cover" }}
         />
         <Header />
         <div className={styles.hero__dark__building_shadow}></div>

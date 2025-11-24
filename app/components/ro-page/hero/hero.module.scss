@@ -26,6 +26,9 @@
   .hero__bg_desktop {
     @apply hidden;
   }
+  .hero__bg_large {
+    @apply hidden;
+  }
   &::after {
         content: '';
         @apply bg-[url('/mobile/hero/dark-building-mobile.avif')] bg-cover bg-center bg-no-repeat inline-flex absolute top-[237rem] left-0 z-[2] w-full h-[726rem];
@@ -50,9 +53,8 @@
         @apply hidden;
       }
 
-     &::before {
-      content: '';
-      @apply w-full h-full bg-[url('/exfm/hero-light-bg-large.avif')] bg-cover bg-bottom bg-no-repeat absolute top-[-40px] left-0 z-[1];
+     .hero__bg_large {
+      @apply block w-full h-full object-cover bg-bottom bg-no-repeat absolute top-[-40px] left-0 z-[1];
     }
 
     &::after {
