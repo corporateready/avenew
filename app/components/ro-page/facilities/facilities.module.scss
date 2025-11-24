@@ -17,7 +17,7 @@
     }
 
     @media screen and (width >= 1920px) {
-     @apply inline-block w-[1920px] h-[760px] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[200px] left-1/2 -translate-x-1/2 z-[1] mt-[-470px];
+     @apply inline-block w-[1920px] h-[760px] bg-[url('/desktop/facilities-light-separator.avif')] bg-cover bg-center bg-no-repeat absolute top-[120px] left-1/2 -translate-x-1/2 z-[1] mt-[-420px];
     }
   }
 }
@@ -29,7 +29,7 @@
   }
 
   @media screen and (width >= 1920px) {
-    @apply text-[72px] absolute top-[-190px] ml-0 tracking-[-1rem];
+    @apply text-[72px] absolute top-[-188px] ml-0 tracking-[-1rem];
   }
 }
 .facilities__inner {
@@ -40,7 +40,7 @@
     }
 
     @media screen and (width >= 1920px) {
-      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-148px];
+      @apply w-[1198px] h-full gap-[18px] px-0 mx-auto mt-[-113px];
     }
 }
 .facilities__item {
