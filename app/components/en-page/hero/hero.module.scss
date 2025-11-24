@@ -89,7 +89,7 @@ overflow-x: hidden;
 
 }
 .hero__text {
-  @apply text-[32rem] text-center leading-[100%] w-full text-white font-semibold absolute top-[540rem] left-1/2 -translate-1/2 z-[3];
+  @apply text-[26rem] text-center leading-[100%] w-full text-white font-semibold absolute top-[558rem] left-1/2 -translate-1/2 z-[3];
 
   .text__gradient {
     @apply inline-block font-extrabold;
@@ -113,7 +113,7 @@ overflow-x: hidden;
   }
 }
 .description { 
-  @apply text-[16rem] text-center leading-[120%] w-full text-white font-normal absolute top-[578rem] left-0 z-[3];
+  @apply text-[16rem] text-center leading-[120%] w-full text-white font-normal absolute top-[583rem] left-0 z-[3];
 
    background: linear-gradient(
     90deg,
@@ -134,7 +134,7 @@ overflow-x: hidden;
   }
 }
 .button__detail {
-  @apply text-white text-[22.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[614rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem] capitalize;
+  @apply text-white text-[22.5rem] font-semibold tracking-[0.4rem] leading-[100%] w-[357rem] h-[50rem] border-[0.54rem] border-white rounded-full flex items-center justify-center absolute top-[620rem] left-1/2 -translate-x-1/2 z-[4] mx-auto mt-[21rem] capitalize;
  
   background: linear-gradient(
     0deg,

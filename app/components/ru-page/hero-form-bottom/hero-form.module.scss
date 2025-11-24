@@ -48,11 +48,11 @@
   @apply text-[20.2rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[32rem] tracking-[-0.3rem];
 
     @media screen and (min-width: 641px) {
-    @apply text-[28rem] leading-[110%] mt-[46rem];
+    @apply text-[29rem] leading-[110%] mt-[46rem];
     }
 
     @media screen and (width >= 1920px) {
-      @apply text-[31px] leading-[100%] mt-[48px];
+      @apply text-[29px] leading-[100%] mt-[48px];
     }
 }
 .hero__form_content {

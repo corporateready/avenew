@@ -24,8 +24,9 @@ const Hero = ({ handleToggle }) => {
 
         <p className={styles.description}>
           Инвестируй в новый проект {""}
-          <br className="inline-block sm:hidden"/>
-          недвижимости {""} <br className="hidden sm:inline-block" />до старта продаж
+          <br className="inline-block sm:hidden" />
+          недвижимости {""} <br className="hidden sm:inline-block" />
+          до старта продаж
         </p>
 
         <button className={styles.button__detail} onClick={handleToggle}>
@@ -45,15 +46,16 @@ const Hero = ({ handleToggle }) => {
         </p>
 
         <p className={styles.location__title_text}>
-          Эксклюзивная локация {""}
-          <br />в сердце сектора Ботаника
+          Беспрецедентная локация {""}
+          <br />в самом сердце Ботаники
         </p>
         <p className={styles.location__description_text}>
           Совсем скоро — новый жилой комплекс, {""}
           <br className="block" />
           который поднимет качество городской {""}
-          <br className="inline-block sm:hidden"/>
-          жизни {""} <br className="hidden sm:inline-block"/>на новый уровень
+          <br className="inline-block sm:hidden" />
+          жизни {""} <br className="hidden sm:inline-block" />
+          на новый уровень
         </p>
 
         <p className={styles.location__title_text__bottom}>

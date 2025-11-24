@@ -99,7 +99,7 @@ const Index = ({ handleToggleModalBottom }) => {
         >
           <ProgressBar />
           <p className={styles.hero__form_title}>
-            Введите свои контактные данные, {""}
+            Введи свои контактные данные, {""}
             <br />
             чтобы получить подробности
           </p>

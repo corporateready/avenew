@@ -16,11 +16,7 @@ const Hero = ({ handleToggle }) => {
 
         <Title textTitle="coming soon" />
 
-        <p className={styles.hero__text}>
-          Special Offer {""}
-          <br className="inline-block sm:hidden" />
-          for Investors
-        </p>
+        <p className={styles.hero__text}>Special Offer for Investors</p>
 
         <p className={styles.description}>
           Invest in a new real estate project {""}

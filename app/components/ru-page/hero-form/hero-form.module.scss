@@ -48,11 +48,11 @@
   @apply text-[20.2rem] text-white font-semibold leading-[120%] text-center w-full z-[1] mt-[30rem] tracking-[-0.3rem];
 
     @media screen and (min-width: 641px) {
-    @apply text-[28rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[48rem];
+    @apply text-[29rem] text-white font-semibold leading-[110%] text-center w-full z-[1] mt-[48rem];
     }
 
     @media screen and (width >= 1920px) {
-      @apply text-[31px] text-white font-semibold leading-[100%] text-center w-full z-[1] mt-[42px];
+      @apply text-[29px] text-white font-semibold leading-[100%] text-center w-full z-[1] mt-[42px];
     }
 }
 .hero__form_content {
