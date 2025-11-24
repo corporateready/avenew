@@ -13,18 +13,21 @@ const Hero = ({ handleToggle }) => {
       <div className={styles.hero}>
         <Image
           src="/exfm/hero-light-bg-mobile.avif"
-          alt="Avenew Botanica"
+          alt="Avenew Botanica hero background"
           fill
-          priority
+          priority={true}
+          fetchPriority="high"
           sizes="100vw"
           quality={85}
           className={styles.hero__bg_mobile}
+          style={{ objectFit: "cover" }}
         />
         <Image
           src="/exfm/hero-light-bg-desktop.avif"
           alt="Avenew Botanica"
           fill
-          priority
+          priority={true}
+          fetchPriority="high"
           sizes="100vw"
           quality={85}
           className={styles.hero__bg_desktop}
