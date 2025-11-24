@@ -5,10 +5,12 @@ const nextConfig = {
   reactStrictMode: true,
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
+    target: "es2020",
   },
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ["posthog-js", "react-icons"],
+    legacyBrowsers: false,
   },
   images: {
     formats: ["image/avif", "image/webp"],
@@ -16,6 +18,7 @@ const nextConfig = {
     minimumCacheTTL: 60,
     qualities: [25, 50, 85],
   },
+  swcMinify: true,
   productionBrowserSourceMaps: false,
   async rewrites() {
     return [
