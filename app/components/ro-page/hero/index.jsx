@@ -15,7 +15,7 @@ const Hero = ({ handleToggle }) => {
           src="/exfm/hero-light-bg-mobile.avif"
           alt="Avenew Botanica"
           fill
-          priority={1}
+          priority
           sizes="100vw"
           quality={85}
           className={styles.hero__bg_mobile}
@@ -24,7 +24,7 @@ const Hero = ({ handleToggle }) => {
           src="/exfm/hero-light-bg-desktop.avif"
           alt="Avenew Botanica"
           fill
-          priority={1}
+          priority
           sizes="100vw"
           quality={85}
           className={styles.hero__bg_desktop}

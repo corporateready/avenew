@@ -23,13 +23,6 @@ export const metadata = {
   },
 };
 
-// export const viewport = {
-//   width: "device-width",
-//   initialScale: 1,
-//   maximumScale: 1,
-//   userScalable: false,
-// };
-
 export default function RootLayout({ children }) {
   const GTM_ID = "GTM-K47WXXSB";
 
@@ -57,9 +50,9 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
 
-        <GoogleTagManager gtmId={GTM_ID} />
+        {/* <GoogleTagManager gtmId={GTM_ID} /> */}
 
-        <noscript
+        {/* <noscript
           dangerouslySetInnerHTML={{
             __html:`
             <iframe
@@ -69,7 +62,7 @@ export default function RootLayout({ children }) {
             style="display:none;visibility:hidden"
           ></iframe>`
           }}
-        />
+        /> */}
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>
