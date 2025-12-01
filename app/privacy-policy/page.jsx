@@ -58,15 +58,15 @@ const Page = () => {
             Privacy Policy for "AVENEW CAPITAL" S.R.L.
           </p>
           <p className={styles.description}>
-            At AVENEW Botanica, accessible from avenew.md, one of our main
+            At AVENEW BOTANICA, accessible from avenew.md, one of our main
             priorities is the privacy of our visitors. This Privacy Policy
             document contains types of information that is collected and
-            recorded by AVENEW Botanica and how we use it. If you have
+            recorded by AVENEW BOTANICA and how we use it. If you have
             additional questions or require more information about our Privacy
             Policy, do not hesitate to contact us. This Privacy Policy applies
             only to our online activities and is valid for visitors to our
             website with regards to the information that they shared and/or
-            collect in AVENEW Botanica. This policy is not applicable to any
+            collect in AVENEW BOTANICA. This policy is not applicable to any
             information collected offline or via channels other than this
             website.
           </p>
@@ -98,7 +98,7 @@ const Page = () => {
             partners, including for customer service, to provide you with
             updates and other information relating to the website, and for
             marketing and promotional purposes Send you emails Find and prevent
-            fraud By contacting the official representatives of AVENEW Botanica
+            fraud By contacting the official representatives of AVENEW BOTANICA
             through the official page on Facebook or Instagram, by calling the
             phone number indicated on the official website of the project, or by
             leaving a request on the website, including using other official
@@ -109,7 +109,7 @@ const Page = () => {
           </p>
           <p className={styles.title}>Log Files</p>
           <p className={styles.description}>
-            AVENEW Botanica follows a standard procedure of using log files.
+            AVENEW BOTANICA follows a standard procedure of using log files.
             These files log visitors when they visit websites. All hosting
             companies do this and a part of hosting services' analytics. The
             information collected by log files include internet protocol (IP)
@@ -122,7 +122,7 @@ const Page = () => {
           </p>
           <p className={styles.title}>Cookies and Web Beacons</p>
           <p className={styles.description}>
-            Like any other website, AVENEW Botanica uses 'cookies'. These
+            Like any other website, AVENEW BOTANICA uses 'cookies'. These
             cookies are used to store information including visitors'
             preferences, and the pages on the website that the visitor accessed
             or visited. The information is used to optimize the users'
@@ -132,10 +132,10 @@ const Page = () => {
           <p className={styles.title}>Advertising Partners Privacy Policies</p>
           <p className={styles.description}>
             You may consult this list to find the Privacy Policy for each of the
-            advertising partners of AVENEW Botanica. Third-party ad servers or
+            advertising partners of AVENEW BOTANICA. Third-party ad servers or
             ad networks uses technologies like cookies, JavaScript, or Web
             Beacons that are used in their respective advertisements and links
-            that appear on AVENEW Botanica, which are sent directly to users'
+            that appear on AVENEW BOTANICA, which are sent directly to users'
             browser. They automatically receive your IP address when this
             occurs. These technologies are used to measure the effectiveness of
             their advertising campaigns and/or to personalize the advertising
@@ -145,7 +145,7 @@ const Page = () => {
           </p>
           <p className={styles.title}>Third Party Privacy Policies</p>
           <p className={styles.description}>
-            AVENEW Botanica Privacy Policy does not apply to other advertisers
+            AVENEW BOTANICA Privacy Policy does not apply to other advertisers
             or websites. Thus, we are advising you to consult the respective
             Privacy Policies of these third-party ad servers for more detailed
             information. It may include their practices and instructions about
@@ -194,7 +194,7 @@ const Page = () => {
             Another part of our priority is adding protection for children while
             using the internet. We encourage parents and guardians to observe,
             participate in, and/or monitor and guide their online activity.
-            AVENEW Botanica does not knowingly collect any Personal Identifiable
+            AVENEW BOTANICA does not knowingly collect any Personal Identifiable
             Information from children under the age of 13. If you think that
             your child provided this kind of information on our website, we
             strongly encourage you to contact us immediately and we will do our

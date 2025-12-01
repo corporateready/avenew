@@ -55,14 +55,14 @@ const Page = () => {
       <div className={styles.container}>
         <div className={styles.terms__content}>
           <p className={styles.headLine__title}>Terms and Conditions</p>
-          <p className={styles.description}>Welcome to AVENEW Botanica!</p>
+          <p className={styles.description}>Welcome to AVENEW BOTANICA!</p>
           <p className={styles.description}>
             These terms and conditions outline the rules and regulations for the
             use of "AVENEW CAPITAL" S.R.L.'s Website, located at avenew.md.
           </p>
           <p className={styles.description}>
             By accessing this website we assume you accept these terms and
-            conditions. Do not continue to use AVENEW Botanica if you do not
+            conditions. Do not continue to use AVENEW BOTANICA if you do not
             agree to take all of the terms and conditions stated on this page.
           </p>
           <p className={styles.description}>
@@ -84,7 +84,7 @@ const Page = () => {
           </p>
           <p className={styles.title}>Cookies</p>
           <p className={styles.description}>
-            We employ the use of cookies. By accessing AVENEW Botanica, you
+            We employ the use of cookies. By accessing AVENEW BOTANICA, you
             agreed to use cookies in agreement with the "AVENEW CAPITAL" S.R.L.
             Privacy Policy.
           </p>{" "}
@@ -99,15 +99,15 @@ const Page = () => {
           <p className={styles.description}>
             Unless otherwise stated, "AVENEW CAPITAL" S.R.L. and/or its
             licensors own the intellectual property rights for all material on
-            AVENEW Botanica. All intellectual property rights are reserved. You
-            may access this from AVENEW Botanica for your own personal use
+            AVENEW BOTANICA. All intellectual property rights are reserved. You
+            may access this from AVENEW BOTANICA for your own personal use
             subjected to restrictions set in these terms and conditions.
           </p>
           <p className={styles.description}>You must not:</p>
           <p className={styles.description}>
-            Republish material from AVENEW Botanica. Sell, rent or sub-license
-            material from AVENEW Botanica. Reproduce, duplicate or copy material
-            from AVENEW Botanica. Redistribute content from AVENEW Botanica.
+            Republish material from AVENEW BOTANICA. Sell, rent or sub-license
+            material from AVENEW BOTANICA. Reproduce, duplicate or copy material
+            from AVENEW BOTANICA. Redistribute content from AVENEW BOTANICA.
             Parts of this website offer an opportunity for users to post and
             exchange opinions and information in certain areas of the website.
             "AVENEW CAPITAL" S.R.L. does not filter, edit, publish or review
