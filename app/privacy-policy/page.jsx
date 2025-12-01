@@ -140,7 +140,7 @@ const Page = () => {
             occurs. These technologies are used to measure the effectiveness of
             their advertising campaigns and/or to personalize the advertising
             content that you see on websites that you visit. Note that AVENEW
-            Botanica has no access to or control over these cookies that are
+            BOTANICA has no access to or control over these cookies that are
             used by third-party advertisers.
           </p>
           <p className={styles.title}>Third Party Privacy Policies</p>
