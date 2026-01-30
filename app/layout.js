@@ -1,7 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import GoogleTagManager from "./components/GoogleTagManager";
+// import GoogleTagManager from "./old_version/components/GoogleTagManager";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
