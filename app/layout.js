@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/favicon_io/site.webmanifest" />
 
-        <GoogleTagManager gtmId={GTM_ID} />
+        {/* <GoogleTagManager gtmId={GTM_ID} />
 
         <noscript
           dangerouslySetInnerHTML={{
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
             style="display:none;visibility:hidden"
           ></iframe>`
           }}
-        />
+        /> */}
       </head>
 
       <body className={`${montserrat.variable} bg-[#060916] antialiased`}>

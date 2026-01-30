@@ -4,7 +4,7 @@ import styles from "./hero.module.scss";
 import Facilities from "../facilities";
 import Title from "../../ui-exfm/title";
 import HeartAnimate from "../../ui-exfm/heart-animate";
-import Header from "../../shared/exfm-pages/header";
+import Header from "../../shared/pages/header";
 
 const Hero = ({ handleToggle }) => {
   return (

@@ -4,7 +4,7 @@ import styles from "./hero.module.scss";
 import Facilities from "../facilities";
 import Title from "../../ui-exfm/title";
 import HeartAnimate from "../../ui-exfm/heart-animate";
-import Header from "../../shared/exfm-pages/header";
+import Header from "../../shared/pages/header";
 
 const Hero = ({ handleToggle }) => {
   return (
@@ -13,9 +13,7 @@ const Hero = ({ handleToggle }) => {
         <Header />
         <div className={styles.hero__dark__building_shadow}></div>
         <HeartAnimate />
-
         <Title textTitle="coming soon" />
-
         <p className={styles.hero__text}>
           Special offer for {""}
           <br className="block sm:hidden" />
@@ -24,14 +22,12 @@ const Hero = ({ handleToggle }) => {
           <br />
           event participants
         </p>
-
         <p className={styles.description}>
           Invest in a new real estate project {""}
           <br className="block sm:hidden" />
           before sales{""} <br className="hidden sm:block" /> launch {""}
           <span>in December 2025</span>
         </p>
-
         <button className={styles.button__detail} onClick={handleToggle}>
           <span className={styles.button__detail__text}>
             Discover details now
@@ -47,7 +43,6 @@ const Hero = ({ handleToggle }) => {
         <p className={styles.oferta__text}>
           Offer valid until <span>15.11.2025</span>
         </p>
-
         <p className={styles.location__title_text}>
           Prime location {""}
           <br className="block sm:hidden" />
@@ -60,13 +55,11 @@ const Hero = ({ handleToggle }) => {
           <br className="block sm:hidden" />
           elevate {""} <br className="hidden sm:block" /> the quality of urban living
         </p>
-
         <p className={styles.location__title_text__bottom}>
           A new standard {""}
           <br />
           of urban living
         </p>
-
         <p className={styles.location__description_text__bottom}>
           Located between two iconic parks and two {""}
           <br />garden squares— where tranquility becomes {""}
